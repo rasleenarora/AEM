@@ -1,0 +1,12 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = "Search field"
+block container
+  main#main.main
+    .block.grey.search-field-block
+      .container
+        include blocks/search-field
+
+

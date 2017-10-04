@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Sprite</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, user-scalable=0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
+    <style>
+      .template { margin: 20px 0; background: #eee; }
+      .margin-b-50 { margin-bottom: 50px; }
+      .group-1 { overflow: hidden; }
+      #color-chart-guide span {
+        display: block;
+        width: 100%;
+        height: 50px;
+      }
+      #color-chart-guide label {
+        display: block;
+        margin-top: 5px;
+      }
+      #ribbon-guide section {
+        overflow: hidden;
+        margin-left: 10px;
+        padding-top: 10px;
+        background: url('images/upload/bgd-ribbon-guide.jpg') no-repeat top left;
+        background-size: cover;
+      }
+      #ribbon-guide .title-2 {
+        margin: 10px 20px;
+        color: #fff;
+        text-align: left;
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom: 1px solid #fff;
+      }
+      .icon-list {
+        margin-top: 43px;
+      }
+      .icon-list li {
+        margin: 42px 0;
+      }
+      .icon-list li .wrap-icon {
+        display: table-cell;
+        min-width: 70px;
+        text-align: center;
+      }
+      .icon-list li:first-child {
+        margin-top: 0;
+      }
+      .icon-list li:last-child {
+        margin-bottom: 0;
+      }
+      .icon-list.first-list li:nth-child(1),
+      .icon-list.first-list li:nth-child(2),
+      .icon-list.first-list li:nth-child(3),
+      .icon-list.first-list li:nth-child(4) {
+        margin: 30px 0;
+      }
+      .icon-list.first-list li:first-child {
+        margin-top: 0;
+      }
+      .icon-list.first-list li:last-child {
+        margin-bottom: 0;
+      }
+      .icon-list span {
+        color: #09354b;
+        font-size: 1.143em;
+        font-family: "Gotham-Book", Arial, Helvetica, sans-serif;
+        line-height: 1.2em;
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 20px;
+      }
+      .container-cpn-nav .block {
+        border: 1px solid #9D9D9D;
+        margin-bottom: 20px;
+      }
+      .container-cpn-nav strong {
+        display: block;
+        padding-bottom: 10px;
+      }
+      .container-cpn-nav [class*="col-"] {
+        background-color: #DDD9D9;
+      }
+      .container-cpn-nav [class*="col-"]:nth-child(2n+1) {
+        background-color: #C3C3C3;
+        z-index: 1;
+      }
+      .title-template {
+        padding-bottom: 2px;
+        margin: 20px 0;
+        color: #207AD1;
+        border-bottom: 1px solid #207AD1;
+        font-size: 20px;
+      }
+      .list-cmp {
+        margin: 20px 0;
+        overflow: hidden;
+      }
+      .list-cmp dt {
+        margin-left: 15px;
+        font-size: 1.429em;
+        font-weight: bold;
+      }
+      .list-cmp dd {
+        margin-top: 10px;
+        padding: 0 1.5%;
+        float: left;
+        width: 30%;
+      }
+      .template .container {
+        max-width: 960px;
+      }
+      .option-group .label-text{ font-family: "Gotham-Book", Arial, Helvetica, sans-serif; }
+      .option-group input:checked + label{
+        font-family: "Gotham-Bold", Arial, Helvetica, sans-serif;
+      }
+      .text .text-link { color: #09354b; }
+      .text .text-link:hover { color: #337ab7; }
+      .wyg-style pre { min-height: 65px; }
+    </style>
+    <script src="js/modernizr.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXX-Y', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body class="template">
+    <div class="container">
+      <div class="row">
+        <h2 class="title-template">Icons</h2>
+        <div class="col-sm-4">
+          <ul class="icon-list first-list list-unstyled">
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-professionals"></i></div><span>Medical <br/> Professionals</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-accountants"></i></div><span>Accountants</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-advisers"></i></div><span>Financial <br/> Advisers</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-clients"></i></div><span>Private <br/> Clients</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-find-events"></i></div><span>Event</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-file"></i></div><span>File</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-checklist"></i></div><span>Tick / Checklist</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-deposits"></i></div><span>Term Deposits</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-notice"></i></div><span>Notice Account</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-car"></i></div><span>Car loan</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-currency"></i></div><span>Foreign Currency</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-private-account"></i></div><span>Private Access Account</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-one-account"></i></div><span>One Account</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-home"></i></div><span>Home</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="icon-list list-unstyled">
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-callback"></i></div><span>Request Callback</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-find"></i></div><span>Find a Specialist</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-offers"></i></div><span>Browse offers</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-find-events"></i></div><span>Find Events</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-guide"></i></div><span>Guide</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-publication"></i></div><span>Publication</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-login"></i></div><span>Login</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-phone"></i></div><span>Phone</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-search"></i></div><span>Search</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-saving"></i></div><span>Savings Account</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-property-finance"></i></div><span>Property Finance</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-cards"></i></div><span>Credit Cards</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-assets-finance"></i></div><span>Assets finance</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-search-1"></i></div><span>Product Finder</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-practice-finance"></i></div><span>Practice Finance</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-personal-finance"></i></div><span>Personal Finance</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="icon-list list-unstyled">
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-profession"></i></div><span>Related Profession</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-finance"></i></div><span>Finance</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-product"></i></div><span>Related Product</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-result-type"></i></div><span>Result Type</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-event-type"></i></div><span>Type of Event</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-event-annual"></i></div><span>Annual Event</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-conference"></i></div><span>Conference</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-luncheon"></i></div><span>Luncheon</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-industry"></i></div><span>Industry Event</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-seminar"></i></div><span>Seminar</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-sporting"></i></div><span>Sporting Event</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-workshop"></i></div><span>Workshop</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-share"></i></div><span>Share</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-message"></i></div><span>Message</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-clear-filters"></i></div><span>Clear Filters</span>
+            </li>
+            <li>
+              <div class="wrap-icon"><i aria-hidden="true" class="wi-icon icon-gallery"></i></div><span>Photo Gallery</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="loader-overlay"><img src="images/loader.gif" alt="Loader"/>
+    </div>
+    <script src="js/l10n.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/script.js"></script>
+    <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </body>
+</html>

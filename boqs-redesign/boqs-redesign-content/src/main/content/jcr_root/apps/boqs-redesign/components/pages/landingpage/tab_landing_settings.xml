@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Panel"
+          title="Landing Page General Settings">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <landingpageicon
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Landing Page Icon"
+            name="./landingpageicon"
+            allowBlank="{Boolean}false"
+            rootPath="/content/dam"
+            xtype="pathfield"/>
+        <landingpageiconurl
+			jcr:primaryType="cq:Widget"
+			fieldLabel="Landing Page Icon’s Url"
+			name="./landingpageiconurl"
+			xtype="pathfield"/>
+        <iconalt
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Landing Page Icon’s Alt"
+            name="./iconalt"
+            xtype="textfield"/>
+        <promoimagealt
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Landing Page Promo Image’s Alt"
+            name="./promoimagealt"
+            xtype="textfield"/>
+        <headingtext
+            jcr:primaryType="cq:Widget"
+            externalStyleSheets="[]"
+            fieldLabel="Heading Text"
+            allowBlank="{Boolean}false"
+            height="400"
+            name="./headingtext"
+            xtype="richtext">
+                <rtePlugins jcr:primaryType="nt:unstructured"
+                    path="/apps/boqs-redesign/components/contents/wysiwygcomp/rteplugins.infinity.json"
+                    xtype="cqinclude"/>
+        </headingtext>
+        <headingbackground
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Heading Background"
+            name="./headingbackground"
+            allowBlank="{Boolean}false"
+            showHexValue="true"
+            xtype="colorfield"/>
+    </items>
+</jcr:root>

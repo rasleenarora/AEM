@@ -1,0 +1,14 @@
+.hero.hero-page
+  .hero-bg.hero-bg-right
+    picture.hero-picture
+      // 6:1 ratio (desktop)
+      source(media="(min-width: 768px)", srcset="http://lorempixel.com/1700/283/business/?1")
+      // 21:9 ratio (mobile)
+      img(src="http://lorempixel.com/1000/429/business/?1", alt="")
+  
+  .hero-overlay
+    .container
+      .row
+        .col-xs-8.col-md-6
+          - if (typeof(heading) === 'undefined') heading = "Everyday Plus with Velocity"
+          h1.hero-heading #{heading}

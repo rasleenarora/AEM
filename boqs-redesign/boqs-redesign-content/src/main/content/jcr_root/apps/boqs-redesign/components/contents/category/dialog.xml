@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    title="Category Component"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <content
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Content"
+                        height="300"
+                        name="./content"
+                        xtype="textarea"/>
+                    <removetitlefromstickyheader
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enable checkbox to remove Title from Sticky Header"
+                        fieldLabel="Remove Title from Sticky Header"
+                        name="./removeTitleStickyHeader"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Card Details">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <categoryInfo
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="browse"
+                        fieldDescription="Based on the selected value Card information will be populated in this component"
+                        fieldLabel="Get Card Information"
+                        name="./categoryInfoType"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <browse
+                                jcr:primaryType="nt:unstructured"
+                                text="Source Pages"
+                                value="browse"/>
+                            <configure
+                                jcr:primaryType="nt:unstructured"
+                                text="Configure Card Details"
+                                value="configure"/>
+                        </options>
+                    </categoryInfo>
+                    <browsemultifield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Source Pages"
+                        name="./browsedCategories"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            limit="2"
+                            xtype="pathfield"/>
+                        
+                    </browsemultifield>
+                    <categorymultifield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Configure Card Details"
+                        itemId="authoredCategories"
+                        name="./authoredCategories"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            anchor="98%"
+                            border="true"
+                            hideLabel="true"
+                            layout="form"
+                            limit="2"
+                            padding="10px"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <title
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    dName="title"
+                                    fieldLabel="Card Title"
+                                    xtype="textfield"/>
+                                <icon
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    dName="thumanailImage"
+                                    fieldLabel="Icon Path"
+                                    xtype="pathfield"/>
+                                <alttext
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    dName="altText"
+                                    fieldLabel="Alt Text for Image"
+                                    xtype="textfield"/>
+                                <targeturl
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    dName="path"
+                                    fieldDescription="If left empty, current page url will be used by default"
+                                    fieldLabel="Target URL"
+                                    xtype="pathfield"/>
+                                <content
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    dName="description"
+                                    fieldLabel="Card Description"
+                                    height="250"
+                                    xtype="richtext">
+                                    <rtePlugins
+                                        jcr:primaryType="nt:unstructured"
+                                        path="/apps/boqs-redesign/components/contents/category/rteplugins.infinity.json"
+                                        xtype="cqinclude"/>
+                                    <htmlRules jcr:primaryType="nt:unstructured">
+                                        <links
+                                            jcr:primaryType="nt:unstructured"
+                                            protocols="[http://,https://,javascript:,mailto:]"/>
+                                    </htmlRules>
+                                </content>
+                            </items>
+                        </fieldConfig>
+                        
+                    </categorymultifield>
+                </items>
+            </tab2>
+        </items>
+    </items>
+    <listeners jcr:primaryType="nt:unstructured"/>
+</jcr:root>

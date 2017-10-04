@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="400"
+    title="Email Configuration"
+    width="500"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <emailaddresslbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Email Address:"
+                        fieldDescription="If left empty, 'Email Address:' will be used by default."
+                        fieldLabel="Email Address Label"
+                        name="./emailaddresslbl"
+                        xtype="textfield"/>
+                    <emailplaceholder
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Enter your email address"
+                        fieldDescription="If left empty, 'Enter your email address' will be used by default."
+                        fieldLabel="Email Placeholder"
+                        name="./emailplaceholder"
+                        xtype="textfield"/>
+                    <emailaddresselement
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="email"
+                        fieldLabel="Email Address Element Name"
+                        name="./emailaddresselement"
+                        regex="/^[a-zA-Z0-9_./:-]+$/"
+                        regexText="Element name should only contain characters, numbers or _./:-"
+                        xtype="textfield"/>
+                    <confirmemailaddresslbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Confirm Email Address:"
+                        fieldDescription="If left empty, 'Confirm Email Address:' will be used by default."
+                        fieldLabel="Confirm Email Address Label"
+                        name="./confirmemailaddresslbl"
+                        xtype="textfield"/>
+                    <confirmemailplaceholder
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Re-type your email address"
+                        fieldDescription="If left empty, 'Re-type your email address' will be used by default."
+                        fieldLabel="Confirm Email Placeholder"
+                        name="./confirmemailplaceholder"
+                        xtype="textfield"/>
+                    <confirmemailaddresselement
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="confirm-email"
+                        fieldLabel="Confirm Email Address Element Name"
+                        name="./confirmemailaddresselement"
+                        regex="/^[a-zA-Z0-9_./:-]+$/"
+                        regexText="Element name should only contain characters, numbers or _./:-"
+                        xtype="textfield"/>
+                    <isrequire
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="yes"
+                        fieldLabel="Is required"
+                        name="./isrequire"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </isrequire>
+                    <requiredmsg
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="It is required."
+                        fieldDescription="Add the required message which will be shown to the end user when the user doesn't enter in this field if it is mandatory. If left empty, &quot;It is required&quot; will be used by default."
+                        fieldLabel="Required Email Message"
+                        name="./requiredmsg"
+                        xtype="textfield"/>
+                    <requireconfirmmsg
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="It is required."
+                        fieldDescription="Add the required message which will be shown to the end user when the user doesn't enter in this field if it is mandatory. If left empty, &quot;It is required&quot; will be used by default."
+                        fieldLabel="Required Confirm Email Message"
+                        name="./requireconfirmmsg"
+                        xtype="textfield"/>
+                    <messageofnonequality
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Confirm email address does not match Email address"
+                        fieldDescription="This is the message which is shown to the user when the email address and confirm email address are not same. If left empty, &quot;Confirm email address does not match Email address&quot; will be used."
+                        fieldLabel="Message of Non Equality"
+                        name="./messageofnonequality"
+                        xtype="textarea"/>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

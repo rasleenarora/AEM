@@ -1,0 +1,14 @@
+.block.recommended
+  h2.block-heading Recommended products
+  .row.row-ib.row-ib-left(data-sameheight)
+    - var i = 1
+    - var variation = "para"
+    - var heading = "Managing money"
+    - var attributes = {'class': 'col-xs-12 col-sm-6 col-md-4'}
+    include card
+
+    - var i = 2
+    - var variation = "ticks"
+    - var heading = "Signature with Velocity points"
+    - var attributes = {'class': 'col-xs-12 col-sm-6 col-md-4'}
+    include card

@@ -1,0 +1,19 @@
+.breadcrumb {
+  .font-size(15px);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+
+  a {
+    color: @dark-blue;  
+
+    &:before {
+      content: '';
+      padding: 0;
+      margin-right: .3em;
+      &:extend(.icon, .icon-small);
+
+      .rotate(180deg);
+    }
+  }
+}

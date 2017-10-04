@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Static Link List Configuration"
+	xtype="dialog">
+	<listeners
+		jcr:primaryType="nt:unstructured"
+		beforesubmit ="function(dialog) { return beforeSubmit(dialog); }"/>
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<general
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<headinglbl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Heading"
+						allowBlank="{Boolean}false"
+						name="./headinglbl"
+						xtype="textfield"/>
+					<listitems
+						jcr:primaryType="cq:Widget"
+						fieldLabel="List Items"
+						name="./listitems"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							xtype="customxtypewithdescfield"/>
+					</listitems>
+				</items>
+			</general>
+		</items>
+	</items>
+</jcr:root>

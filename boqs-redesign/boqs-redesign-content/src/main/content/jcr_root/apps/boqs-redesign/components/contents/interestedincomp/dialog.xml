@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="650"
+    title="Interested In Configuration"
+    width="550"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <wouldlikelbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="I would like to"
+                        fieldDescription="If left empty, &quot;I would like to&quot; will be used by default"
+                        fieldLabel="Dropdown Label"
+                        name="./wouldlikelbl"
+                        xtype="textfield"/>
+                    <wouldlikeelement
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="wouldlikeselect"
+                        fieldLabel="Dropdown Element Name"
+                        name="./wouldlikeelement"
+                        regex="/^[a-zA-Z0-9_./:-]+$/"
+                        regexText="Element name should only contain characters, numbers or _./:-"
+                        xtype="textfield"/>
+                    <requiredmessage
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="It is required."
+                        fieldDescription="This message will be shown to the user, when this field is mandatory and user submits without entering or selecting anything to this field.  If left empty, &quot;It is required&quot; will be used by default."
+                        fieldLabel="Required Message"
+                        name="./requiredmessage"
+                        xtype="textfield"/>
+                    <wouldlikelist
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="[becomespecialist,learnmore,askevent,givecompliment,makecomplaint,makeenquiry]"
+                        fieldLabel="Dropdown Options"
+                        name="./wouldlikelist"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <becomespecialist
+                                jcr:primaryType="nt:unstructured"
+                                text="Become a BOQ Specialist member"
+                                value="becomespecialist"/>
+                            <learnmore
+                                jcr:primaryType="nt:unstructured"
+                                text="Learn more about a product"
+                                value="learnmore"/>
+                            <askevent
+                                jcr:primaryType="nt:unstructured"
+                                text="Ask about an event"
+                                value="askevent"/>
+                            <givecompliment
+                                jcr:primaryType="nt:unstructured"
+                                text="Give a compliment"
+                                value="givecompliment"/>
+                            <makecomplaint
+                                jcr:primaryType="nt:unstructured"
+                                text="Make a complaint"
+                                value="makecomplaint"/>
+                            <makeenquiry
+                                jcr:primaryType="nt:unstructured"
+                                text="Make some other enquiry"
+                                value="makeenquiry"/>
+                        </options>
+                    </wouldlikelist>
+                    <interestedlbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="I'm interested in"
+                        fieldDescription="If left empty, &quot;I'm interested in&quot; will be used by default"
+                        fieldLabel="Interested in Label"
+                        name="./interestedlbl"
+                        xtype="textfield"/>
+                    <interestedelement
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="interestedcb"
+                        fieldLabel="Checkbox Element Name"
+                        name="./interestedelement"
+                        regex="/^[a-z0-9]*$/"
+                        xtype="textfield"/>
+                    <interestinlist
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="[savingsaccount,homeloans,creditcards,carloans,commercialpropertyloan,equipmentfinance,partnerbuy-ins,other]"
+                        fieldLabel="Interested In Options"
+                        name="./interestinlist"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <savingsaccount
+                                jcr:primaryType="nt:unstructured"
+                                text="Savings Accounts"
+                                value="savingsaccount"/>
+                            <homeloans
+                                jcr:primaryType="nt:unstructured"
+                                text="Home Loans"
+                                value="homeloans"/>
+                            <creditcards
+                                jcr:primaryType="nt:unstructured"
+                                text="Credit Cards"
+                                value="creditcards"/>
+                            <carloans
+                                jcr:primaryType="nt:unstructured"
+                                text="Car Loans"
+                                value="carloans"/>
+                            <commercialpropertyloan
+                                jcr:primaryType="nt:unstructured"
+                                text="Commercial Property Loan"
+                                value="commercialpropertyloan"/>
+                            <equipmentfinance
+                                jcr:primaryType="nt:unstructured"
+                                text="Equipment Finance"
+                                value="equipmentfinance"/>
+                            <partnerbuy-ins
+                                jcr:primaryType="nt:unstructured"
+                                text="Partner Buy-ins"
+                                value="partnerbuy-ins"/>
+                            <other
+                                jcr:primaryType="nt:unstructured"
+                                text="Other – please specify below"
+                                value="other"/>
+                        </options>
+                    </interestinlist>
+                    <isrequire
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="yes"
+                        fieldLabel="Is required"
+                        name="./isrequire"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </isrequire>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

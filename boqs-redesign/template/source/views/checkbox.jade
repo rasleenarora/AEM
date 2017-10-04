@@ -1,0 +1,39 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'interested-component'
+
+block container
+  main#main.main(style="background-color: #fff")
+    .container
+      .interested-component
+        .form-group.dropdown-component
+          .row
+            .col-sm-6
+              +label("select","I would like to:")
+              i.wi-icon.icon-required(aria-hidden="true")
+          .row
+            .col-sm-6
+              +custom-select([
+                {value: "", text: "Please select"},
+                {value: "0", text: "Become a BOQ Specialist member"},
+                {value: "1", text: "Learn more about a product"},
+                {value: "2", text: "Ask about an event"},
+                {value: "3", text: "Give a compliment"},
+                {value: "4", text: "Make a complaint"},
+                {value: "5", text: "Make some other enquiry"}
+                ])
+        .form-group
+          +label-1({text: "I'm interested in:"})
+          .row
+            .col-sm-6
+              +option-group({id: "checkbox1", type: "checkbox", text: "Savings Accounts", classDiv: "checkbox-group"})
+              +option-group({id: "checkbox2", type: "checkbox", text: "Credit Cards", classDiv: "checkbox-group"})
+              +option-group({id: "checkbox3", type: "checkbox", text: "Commercial Property Loan", classDiv: "checkbox-group"})
+              +option-group({id: "checkbox4", type: "checkbox", text: "Partner buy-ins", classDiv: "checkbox-group"})
+            .col-sm-6
+              +option-group({id: "checkbox5", type: "checkbox", text: "Home loans", classDiv: "checkbox-group"})
+              +option-group({id: "checkbox6", type: "checkbox", text: "Car Loans", classDiv: "checkbox-group"})
+              +option-group({id: "checkbox7", type: "checkbox", text: "Equipment Finance", classDiv: "checkbox-group"})
+              +option-group({id: "checkbox8", type: "checkbox", text: "Other - please specify below", classDiv: "checkbox-group"})

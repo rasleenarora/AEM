@@ -1,0 +1,49 @@
+// Set a max-width on fluid layout
+.container-fluid {
+  max-width: 1340px;
+}
+.container-nogutter {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row-nogutter {
+  margin-left: 0;
+  margin-right: 0;
+
+  [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+    vertical-align: top;
+  }
+}
+.row-ib {
+  font-size: 0; //inline-block space hack
+
+  [class*="col-"] {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+}
+.row-ib-center { text-align: center; }
+.row-ib-left { text-align: left; }
+.row-ib-right { text-align: right; }
+
+.cells {
+  display: table;
+  width: 100%;
+  white-space: nowrap;
+}
+.cells-fixed {
+  table-layout: fixed;
+}
+.cell {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.cell-fill {
+  width: 100%;
+}
+

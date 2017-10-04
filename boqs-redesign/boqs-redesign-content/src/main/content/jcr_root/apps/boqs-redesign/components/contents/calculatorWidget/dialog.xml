@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Calculator Widget Configuration"
+	height="550"
+	xtype="dialog">
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<calculatorScriptURL
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Calculator script URL"
+						name="./calculatorScriptURL"
+						defaultValue=""
+						fieldDescription="If no value is set, then it defaults to http://calculators.infochoice.com.au/Ui/GetScript/?clientId..."
+						xtype="pathfield"/>
+				</items>
+			</tab1>
+		</items>
+	</items>
+</jcr:root>
+<!--
+  http://calculators.infochoice.com.au/Ui/GetScript/?clientId=4367742b-02c8-4756-b241-f2d1862859ed&calcId=b9d47181-d8f1-46b4-bed8-e0cec1946c77&target=
+ -->

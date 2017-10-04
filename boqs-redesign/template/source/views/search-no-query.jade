@@ -1,0 +1,39 @@
+extends layouts/layout
+
+block vars
+  -title = 'Search no query'
+
+block container
+  main#main.main
+    include blocks/page-header
+    
+    include blocks/breadcrumb
+    
+    .search-field-block.grey
+      .container
+        include blocks/search-field
+    .search-no-query
+      .container
+        h2: span.title.title-1.text-center Or try one of theese recommended pages:
+        .row
+          .col-sm-4
+            .static-list-block
+              h3.static-title Specialties
+              +static-link-list([
+                {text: "Medical Professionalst"},
+                {text: "Accountants"}]).list-unstyled.static-list
+          .col-sm-4
+            .static-list-block
+              h3.static-title Products
+              +static-link-list([
+                {text: "Home Loans"},
+                {text: "Credit Cards"}]).list-unstyled.static-list
+          .col-sm-4
+            .static-list-block
+              h3.static-title Expertise
+              +static-link-list([
+                {text: "Home Buyer's Guide"},
+                {text: "Best Practice Magazine"}]).list-unstyled.static-list
+    .parsys-area-1.grey.text-center
+      .container
+        include blocks/parsys-area-1

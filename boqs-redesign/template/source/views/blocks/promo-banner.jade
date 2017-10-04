@@ -1,0 +1,57 @@
+.content-carousel.promo
+  .slider(data-carousel="promo")
+    .promo-banner
+      .hero.hero-promo
+        .hero-bg.hero-bg-right
+          picture.hero-picture
+            // 4:1 ratio (desktop)
+            source(media="(min-width: 768px)", srcset="http://lorempixel.com/1700/425/nature/?1")
+            //- +img("http://lorempixel.com/1000/429/nature", "promo banner")
+            // 16:9 ratio (mobile)
+            img(src="http://lorempixel.com/1000/429/nature/?1", alt="")
+        .hero-overlay
+          .container
+            .row
+              .col-sm-7.col-md-6.col-lg-7
+                h2.hero-heading Buckle up... 
+                  span.small for your chance to win 1,000,000 Velocity Frequent Flyer Points
+                .actions.hero-actions
+                  +link("Learn more").btn.btn-primary.btn-lg Learn more
+                  +link("Learn more").btn.btn-default.btn-lg View all
+    .promo-banner
+      .hero.hero-promo
+        .hero-bg.hero-bg-right
+          picture.hero-picture
+            // 4:1 ratio (desktop)
+            source(media="(min-width: 768px)", srcset="http://lorempixel.com/1700/425/nature/?2")
+            //- +img("http://lorempixel.com/1000/429/nature", "promo banner")
+            // 16:9 ratio (mobile)
+            img(src="http://lorempixel.com/1000/429/nature/?2", alt="")
+        .hero-overlay
+          .container
+            .row
+              .col-sm-7.col-md-6.col-lg-7
+                h2.hero-heading Slide 2 
+                  span.small We can help with them all.
+                .actions.hero-actions
+                  +link("Learn more").btn.btn-primary.btn-lg Learn more
+                  +link("Learn more").btn.btn-default.btn-lg View all
+    .promo-banner
+      .hero.hero-promo
+        .hero-bg.hero-bg-right
+          picture.hero-picture
+            // 4:1 ratio (desktop)
+            source(media="(min-width: 768px)", srcset="http://lorempixel.com/1700/425/nature/?3")
+            //- +img("http://lorempixel.com/1000/429/nature", "promo banner")
+            // 16:9 ratio (mobile)
+            img(src="http://lorempixel.com/1000/429/nature/?3", alt="")
+        .hero-overlay
+          .container
+            .row
+              .col-sm-7.col-md-6.col-lg-7
+                h2.hero-heading Slide 3 
+                  span.small We can help with them all.
+                .actions.hero-actions
+                  +link("Learn more").btn.btn-primary.btn-lg Learn more
+                  +link("Learn more").btn.btn-default.btn-lg View all
+  .control.promo

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Phone Number Configuration"
+	xtype="dialog">
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<general
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<alignment
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Component Alignment"
+						allowBlank="{Boolean}false"
+						defaultValue="left"
+						name="./alignment"
+						type="select"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<left
+								jcr:primaryType="nt:unstructured"
+								text="Left"
+								value="left"/>
+							<centred
+								jcr:primaryType="nt:unstructured"
+								text="Centred"
+								value="centred"/>
+						</options>
+					</alignment>
+					<phonenumber
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Phone Number Override"
+						defaultValue="1300 131 141"
+						fieldDescription="If left empty, '1300 131 141' as phone number will be used by default"
+						regex="/^([\\d\\ ]*)$/"
+						name="./phonenumber"
+						xtype="textfield"/>
+				</items>
+			</general>
+		</items>
+	</items>
+</jcr:root>

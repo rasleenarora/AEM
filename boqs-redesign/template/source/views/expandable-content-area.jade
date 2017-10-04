@@ -1,0 +1,33 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Expandable Content Area'
+block container
+  main#main.main
+    .row
+      .col-sm-6.center
+        .collapse-cmp.content-area-cmp
+          .heading(data-expand-handle="", data-target="#collapse")
+            h2.title Home loans
+            +link("", "javascript:;").link-1
+              span.icon.icon-next-gold(aria-hidden="true")
+          #collapse.collapse(data-expand-content="")
+            .desc
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum. Bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.
+        .collapse-cmp.content-area-cmp
+          .heading(data-expand-handle="", data-target="#collapse1")
+            h2.title Home loans
+            +link("", "javascript:;").link-1
+              span.icon.icon-next-gold(aria-hidden="true")
+          #collapse1.collapse(data-expand-content="")
+            .desc
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum. Bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.
+        .collapse-cmp.content-area-cmp
+          .heading(data-expand-handle="", data-target="#collapse2")
+            h2.title Home loans
+            +link("", "javascript:;").link-1
+              span.icon.icon-next-gold(aria-hidden="true")
+          #collapse2.collapse(data-expand-content="")
+            .desc
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum. Bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.

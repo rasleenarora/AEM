@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Phone and Email Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <phoneandemailmainlbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Preferred contact method"
+                        fieldDescription="This is the main label. If left empty, &quot;Preferred contact method&quot; will be used by default"
+                        fieldLabel="Phone and Email Main Label"
+                        name="./phoneandemailmainlbl"
+                        xtype="textfield"/>
+                    <phoneandemailelement
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="phone"
+                        fieldLabel="Phone And Email Element Name"
+                        name="./phoneandemailelement"
+                        regex="/^[a-zA-Z0-9_./:-]+$/"
+                        regexText="Element name should only contain characters, numbers or _./:-"
+                        xtype="textfield"/>
+                    <phoneandemailaltlbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Alternate contact"
+                        fieldDescription="This is the alternate label and it will be shown when the end user enters an alternate phone or email address. If left empty, &quot;Alternate contact&quot; will be used by default"
+                        fieldLabel="Phone and Email Alternate Label"
+                        name="./phoneandemailaltlbl"
+                        xtype="textfield"/>
+                    <addmorelbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Add antoher contact method"
+                        fieldDescription="This label will be shown below the main field and when the end user click on this label, an alternate field appear so that end user can enter alternate details. If left empty, &quot;Add antoher contact method&quot; will be used by default"
+                        fieldLabel="Add more Label"
+                        name="./addmorelbl"
+                        xtype="textfield"/>
+                    <phoneplaceholder
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Enter a phone number"
+                        fieldDescription="If left empty, &quot;Enter a phone number&quot; will be used by default"
+                        fieldLabel="Phone placeholder"
+                        name="./phoneplaceholder"
+                        xtype="textfield"/>
+                    <emailplaceholder
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Enter an email address"
+                        fieldDescription="If left empty, &quot;Enter an email address&quot; will be used by default"
+                        fieldLabel="Email placeholder"
+                        name="./emailplaceholder"
+                        xtype="textfield"/>
+                    <isrequire
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="no"
+                        fieldLabel="Is required"
+                        name="./isrequire"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </isrequire>
+                    <requiredmessage
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="It is required."
+                        fieldDescription="This message will be shown to the user, when this field is mandatory and user submits without entering or selecting anything to this field.If left empty, &quot;It is required&quot; will be used by default. "
+                        fieldLabel="Required Message"
+                        name="./requiredmessage"
+                        xtype="textfield"/>
+                    <phonenumbervaliditymessage
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="The phone number entered does not appear to be valid"
+                        fieldDescription="This message will be shown to the user, when the user has entered an invalid phone number. If left empty, &quot;The phone number entered does not appear to be valid&quot; will be used by default."
+                        fieldLabel="Phone Number Validity Message"
+                        name="./phonenumbervaliditymessage"
+                        xtype="textfield"/>
+                    <emailvaliditymessage
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Please enter a valid Email address"
+                        fieldDescription="This message will be shown to the user, when the user has entered an invalid email address. If left empty, &quot;Please enter a valid Email address&quot; will be used by default."
+                        fieldLabel="Email Validity Message"
+                        name="./emailvaliditymessage"
+                        xtype="textfield"/>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

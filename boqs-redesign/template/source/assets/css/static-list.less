@@ -1,0 +1,98 @@
+// Static link list
+.static-title {
+  margin-bottom: 0;
+  padding-bottom: .5rem;
+  .font-size(19px);
+  color: @dark-blue;
+  border-bottom: 2px solid @brown-light;
+
+  @media (min-width: @screen-sm-min) {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+.static-list {
+  li {
+    position: relative;
+    border-bottom: 1px solid;
+    z-index: 0;
+
+    // Icon
+    &:before {
+      &:extend(.icon, .icon-medium);
+
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+
+      @media (min-width: @screen-sm-min) {
+        right: .5rem;
+      }
+    }
+  }
+  .static-link {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      /*.no-touch & {
+        text-decoration: none;
+        .text { color: lighten(@dark-blue, 20%); }
+        .wi-icon { background-image: url('@{img}icon-sprite-hover.png'); }
+      }*/
+    }
+  }
+  .icon-box {
+    display: table-cell;
+    vertical-align: middle;
+    i { .transition(background .3s linear); }
+  }
+  .text-box {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .text { .transition(color .3s linear); }
+  .desc { display: block; }
+}
+
+.static-list-block {
+  overflow: hidden;
+  .static-list {
+    margin-top: .5rem;
+    margin-bottom: 0;
+
+    li {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      border-bottom-color: @gray-lighter;
+      margin-bottom: 0;
+      // &:before { right: 20px; }
+
+      @media (min-width: @screen-sm-min) {
+        padding-left: .5rem;
+        padding-right: .5rem;
+      }
+    }
+  }
+  .static-link { display: block; }
+  .icon-box {
+    padding-right: @icon-gap;
+
+    img {
+      max-width: 16px; // fix bug on Nokia
+      display: block;
+    }
+  }
+  .text-box {
+    padding-right: 32px;
+    .font-size(16px);
+  }
+  .desc {
+    color: @brown-light;
+    text-transform: uppercase;
+    .medical & {
+      color: @dark-grey;
+    }
+  }
+}

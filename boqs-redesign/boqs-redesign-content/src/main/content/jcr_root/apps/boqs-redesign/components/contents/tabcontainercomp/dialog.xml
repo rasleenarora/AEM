@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Tab Containner Configuration"
+	xtype="dialog">
+	<listeners jcr:primaryType="nt:unstructured" 
+	loadcontent="function(dialog) { showHideTabs(dialog); }" />
+	<items jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<general jcr:primaryType="cq:Panel" title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<numberoftabs
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Number of Tabs"
+						allowBlank="{Boolean}false"
+						defaultValue="2"
+						name="./numberoftabs"
+						type="select"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<o1
+								jcr:primaryType="nt:unstructured"
+								text="2"
+								value="2"/>
+							<o2
+								jcr:primaryType="nt:unstructured"
+								text="3"
+								value="3"/>
+							<o3
+								jcr:primaryType="nt:unstructured"
+								text="4"
+								value="4"/>
+						</options>
+						<listeners jcr:primaryType="nt:unstructured" 
+							selectionchanged="function(radio, isChecked) 
+								{var dialog = this.findParentByType('dialog'); 
+									showHideTabs(dialog); }"/>
+					</numberoftabs>
+					<internalcolumns
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Number of Internal Columns"
+						allowBlank="{Boolean}false"
+						defaultValue="1"
+						name="./internalcolumns"
+						type="select"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<o1
+								jcr:primaryType="nt:unstructured"
+								text="1"
+								value="1"/>
+							<o2
+								jcr:primaryType="nt:unstructured"
+								text="2"
+								value="2"/>
+							<o3
+								jcr:primaryType="nt:unstructured"
+								text="3"
+								value="3"/>
+						</options>
+					</internalcolumns>
+				</items>
+			</general>
+			<tab1 jcr:primaryType="cq:Panel" title="Tab1">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<firsttablabel jcr:primaryType="cq:Widget"
+						fieldLabel="First Tab’s Label"
+						name="./firsttablabel"
+						allowBlank="{Boolean}false"
+						xtype="textfield" />
+					<firsttabiconpath jcr:primaryType="cq:Widget"
+						fieldLabel="First Tab’s Icon Path"
+						name="./firsttabiconpath"
+						rootPath="/content/dam"
+						xtype="pathfield" />
+					<firstalternate
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Alternate text for first tab."
+						name="./firstalternate"
+						fieldDescription="If left empty, the tab label will be used by default."
+						xtype="textfield"/>
+				 </items>
+			</tab1>
+			<tab2 jcr:primaryType="cq:Panel" title="Tab2">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<secondtablabel jcr:primaryType="cq:Widget"
+						fieldLabel="Second Tab’s Label"
+						name="./secondtablabel"
+						allowBlank="{Boolean}false"
+						xtype="textfield" />
+					<secondtabiconpath jcr:primaryType="cq:Widget"
+						fieldLabel="Second Tab’s Icon Path"
+						name="./secondtabiconpath"
+						rootPath="/content/dam"
+						xtype="pathfield" />
+					<secondalternate
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Alternate text for second tab."
+						name="./secondalternate"
+						fieldDescription="If left empty, the tab label will be used by default."
+						xtype="textfield"/>
+				 </items>
+			</tab2>
+			<tab3 jcr:primaryType="cq:Panel" title="Tab3">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<thirdtablabel jcr:primaryType="cq:Widget"
+						fieldLabel="Third Tab’s Label"
+						name="./thirdtablabel"
+						allowBlank="{Boolean}false"
+						xtype="textfield" />
+					<thirdtabiconpath jcr:primaryType="cq:Widget"
+						fieldLabel="Third Tab’s Icon Path"
+						name="./thirdtabiconpath"
+						rootPath="/content/dam"
+						xtype="pathfield" />
+					<thirdalternate
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Alternate text for third tab."
+						name="./thirdalternate"
+						fieldDescription="If left empty, the tab label will be used by default."
+						xtype="textfield"/>
+				 </items>
+			</tab3>
+			<tab4 jcr:primaryType="cq:Panel" title="Tab4">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<fourthtablabel jcr:primaryType="cq:Widget"
+						fieldLabel="Fourth Tab’s Label"
+						name="./fourthtablabel"
+						allowBlank="{Boolean}false"
+						xtype="textfield" />
+					<fourthtabiconpath jcr:primaryType="cq:Widget"
+						fieldLabel="Fourth Tab’s Icon Path"
+						name="./fourthtabiconpath"
+						rootPath="/content/dam"
+						xtype="pathfield" />
+					<fourthalternate
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Alternate text for fourth tab."
+						name="./fourthalternate"
+						fieldDescription="If left empty, the tab label will be used by default."
+						xtype="textfield"/>
+				 </items>
+			</tab4>
+		</items>
+	</items>
+</jcr:root>

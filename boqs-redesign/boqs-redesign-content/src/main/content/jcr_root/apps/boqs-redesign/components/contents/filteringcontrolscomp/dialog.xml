@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    title="Filtering Controls Configuration"
+    width="600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <contentfiltered
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="resultcards"
+                        fieldLabel="Content Being Filtered"
+                        name="./contentfiltered"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <resultcards
+                                jcr:primaryType="nt:unstructured"
+                                text="Custom result cards"
+                                value="resultcards"/>
+                            <resultcardswithstates
+                                jcr:primaryType="nt:unstructured"
+                                text="Custom result cards with states"
+                                value="resultcardswithstates"/>
+                            <sitepages
+                                jcr:primaryType="nt:unstructured"
+                                text="Site pages &amp; content"
+                                value="sitepages"/>
+                            <eventcalendar
+                                jcr:primaryType="nt:unstructured"
+                                text="Event calendar"
+                                value="eventcalendar"/>
+                            <expertise
+                                jcr:primaryType="nt:unstructured"
+                                text="Expertise"
+                                value="expertise"/>
+                        </options>
+                    </contentfiltered>
+                    <refineresults
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Refine Results"
+                        fieldDescription="If left empty, &quot;Refine Results&quot; will be used by default"
+                        fieldLabel="Refine Results Label"
+                        name="./refineresults"
+                        xtype="textfield"/>
+                    <relatedprofessions
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        title="Related Professions"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <relatedprofessionslbl
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Related Profession"
+                                fieldDescription="If left empty, &quot;Related Profession&quot; will be used by default"
+                                fieldLabel="Label"
+                                name="./relatedprofession"
+                                xtype="textfield"/>
+                            <relatedprofessionslist
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Related Profession List"
+                                name="./relatedprofessionlist"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="cq:Widget"
+                                    optionsProvider="function(){&#xa;var json=[];&#xa;var key=&quot;boqs.relatedprofessions_list&quot;;&#xa;json=loadCategories(key);&#xa;return json;&#xa;}"
+                                    type="select"
+                                    xtype="selection"/>
+                            </relatedprofessionslist>
+                        </items>
+                    </relatedprofessions>
+                    <relatedprofessionsvalues
+                        jcr:primaryType="cq:Widget"
+                        hidden="{Boolean}true"
+                        name="./relatedProfessionListLabels"
+                        xtype="textfield"/>
+                    <financelbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Finance"
+                        fieldDescription="If left empty, &quot;Finance&quot; will be used by default"
+                        fieldLabel="Finance Label"
+                        name="./financelbl"
+                        xtype="textfield"/>
+                    <specificfinancelist
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Specific Finance List"
+                        name="./specificfinancelist"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            type="select"
+                            xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <personalfinance
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Personal Finance"
+                                    value="personalfinance"/>
+                                <practicefinance
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Practice Finance"
+                                    value="practicefinance"/>
+                                <financeclients
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Finance for my clients"
+                                    value="financeforclient"/>
+                            </options>
+                        </fieldConfig>
+                    </specificfinancelist>
+                    <relatedproductlbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Related Products"
+                        fieldDescription="If left empty, &quot;Related Products&quot; will be used by default"
+                        fieldLabel="Related Products Label"
+                        name="./relatedproductlbl"
+                        xtype="textfield"/>
+                    <specificrelatedproductlist
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Specific Related Products Label"
+                        name="./specificrelatedproductlist"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            type="select"
+                            xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <savingsaccounts
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Savings Accounts"
+                                    value="savingsaccount"/>
+                                <creditcards
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Credit Cards"
+                                    value="creditcard"/>
+                                <propertyfinance
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Property Finance"
+                                    value="propertyfinance"/>
+                                <assetfinance
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Asset Finance"
+                                    value="assetfinance"/>
+                            </options>
+                        </fieldConfig>
+                    </specificrelatedproductlist>
+                    <daterangelbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Date range"
+                        fieldDescription="If left empty, &quot;Date range&quot; will be used by default"
+                        fieldLabel="Date Range Label"
+                        name="./daterangelbl"
+                        xtype="textfield"/>
+                    <resulttypelbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Result Type"
+                        fieldDescription="If left empty, &quot;Result Type&quot; will be used by default"
+                        fieldLabel="Result Type Label"
+                        name="./resulttypelbl"
+                        xtype="textfield"/>
+                    <specificresultlist
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Specific Result Type List"
+                        name="./specificresultlist"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            type="select"
+                            xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <product
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Product"
+                                    value="product"/>
+                                <expertise
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Expertise"
+                                    value="expertise"/>
+                                <event
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Event"
+                                    value="event"/>
+                                <specialistbanker
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Specialist Banker Profile"
+                                    value="specialistbanker"/>
+                                <news
+                                    jcr:primaryType="nt:unstructured"
+                                    text="News"
+                                    value="news"/>
+                                <legal
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Legal"
+                                    value="legaldocument"/>
+                            </options>
+                        </fieldConfig>
+                    </specificresultlist>
+                    <typeeventlbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Type of Event"
+                        fieldDescription="If left empty, &quot;Type of Event&quot; will be used by default"
+                        fieldLabel="Type of Event Label"
+                        name="./typeeventlbl"
+                        xtype="textfield"/>
+                    <specifictypeeventlist
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Specific Type of Event List"
+                        name="./specifictypeeventlist"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            type="select"
+                            xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <annualevent
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Annual Event"
+                                    value="annualevent"/>
+                                <conference
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Conference"
+                                    value="conference"/>
+                                <luncheon
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Luncheon"
+                                    value="luncheon"/>
+                                <industryevent
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Industry Event"
+                                    value="industryevent"/>
+                                <seminar
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Seminar"
+                                    value="seminar"/>
+                                <sportingvvent
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Sporting Event"
+                                    value="sportingevent"/>
+                                <workshop
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Workshop"
+                                    value="workshop"/>
+                            </options>
+                        </fieldConfig>
+                    </specifictypeeventlist>
+                    <statelbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="State"
+                        fieldDescription="If left empty, &quot;State&quot; will be used by default"
+                        fieldLabel="State Label"
+                        name="./statelbl"
+                        xtype="textfield"/>
+                    <specificstatelist
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Specific State List"
+                        name="./specificstatelist"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            type="select"
+                            xtype="selection">
+                            <options jcr:primaryType="cq:WidgetCollection">
+                                <act
+                                    jcr:primaryType="nt:unstructured"
+                                    text="ACT"
+                                    value="act"/>
+                                <nt
+                                    jcr:primaryType="nt:unstructured"
+                                    text="NT"
+                                    value="nt"/>
+                                <nsw
+                                    jcr:primaryType="nt:unstructured"
+                                    text="NSW"
+                                    value="nsw"/>
+                                <qld
+                                    jcr:primaryType="nt:unstructured"
+                                    text="QLD"
+                                    value="qld"/>
+                                <sa
+                                    jcr:primaryType="nt:unstructured"
+                                    text="SA"
+                                    value="sa"/>
+                                <tas
+                                    jcr:primaryType="nt:unstructured"
+                                    text="TAS"
+                                    value="tas"/>
+                                <vic
+                                    jcr:primaryType="nt:unstructured"
+                                    text="VIC"
+                                    value="vic"/>
+                                <wa
+                                    jcr:primaryType="nt:unstructured"
+                                    text="WA"
+                                    value="wa"/>
+                            </options>
+                        </fieldConfig>
+                    </specificstatelist>
+                    <topics
+                        jcr:primaryType="cq:Widget"
+                        collapsible="{Boolean}true"
+                        title="Topic"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <topicslbl
+                                jcr:primaryType="cq:Widget"
+                                defaultValue="Topics"
+                                fieldDescription="If left empty, &quot;Topics&quot; will be used by default"
+                                fieldLabel="Label"
+                                name="./topiclbl"
+                                xtype="textfield"/>
+                            <topicslist
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Topic List"
+                                name="./topiclist"
+                                xtype="multifield">
+                                <fieldConfig
+                                    jcr:primaryType="cq:Widget"
+                                    optionsProvider="function(){&#xa;var json=[];&#xa;var key=&quot;boqs.topic_list&quot;;&#xa;json=loadCategories(key);&#xa;return json;&#xa;}"
+                                    type="select"
+                                    xtype="selection"/>
+                            </topicslist>
+                        </items>
+                    </topics>
+                    <topiclistvalues
+                        jcr:primaryType="cq:Widget"
+                        hidden="{Boolean}true"
+                        name="./topicListLabels"
+                        xtype="textfield"/>
+                </items>
+            </general>
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Automatically Filtered Settings">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <popupheading
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="We have applied filters:"
+                        fieldLabel="Automatically Filtered Popup Heading"
+                        name="./popupheading"
+                        xtype="textfield"/>
+                    <okbuttonlabel
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="OK"
+                        fieldLabel="OK Button Label"
+                        name="./okbuttonlabel"
+                        xtype="textfield"/>
+                    <clearallfilters
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Clear all filters"
+                        fieldLabel="Clear All Filters Label"
+                        name="./clearallfilters"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(){&#xa;var field=this;&#xa;setTopicListValuesField(field);&#xa;setRelatedProfessionListValuesField(field);&#xa;}"/>
+</jcr:root>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Filterable template will have a built-in filter component that is used for presenting large amounts of card-based information in a way that makes it easy for users to locate relevant content."
+    jcr:primaryType="cq:Template"
+    jcr:title="BOQS - Redesign Filterable Template"
+    allowedPaths="[/content(/.*)?]"
+    ranking="{Long}2">
+    <jcr:content
+        cq:designPath="/etc/designs/boqs-redesign"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="boqs-redesign/components/pages/filterablepage">
+        <globalheadercomp
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="boqs-redesign/components/contents/globalheadercomp">
+            <searchinputcomp
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="boqs-redesign/components/contents/searchinputcomp" />
+            <topnavigationcomp
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="boqs-redesign/components/contents/topnavigationcomp" />
+        </globalheadercomp>
+        <menuitemscomp 
+			jcr:primaryType="nt:unstructured"
+			sling:resourceType="boqs-redesign/components/contents/menuitemscomp"/>   
+        <globalfootercomp
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="boqs-redesign/components/contents/globalfootercomp"/>
+    </jcr:content>
+</jcr:root>

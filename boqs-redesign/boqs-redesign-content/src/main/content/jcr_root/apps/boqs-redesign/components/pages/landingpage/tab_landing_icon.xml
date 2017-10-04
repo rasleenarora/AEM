@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Panel"
+          title="Landing Page Promo Image">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <landingpagepromoimage
+            jcr:primaryType="cq:Widget"
+            cropParameter="./imageCrop"
+            ddGroups="[media]"
+            fieldLabel="Landing Page Promo Image"
+            fileReferenceParameter="./fileReference"
+            name="./landingpagepromoimage"
+            rotateParameter="./imageRotate"
+            height="{Long}400"
+            allowUpload="{Boolean}false"
+            allowBlank="{Boolean}false"
+            xtype="html5smartimage"/>
+    </items>
+</jcr:root>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Panel"
+          title="Google Analytics Setting">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <id
+            jcr:primaryType="cq:Widget"
+            fieldLabel="googleAnalyticsId :"
+            name="./googleAnalyticsId"
+            defaultValue="UA-65332818-1"
+            xtype="textfield"/>
+    </items>
+</jcr:root>

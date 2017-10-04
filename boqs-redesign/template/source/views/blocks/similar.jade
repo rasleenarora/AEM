@@ -1,0 +1,12 @@
+//- Similar items placeholder (AJAX populated)
+.placeholder.placeholder-similar(data-nodepath="")
+  //- .template-wrapper
+  script(type="text/x-tmpl-mustache").template  
+    section.panel
+      .container
+        .block.similar
+          h2.block-heading Similar products
+          .row.row-ib.row-ib-left(data-sameheight)
+            | {{#products}}
+            include card-template
+            | {{/products}}

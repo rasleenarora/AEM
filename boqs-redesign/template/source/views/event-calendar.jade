@@ -1,0 +1,10 @@
+extends layouts/template
+
+block vars
+  -title = 'Event Calendar'
+block container
+  main#main.main
+    .container
+      .row
+        .col-sm-9
+          include blocks/event-calendar

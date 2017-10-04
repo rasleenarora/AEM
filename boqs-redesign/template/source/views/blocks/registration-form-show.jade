@@ -1,0 +1,31 @@
+form(action="#")
+  .popup.register-popup(data-popin, data-showonload="true")
+    .modal-dialog
+      .modal-content
+        .modal-header
+          +btn-icon({typebtn: "button", title: "Close", icon: "wi-icon icon-close-1"}).close
+          .wrap-error.hidden
+            span.wi-icon.icon-close-2(aria-hidden="true")
+            p.text-error
+              | We could not process your registration. Please check the fields highlighted below.
+          h4.modal-title Register for event name lorem ipsum
+        .modal-body
+          .event-group
+            span.wi-icon.icon-time(aria-hidden="true")
+            .desc
+              p Thu 26 February 2015, 3:00pm - 6:00pm
+              p Complete the form below to let us know you"re coming to the event. Please make sure you use a valid email address so that we can send you more details and keep you updated about any changes.
+          .event-group
+            span.wi-icon.icon-required(aria-hidden="true")
+            p.desc = Required field
+          .register-form
+            +form-group-1({id: "full-name",classForm : "form-group textfield-component", text: "Full Name:", required: "wi-icon icon-required", placeholder: "Enter your first and last name", classIcon: "wi-icon icon-close-2", attr:{"data-required":""}})
+            +form-group-1({id: "email",classForm : "form-group textfield-component", text: "Email Address:", type: "email", required: "wi-icon icon-required", placeholder: "Enter your email address", classIcon: "wi-icon icon-close-2", attr:{"data-required":"","data-email":""}})
+            +form-group-1({id: "confirm-email",classForm : "form-group textfield-component no-paste", text: "Confirm Email Address:", type: "email", required: "wi-icon icon-required", placeholder: "Re-type your email address", classIcon: "wi-icon icon-close-2", attr:{"data-required":"","data-email":"", "data-equalto":"email"}})
+            +form-group-1({id: "phone",classForm : "form-group textfield-component", text: "Phone Number:",placeholder: "e.g. 0291234567 or 0431234567", classIcon: "wi-icon icon-close-2", attr:{"data-required":"", "data-digits": ""}})
+            .form-group
+              +option-group({id: "checkbox-agree", type: "checkbox", text: "I have read and agree to the BOQ Specialist", classDiv: "checkbox-group",attr:{"data-required":""}})
+                  | &nbsp;
+                  +link ("Privacy Policy")
+            +btn-wrap({typebtn: "submit", title: "Submit", icon: "wi-icon icon-arrow icon-btn"}).btn.btn-primary.btn-submit
+            +button({typebtn: "reset", title: "Cancel Registration"}).btn-cancel

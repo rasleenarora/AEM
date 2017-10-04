@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Iframe"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <iframe
+                jcr:primaryType="cq:Panel"
+                title="Iframe Configurations">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <iframesource
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Please provide the URL of the page which needs to be iframed."
+                        fieldLabel="Iframe Source URL"
+                        name="./iframeSrc"
+                        xtype="pathfield"/>
+                    <height
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Please provide the height of the iframe."
+                        fieldLabel="Iframe Height"
+                        name="./height"
+                        regex="/^0*[1-9][0-9]*$/"
+                        regexText="Only positive numbers are allowed."
+                        xtype="numberfield"/>
+                    <alignment
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="left"
+                        fieldDescription="Please select the alignment of the iframe. By default, left will be selected."
+                        fieldLabel="Iframe Alignment"
+                        name="./alignment"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="left"/>
+                            <centred
+                                jcr:primaryType="nt:unstructured"
+                                text="Centred"
+                                value="center"/>
+                            <right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="right"/>
+                        </options>
+                    </alignment>
+                    <width
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Please provide the width of the iframe."
+                        fieldLabel="Iframe Width"
+                        name="./width"
+                        regex="/^0*[1-9][0-9]*$/"
+                        regexText="Only positive numbers are allowed."
+                        xtype="numberfield"/>
+                </items>
+            </iframe>
+        </items>
+    </items>
+</jcr:root>

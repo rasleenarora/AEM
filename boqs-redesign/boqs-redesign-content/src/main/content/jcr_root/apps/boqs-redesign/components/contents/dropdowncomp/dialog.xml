@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Drop Down Configuration"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <dropdownlbl
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Dropdown Label"
+                        name="./dropdownlbl"
+                        xtype="textfield"/>
+                    <dropdownelement
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Dropdown Element Name"
+                        name="./dropdownelement"
+                        regex="/^[a-zA-Z0-9_./:-]+$/"
+                        regexText="Element name should only contain characters, numbers or _./:-"
+                        xtype="textfield"/>
+                    <dropdownlist
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Dropdown Options"
+                        name="./dropdownlist"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Dropdown Option"
+                            xtype="optionlistxtypefield"/>
+                    </dropdownlist>
+                    <isrequire
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="yes"
+                        fieldLabel="Is required"
+                        name="./isrequire"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </isrequire>
+                    <requiredmessage
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="It is required."
+                        fieldDescription="This message will be shown to the user, when this field is mandatory and user submits without entering or selecting anything to this field.  If left empty, &quot;It is required.&quot; will be used by default."
+                        fieldLabel="Required Message"
+                        name="./requiredmessage"
+                        xtype="textfield"/>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

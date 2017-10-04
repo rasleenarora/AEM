@@ -1,0 +1,26 @@
+.top-menu {
+  list-style: none;
+  float:right;
+  margin-bottom: 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  > li {
+    display: inline-block;
+
+    + li {
+      margin-left: 40px;
+    }
+  }
+  a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+      color: $blue-dark;
+    }
+  }
+}
+.top-menu-item-phone {
+  font-weight: bold;
+}

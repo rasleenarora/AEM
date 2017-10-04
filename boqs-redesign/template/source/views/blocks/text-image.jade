@@ -1,0 +1,17 @@
+.text-image
+  .thumb.hidden-xs
+    // 16:9 ratio
+    img(src="http://lorempixel.com/500/282/people/?#{i}", alt="")
+  
+  case i
+    when 1
+      - var caption = "We have an in-depth understanding of your profession and are willing to back you as an individual."
+    when 2
+      - var caption = "You’ll have a dedicated financial specialist who will partner with you at every stage of your career."
+    when 3
+      - var caption = "We offer personalised service and 24/7 support through our Client Service Centre."
+    when 4
+      - var caption = "Our innovative range of products provide distinctive solutions tailored to meet the demands of your profession."
+    default
+      - var caption = "We have an in-depth understanding of your profession and are willing to back you as an individual."
+  .caption #{caption}

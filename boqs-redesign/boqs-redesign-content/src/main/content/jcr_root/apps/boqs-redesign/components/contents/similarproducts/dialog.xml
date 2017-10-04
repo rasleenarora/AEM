@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Similar Products"
+    width="850"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Similar Products"
+                        fieldDescription="If left empty, &quot;Similar Products&quot; will be used by default "
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <path
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="If left empty, rootpage of this site will be used to search for similar products."
+                        fieldLabel="Select a page path to get similar products"
+                        name="./pagePath"
+                        xtype="pathfield"/>
+                    <cardinfo
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="pageprop"
+                        fieldDescription="Based on the selected value Card information will be populated in this component"
+                        fieldLabel="Card Information Source"
+                        name="./cardInfoSrc"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <pageprop
+                                jcr:primaryType="nt:unstructured"
+                                text="Page Properties"
+                                value="pageprop"/>
+                            <cardcomp
+                                jcr:primaryType="nt:unstructured"
+                                text="Card Component"
+                                value="cardcomp"/>
+                        </options>
+                    </cardinfo>
+                    <filters
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Similar products will be fetched based on selected filters"
+                        fieldLabel="Filters"
+                        name="./filterList"
+                        optionsProvider="function(){&#xa;var json=[];&#xa;var key=&quot;boqs.filter_list&quot;;&#xa;json=loadCategories(key);&#xa;return json;&#xa;}"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

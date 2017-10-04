@@ -1,0 +1,19 @@
+.event-content
+  +link-icon({text: "Event Name Lorem Ipsum", icon: "icon-calendar.png"})
+  .date-time
+    +link("Thu 26 February 2015, 3:00pm - 6:00pm").link-1
+      span.wi-icon.icon-date-time(aria-hidden="true")
+      span.blue-text Thu 26 February 2015, 3:00pm - 6:00pm
+  .location
+    +link("Sydney, NSW2000").link-1
+      span.wi-icon.icon-location(aria-hidden="true")
+      span.blue-text Sydney, NSW 2000
+  .btn-group
+    +link('More details').btn.btn-default
+      span More details
+      span.wi-icon.icon-arrow(aria-hidden="true")
+    +link("Find out more").btn.btn-primary.btn-register.hidden-xs
+      span Register
+      span.wi-icon.icon-arrow(aria-hidden="true")
+  .pin-item
+    span.wi-icon.icon-pin

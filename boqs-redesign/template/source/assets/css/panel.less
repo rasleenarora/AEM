@@ -1,0 +1,26 @@
+.panel {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background: linear-gradient(to bottom, @panel-bg-top 0%, @panel-bg-bottom 100%);
+
+  @media (min-width: @screen-sm-min) {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  // A .panel directly after the .breadcumb
+  .breadcrumb + & {
+    padding-top: 1rem;
+
+    @media (min-width: @screen-sm-min) {
+      padding-top: 2rem;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    &:first-child {
+      margin-top: 0;      
+    }
+  }
+}

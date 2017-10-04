@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, user-scalable=0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
+    <style>
+      .template { margin: 20px 0; background: #eee; }
+      .margin-b-50 { margin-bottom: 50px; }
+      .group-1 { overflow: hidden; }
+      #color-chart-guide span {
+        display: block;
+        width: 100%;
+        height: 50px;
+      }
+      #color-chart-guide label {
+        display: block;
+        margin-top: 5px;
+      }
+      #ribbon-guide section {
+        overflow: hidden;
+        margin-left: 10px;
+        padding-top: 10px;
+        background: url('images/upload/bgd-ribbon-guide.jpg') no-repeat top left;
+        background-size: cover;
+      }
+      #ribbon-guide .title-2 {
+        margin: 10px 20px;
+        color: #fff;
+        text-align: left;
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom: 1px solid #fff;
+      }
+      .icon-list {
+        margin-top: 43px;
+      }
+      .icon-list li {
+        margin: 42px 0;
+      }
+      .icon-list li .wrap-icon {
+        display: table-cell;
+        min-width: 70px;
+        text-align: center;
+      }
+      .icon-list li:first-child {
+        margin-top: 0;
+      }
+      .icon-list li:last-child {
+        margin-bottom: 0;
+      }
+      .icon-list.first-list li:nth-child(1),
+      .icon-list.first-list li:nth-child(2),
+      .icon-list.first-list li:nth-child(3),
+      .icon-list.first-list li:nth-child(4) {
+        margin: 30px 0;
+      }
+      .icon-list.first-list li:first-child {
+        margin-top: 0;
+      }
+      .icon-list.first-list li:last-child {
+        margin-bottom: 0;
+      }
+      .icon-list span {
+        color: #09354b;
+        font-size: 1.143em;
+        font-family: "Gotham-Book", Arial, Helvetica, sans-serif;
+        line-height: 1.2em;
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 20px;
+      }
+      .container-cpn-nav .block {
+        border: 1px solid #9D9D9D;
+        margin-bottom: 20px;
+      }
+      .container-cpn-nav strong {
+        display: block;
+        padding-bottom: 10px;
+      }
+      .container-cpn-nav [class*="col-"] {
+        background-color: #DDD9D9;
+      }
+      .container-cpn-nav [class*="col-"]:nth-child(2n+1) {
+        background-color: #C3C3C3;
+        z-index: 1;
+      }
+      .title-template {
+        padding-bottom: 2px;
+        margin: 20px 0;
+        color: #207AD1;
+        border-bottom: 1px solid #207AD1;
+        font-size: 20px;
+      }
+      .list-cmp {
+        margin: 20px 0;
+        overflow: hidden;
+      }
+      .list-cmp dt {
+        margin-left: 15px;
+        font-size: 1.429em;
+        font-weight: bold;
+      }
+      .list-cmp dd {
+        margin-top: 10px;
+        padding: 0 1.5%;
+        float: left;
+        width: 30%;
+      }
+      .template .container {
+        max-width: 960px;
+      }
+      .option-group .label-text{ font-family: "Gotham-Book", Arial, Helvetica, sans-serif; }
+      .option-group input:checked + label{
+        font-family: "Gotham-Bold", Arial, Helvetica, sans-serif;
+      }
+      .text .text-link { color: #09354b; }
+      .text .text-link:hover { color: #337ab7; }
+      .wyg-style pre { min-height: 65px; }
+    </style>
+    <script src="js/modernizr.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXX-Y', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body class="template">
+    <main id="main" class="main">
+      <form action="#" data-required-message="This field is required">
+        <div class="embedded-style">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <button type="button" id="contact-button" class="btn btn-default btn-primary btn-submit embedded-hidden">Enquire Now<span aria-hidden="true" class="wi-icon icon-arrow icon-btn"></span></button>
+              </div>
+            </div>
+          </div>
+          <div data-popin data-showonload="true" class="popup contact-popup">
+            <div class="container">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close"><span aria-hidden="true" class="wi-icon icon-close-1"></span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="event-group"><i aria-hidden="true" class="wi-icon icon-required"></i>
+                      <div class="desc">
+                        <p>= Required field</p>
+                      </div>
+                    </div>
+                    <div class="contact-form">
+                      <div class="interested-component">
+                        <div class="form-group dropdown-component">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <label for="select">I would like to:</label><i aria-hidden="true" class="wi-icon icon-required"></i>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div data-customselectbox data-select-info class="custom-select">
+                                <select id="select-more-info" data-required data-required-message="Please select an option below" class="custom-box">
+                                  <option value="">Please select</option>
+                                  <option value="0" data-option-info="data-option-info">Become a BOQ Specialist member</option>
+                                  <option value="1" data-option-info="data-option-info">Learn more about a product</option>
+                                  <option value="2">Ask about an event</option>
+                                  <option value="3">Give a compliment</option>
+                                  <option value="4">Make a complaint</option>
+                                  <option value="5">Make some other enquiry</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-more-info class="form-group hide">
+                          <label>I'm interested in:</label>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="checkbox-group">
+                                <input id="checkbox1" name="checkbox1" type="checkbox" value=""/>
+                                <label for="checkbox1" class="label-text">Savings Accounts</label>
+                              </div>
+                              <div class="checkbox-group">
+                                <input id="checkbox2" name="checkbox2" type="checkbox" value=""/>
+                                <label for="checkbox2" class="label-text">Credit Cards</label>
+                              </div>
+                              <div class="checkbox-group">
+                                <input id="checkbox3" name="checkbox3" type="checkbox" value=""/>
+                                <label for="checkbox3" class="label-text">Commercial Property Loan</label>
+                              </div>
+                              <div class="checkbox-group">
+                                <input id="checkbox4" name="checkbox4" type="checkbox" value=""/>
+                                <label for="checkbox4" class="label-text">Partner buy-ins</label>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="checkbox-group">
+                                <input id="checkbox5" name="checkbox5" type="checkbox" value=""/>
+                                <label for="checkbox5" class="label-text">Home loans</label>
+                              </div>
+                              <div class="checkbox-group">
+                                <input id="checkbox6" name="checkbox6" type="checkbox" value=""/>
+                                <label for="checkbox6" class="label-text">Car Loans</label>
+                              </div>
+                              <div class="checkbox-group">
+                                <input id="checkbox7" name="checkbox7" type="checkbox" value=""/>
+                                <label for="checkbox7" class="label-text">Equipment Finance</label>
+                              </div>
+                              <div class="checkbox-group">
+                                <input id="checkbox8" name="checkbox8" type="checkbox" value=""/>
+                                <label for="checkbox8" class="label-text">Other - please specify below</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group textarea-component">
+                        <label for="details">Additional details or comments:</label><i aria-hidden="true" class="wi-icon icon-required"></i>
+                        <div class="row">
+                          <textarea name="comment" data-required id="comment" class="textarea-control"></textarea>
+                        </div>
+                      </div>
+                      <h3 class="static-title">Your contact details</h3>
+                      <div class="form-group textfield-component">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <label for="full-name">Full Name:</label><i class="wi-icon icon-required"></i>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-6 input-1 custom-box">
+                            <input id="full-name" name="full-name" type="text" value="" placeholder="Enter your first and last names" autocomplete="off" class="form-control" data-required="" data-required-message="Please enter a valid Full name"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div data-phone-container data-placeholder-phone="Enter phone number" data-placeholder-email="Enter email address" data-valid-phone="The phone number entered does not appear to be valid" data-valid-email="Please enter a valid Email address" data-title-phone="Alternative contact method" data-title-email="Alternative contact" class="twice-component">
+                        <div class="form-group phone-component">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <label for="phone">Preferred contact method:</label><i aria-hidden="true" class="wi-icon icon-required"></i>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="input-group">
+                                <div class="dropdown">
+                                  <div data-customselectbox="data-customselectbox" class="custom-select">
+                                    <select class="custom-box">
+                                      <option value="phone">Phone</option>
+                                      <option value="email">Email</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="wrap">
+                                  <input id="phone" name="phone" type="input" value="" placeholder="Enter phone number" autocomplete="off" class="form-control" data-required="data-required" data-required-message="Please enter a Preferred contact method" data-phonenumber="data-phonenumber" data-phonenumber-message="The phone number entered does not appear to be valid"/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group"><a href="javascript:;" class="text-link" data-add-contact="data-add-contact" data-validate-required="true" data-title="Alternative contact">+Add another contact method</a>
+                        </div>
+                      </div>
+                      <div class="form-group dropdown-component">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <label for="state">State:</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div data-customselectbox="data-customselectbox" class="custom-select">
+                              <select class="custom-box">
+                                <option value="">Please select</option>
+                                <option value="0">ACT</option>
+                                <option value="1">NT</option>
+                                <option value="2">NSW</option>
+                                <option value="3">QLD</option>
+                                <option value="4">SA</option>
+                                <option value="5">TAS</option>
+                                <option value="6">VIC</option>
+                                <option value="7">TAS</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group dropdown-component">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <label for="profession">Profession:</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div data-customselectbox="data-customselectbox" class="custom-select">
+                              <select class="custom-box">
+                                <option value="">Please select</option>
+                                <option value="0">Medical Professional</option>
+                                <option value="1">Accountant</option>
+                                <option value="2">Financial Planner</option>
+                                <option value="3">Other / Private Client</option>
+                              </select>
+                            </div>
+                          </div>
+                          <input data-phone-hidden type="hidden" name="add-phone">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <button type="submit" class="btn btn-default btn-primary btn-submit">Submit Enquiry<span aria-hidden="true" class="wi-icon icon-arrow icon-btn"></span></button>
+                        </div>
+                        <div class="col-sm-6 text-center">
+                          <button type="reset" class="btn-cancel">Cancel Enquiry</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="submit-success" data-popin class="popup information-popup">
+            <div class="container">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button class="close"><span aria-hidden="true" class="wi-icon icon-close-1"></span>
+                    </button>
+                    <h4 class="modal-title">You have been registered for event name</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p class="desc">We will send you an email shortly with additional information. Thank you for registering, and we look forward to seeing you at the event.</p><a href="#"></a>
+                    <button type="text" class="btn btn-default btn-primary">Continue<span aria-hidden="true" class="wi-icon icon-arrow icon-btn"></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+    <div class="loader-overlay"><img src="images/loader.gif" alt="Loader"/>
+    </div>
+    <script src="js/l10n.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/script.js"></script>
+    <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </body>
+</html>

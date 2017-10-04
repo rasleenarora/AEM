@@ -1,0 +1,22 @@
+- if (typeof(attributes) === 'undefined') attributes = {}
+
+.card.filter-item&attributes(attributes)
+  +link("Everyday plus Velocity").card-inner(data-item)
+    .card-thumb
+      // 3:1 ratio
+      img(src="http://lorempixel.com/1000/333/nature/?#{i}", alt="").img-responsive
+
+    - if (typeof(heading) === 'undefined') heading = "Owning a practice"
+    h2.card-heading #{heading}
+    .card-body.wysiwygcomp
+      case variation
+        when "para"
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+          p Accusamus a saepe eaque optio doloremque ipsam dolore sequi, voluptate animi aliquid.  
+        when "ticks"
+        default
+          ul
+            li: span.tick-list Earn 1 Velocity Point for every $10 of daily average balance in your account, calculated at the end of each month
+            li: span.tick-list No establishment or account keeping fees
+            li: span.tick-list 10 free ATM withdrawals per month at all major bank ATMs Australia-wide
+        

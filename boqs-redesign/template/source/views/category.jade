@@ -1,0 +1,55 @@
+extends layouts/layout
+
+block vars
+  -title = 'Credit cards'
+  -bodyClass = 'creditcards'
+
+block container
+  main#main.main
+    - var heading = "Credit cards that fly"
+    include blocks/page-header
+    
+    include blocks/section-nav
+
+    include blocks/breadcrumb
+
+    section.panel#signature-credit-cards(data-section-nav)
+      .container
+        .block.rich-text
+          h2 Signature credit cards
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        .block.cards
+          .row.row-ib.row-ib-left            
+            - var i = 1
+            - var variation = "ticks"
+            - var heading = "Signature with Velocity points"
+            - var attributes = {'class': 'col-xs-12 col-sm-6 col-md-4'}
+            include blocks/card
+
+            - var i = 2
+            - var variation = "ticks"
+            - var heading = "Signature with Qantas points"
+            - var attributes = {'class': 'col-xs-12 col-sm-6 col-md-4'}
+            include blocks/card
+
+    section.panel#platinum-credit-cards(data-section-nav)
+      .container
+        .block.rich-text
+          h2 Platinum credit cards
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        .block.cards
+          .row.row-ib.row-ib-left
+            - var i = 3
+            - var variation = "ticks"
+            - var heading = "Platinum with Velocity points"
+            - var attributes = {'class': 'col-xs-12 col-sm-6 col-md-4'}
+            include blocks/card
+
+            - var i = 4
+            - var variation = "ticks"
+            - var heading = "Platinum with Qantas points"
+            - var attributes = {'class': 'col-xs-12 col-sm-6 col-md-4'}
+            include blocks/card
+

@@ -1,0 +1,11 @@
+.event-calendar(data-event-calendar, data-init-ajax="data/ajax-event.json")
+  .event-calendar-wrap.feature
+    h3.static-title
+      span.feature-label Featured Events
+      span.num (0)
+    ul.list-unstyled.static-list
+  .month
+  .text-center
+    +link('View more events').link-more
+      span.load-more-label View more events
+      span.wi-icon.icon-arrow-gray-sm(aria-hidden="true")

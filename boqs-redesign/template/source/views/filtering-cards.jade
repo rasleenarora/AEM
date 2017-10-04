@@ -1,0 +1,21 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Filtering Cards'
+block container
+  main#main.main
+    .container
+      .row
+        .col-sm-3.filter-component
+          // Filter panel
+          +link("Refine")(data-popover-trigger='filter-control', data-expand-handle, data-target="#filtering-controls").btn.btn-primary.btn-block.btn-refine.filters-applied
+            span.num-filters 3
+            | Filters have been applied
+          include blocks/popover-filter-control
+
+          include blocks/filtering-controls
+          // This space is to simulate the filter panel on the left side
+        .col-sm-9
+          // Filter cards
+          include blocks/card-container

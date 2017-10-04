@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Global Header Configuration"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Contact Us Section(Desktop View)">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <contactuslabel
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Contact Us"
+                        fieldLabel="Contact Us Label"
+                        name="./contactuslabel"
+                        xtype="textfield"/>
+                    <contactusurl
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Contact us URL"
+                        name="./contactusurl"
+                        xtype="pathfield"/>
+                    <eventslabel
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Events"
+                        fieldLabel="Events Label"
+                        name="./eventslabel"
+                        xtype="textfield"/>
+                    <eventsUrl
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Events Url"
+                        name="./eventsUrl"
+                        xtype="pathfield"/>
+                    <phonenumber
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="1300 131 141"
+                        fieldLabel="Phone Number"
+                        name="./phonenumber"
+                        regex="/^([\\d\\ ]*)$/"
+                        xtype="textfield"/>
+                    <browseOffersLabel
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Browse Offers"
+                        fieldLabel="Browse offers Label"
+                        name="./browseOfferLabel"
+                        xtype="textfield"/>
+                    <browseOffersUrl
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Browse offers Url"
+                        name="./browseOfferUrl"
+                        xtype="pathfield"/>
+                    <findaspecialistLabel
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Find A Specialist"
+                        fieldLabel="Find A Specialist Label"
+                        name="./findaspecialistLabel"
+                        xtype="textfield"/>
+                    <findaspecialistUrl
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Find A Specialist Url"
+                        name="./findaspecialistUrl"
+                        xtype="pathfield"/>
+                </items>
+            </tab1>
+            <tab3
+                jcr:primaryType="cq:Panel"
+                title="Welcome Section">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <welcomebacklabel
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Welcome back"
+                        fieldLabel="Welcome Back Label"
+                        name="./welcomebacklabel"
+                        xtype="textfield"/>
+                    <closelabel
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Close"
+                        fieldLabel="Close Label"
+                        name="./closelabel"
+                        xtype="textfield"/>
+                    <message
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="The last time you visited, you were looking at:"
+                        fieldLabel="Message"
+                        name="./message"
+                        xtype="textfield"/>
+                    <returnlabel
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Return to this page"
+                        fieldLabel="Return Label"
+                        name="./returnlabel"
+                        xtype="textfield"/>
+                </items>
+            </tab3>
+            <tab4
+                jcr:primaryType="cq:Panel"
+                title="Accounts Setting">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <loginlabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Login Label:"
+                        name="./loginlabel"
+                        xtype="textfield"/>
+                    <registerlabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Register Label:"
+                        name="./registerlabel"
+                        xtype="textfield"/>
+                    <registerUrl
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Register  URL"
+                        name="./registerUrl"
+                        xtype="pathfield"/>
+                    <loginUrl
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Login URL"
+                        name="./loginUrl"
+                        xtype="pathfield"/>
+                </items>
+            </tab4>
+            
+        </items>
+    </items>
+</jcr:root>

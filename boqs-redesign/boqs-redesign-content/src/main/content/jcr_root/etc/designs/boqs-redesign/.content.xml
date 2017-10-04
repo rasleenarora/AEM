@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <footlibs/>
+    <headlibs/>
+    <favicon.ico/>
+    <jcr:content
+        cq:lastModified="{Date}2015-04-27T16:40:41.335+07:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/wcm/core/templates/designpage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="BOQS Redesign"
+        sling:resourceType="wcm/core/components/designer">
+        <homepage jcr:primaryType="nt:unstructured">
+            <par_content
+                jcr:lastModified="{Date}2015-04-27T16:12:10.016+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_content>
+            <globalheadercomp jcr:primaryType="nt:unstructured">
+                <logo
+                    jcr:lastModified="{Date}2015-05-25T13:34:05.044+07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="boqs-redesign/components/contents/logocomp"
+                    imageReference="/content/dam/boqs-redesign/renditions/logo.png"
+                    imageRotate="0"
+                    maxWidth="165"
+                    mobilerenditionname="mobile"
+                    logoalttext="BOQ Specialist"
+                    stickyrenditionname="sticky"/>
+            </globalheadercomp>
+        </homepage>
+        <searchpage jcr:primaryType="nt:unstructured">
+            <par_content
+                jcr:lastModified="{Date}2015-04-27T16:12:10.016+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_content>
+            <par_no_query
+                jcr:lastModified="{Date}2015-05-14T15:57:49.226+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_no_query>
+            <globalheadercomp jcr:primaryType="nt:unstructured">
+                <logo
+                    jcr:lastModified="{Date}2015-05-25T13:34:05.044+07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="boqs-redesign/components/contents/logocomp"
+                    imageReference="/content/dam/boqs-redesign/renditions/logo.png"
+                    imageRotate="0"
+                    maxWidth="165"
+                    logoalttext="BOQ Specialist"
+                    mobilerenditionname="mobile"
+                    stickyrenditionname="sticky"/>
+            </globalheadercomp>
+        </searchpage>
+        <contentwithsidebarpage jcr:primaryType="nt:unstructured">
+            <globalheadercomp jcr:primaryType="nt:unstructured">
+                <logo
+                    jcr:lastModified="{Date}2015-05-25T13:34:05.044+07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="boqs-redesign/components/contents/logocomp"
+                    imageReference="/content/dam/boqs-redesign/renditions/logo.png"
+                    imageRotate="0"
+                    maxWidth="165"
+                    logoalttext="BOQ Specialist"
+                    mobilerenditionname="mobile"
+                    stickyrenditionname="sticky"/>
+            </globalheadercomp>
+            <par_area_1
+                jcr:lastModified="{Date}2015-05-20T16:52:01.978+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_area_1>
+            <par_area_2
+                jcr:lastModified="{Date}2015-05-20T16:52:11.742+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_area_2>
+            <par_area_3
+                jcr:lastModified="{Date}2015-05-20T16:52:25.944+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_area_3>
+            <par_area_4
+                jcr:lastModified="{Date}2015-05-20T16:52:34.424+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_area_4>
+        </contentwithsidebarpage>
+        <carouselpage jcr:primaryType="nt:unstructured">
+            <panelcomp jcr:primaryType="nt:unstructured">
+                <par_container
+                    jcr:lastModified="{Date}2015-07-01T18:18:17.739+07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/parsys"
+                    components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                    <section jcr:primaryType="nt:unstructured"/>
+                </par_container>
+            </panelcomp>
+        </carouselpage>
+        <fullwidthcontentpage jcr:primaryType="nt:unstructured">
+            <globalheadercomp jcr:primaryType="nt:unstructured">
+                <logo
+                    jcr:lastModified="{Date}2015-05-25T17:05:07.035+07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="boqs-redesign/components/contents/logocomp"
+                    imageReference="/content/dam/boqs-redesign/renditions/logo.png"
+                    imageRotate="0"
+                    maxWidth="165"
+                    logoalttext="BOQ Specialist"
+                    mobilerenditionname="mobile"
+                    stickyrenditionname="sticky"/>
+            </globalheadercomp>
+            <par_area_1
+                jcr:lastModified="{Date}2015-05-28T10:23:08.988+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+                <tabcontainercomp jcr:primaryType="nt:unstructured">
+                    <par_container_tab1
+                        jcr:lastModified="{Date}2015-05-28T10:23:18.935+07:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys"
+                        components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                        <section jcr:primaryType="nt:unstructured"/>
+                        <cardcontainercomp jcr:primaryType="nt:unstructured">
+                            <par_card_container
+                                jcr:lastModified="{Date}2015-05-28T10:23:29.554+07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/parsys"
+                                components="/apps/boqs-redesign/components/contents/resultcardcomp">
+                                <section jcr:primaryType="nt:unstructured"/>
+                            </par_card_container>
+                        </cardcontainercomp>
+                    </par_container_tab1>
+                </tabcontainercomp>
+            </par_area_1>
+            <par_area_2
+                jcr:lastModified="{Date}2015-05-28T10:23:51.345+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+                <containercomp jcr:primaryType="nt:unstructured">
+                    <par_container jcr:primaryType="nt:unstructured">
+                        <containercomp jcr:primaryType="nt:unstructured">
+                            <par_container_left
+                                jcr:lastModified="{Date}2015-05-28T10:24:07.849+07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/parsys"
+                                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                                <section jcr:primaryType="nt:unstructured"/>
+                            </par_container_left>
+                            <par_container_right
+                                jcr:lastModified="{Date}2015-05-28T10:24:17.618+07:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/parsys"
+                                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                                <section jcr:primaryType="nt:unstructured"/>
+                            </par_container_right>
+                        </containercomp>
+                    </par_container>
+                </containercomp>
+                <contentcarouselcomp jcr:primaryType="nt:unstructured">
+                    <panelcomp jcr:primaryType="nt:unstructured">
+                        <par_container
+                            jcr:lastModified="{Date}2015-05-28T10:24:30.024+07:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="foundation/components/parsys"
+                            components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                            <section jcr:primaryType="nt:unstructured"/>
+                        </par_container>
+                    </panelcomp>
+                </contentcarouselcomp>
+            </par_area_2>
+        </fullwidthcontentpage>
+        <blankpage jcr:primaryType="nt:unstructured">
+            <par_content
+                jcr:lastModified="{Date}2015-04-27T16:12:10.016+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_content>
+        </blankpage>
+        <landingpage jcr:primaryType="nt:unstructured">
+            <par_area_1
+                jcr:lastModified="{Date}2015-05-20T16:52:01.978+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_area_1>
+            <par_area_2
+                jcr:lastModified="{Date}2015-05-20T16:52:11.742+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_area_2>
+            <par_area_3
+                jcr:lastModified="{Date}2015-05-20T16:52:25.944+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_area_3>
+        </landingpage>
+        <filterablepage jcr:primaryType="nt:unstructured">
+            <globalheadercomp jcr:primaryType="nt:unstructured">
+                <logo
+                    jcr:lastModified="{Date}2015-05-25T13:34:05.044+07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="boqs-redesign/components/contents/logocomp"
+                    imageReference="/content/dam/boqs-redesign/renditions/logo.png"
+                    imageRotate="0"
+                    maxWidth="165"
+                    logoalttext="BOQ Specialist"
+                    mobilerenditionname="mobile"
+                    stickyrenditionname="sticky"/>
+            </globalheadercomp>
+            <par_area_1
+                jcr:lastModified="{Date}2015-05-20T16:52:01.978+08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_area_1>
+            <par_area_2
+                jcr:lastModified="{Date}2015-05-20T16:52:11.742+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_area_2>
+            <par_area_3
+                jcr:lastModified="{Date}2015-05-20T16:52:25.944+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_area_3>
+            <par_area_4
+                jcr:lastModified="{Date}2015-05-20T16:52:25.944+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_area_4>
+        </filterablepage>
+        <eventpage jcr:primaryType="nt:unstructured">
+            <globalheadercomp jcr:primaryType="nt:unstructured">
+                <logo
+                    jcr:lastModified="{Date}2015-05-25T13:34:05.044+07:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="boqs-redesign/components/contents/logocomp"
+                    imageReference="/content/dam/boqs-redesign/renditions/logo.png"
+                    imageRotate="0"
+                    maxWidth="165"
+					logoalttext="BOQ Specialist"
+                    mobilerenditionname="mobile"
+                    stickyrenditionname="sticky"/>
+            </globalheadercomp>
+            <par_area_2
+                jcr:lastModified="{Date}2015-05-20T16:52:11.742+07:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:BOQS - Redesign,group:BOQS Redesign Form,/libs/foundation/components/form/start]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_area_2>
+        </eventpage>
+    </jcr:content>
+</jcr:root>

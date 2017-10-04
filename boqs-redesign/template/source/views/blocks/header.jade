@@ -1,0 +1,173 @@
+// Begin: globalheadercomp
+header#header.header(role="banner")
+  // Welcome back
+  .well-block(data-welcome-back, data-close-button=".close-btn")
+    .container
+      .row
+        .col-xs-8
+          p.well-msg Welcome back
+        .col-xs-4.text-right
+          +link("Close").btn.btn-link.close-btn
+            | Close
+            span.icon.icon-close-white.icon-right(aria-hidden="true")
+    .container.has-border
+      .row
+        .col-sm-8
+          p The last time you visited, you were looking at:&nbsp;
+            //- span.icon-1
+              +upload-img("icon-home.png").img-responsive(data-icon)
+            +link("Home loans")(data-title)
+        .col-sm-4.text-right
+          +link("Return to this page").btn.btn-primary(data-url)
+            | Return to this page
+  
+  // Header (white)
+  #navbar-top.navbar-top
+    .container
+      // Begin: logocomp (mobile)
+      +link("Logo", "/").logo.hidden-md.hidden-lg: span.sr-only BOQ Specialist
+        //- +img("svg/logo-compact.svg").img-responsive.visible-xs.visible-sm
+      // End: logocomp (mobile)
+      
+      button.navbar-toggle.collapsed(data-activate="#main-nav")
+        span.sr-only Toggle navigation
+        span.icon.icon-close-white(aria-hidden="true")
+        span.icon.icon-menu-white(aria-hidden="true")
+
+      ul.top-menu
+        li
+          +link("1300131141", "tel:1300131141").link-phone
+            span.btn.hidden-md.hidden-lg
+              span.icon.icon-phone-white(aria-hidden="true")
+            span.hidden-xs.hidden-sm 1300 131 141
+        li.hidden-xs.hidden-sm: +link("Browse offers")
+        li.hidden-xs.hidden-sm: +link("Find a specialist")
+        li.hidden-xs.hidden-sm: +link("Contact us")
+        li.hidden-md.hidden-lg
+          +link("Online banking", "https://secure.boqspecialist.com.au/MOB/Mobile")(target="_blank").btn.btn-login
+            span.icon.icon-login-white(aria-hidden="true")
+  
+  // Main nav (blue parent wrapper)
+  nav#main-nav.navbar-main(role="navigation")
+    .container
+      // Begin: topnavigationcomp (blue)
+      .cells.navbar-main-inner
+        .cell.hidden-xs.hidden-sm
+          // Begin: logocomp (desktop)
+          +link("Logo", "/").logo.hidden-xs: span.sr-only BOQ Specialist
+            //- +img("svg/logo.svg").img-responsive
+          // End: logocomp (desktop)
+        .cell.cell-fill
+          // Begin: searchinputcomp
+          .search-panel
+            script.
+              window.suggestionjson = '[{"text":"Credit cards","value":"/content/boqs-live/home/specialties/medical.html"},{"text":"Bank accounts","value":"/content/boqs-live/home.html"},{"text":"Home loans","value":"http://google.com "},{"text":"Buying a property","value":"http://google.com "},{"text":"Planning for succession","value":"http://google.com "},{"text":"Tools and calculators","value":"http://google.com "},{"text":"hellllll","value":"http://www.google.com"}]';
+            +form({
+                action: "#", 
+                id: "search-form-global",
+                method: "post",
+                attr: {
+                  "data-maxautosuggestresults": "",
+                  "data-quicklinkslabel": "",
+                  "data-notfoundlabel": ""
+                }
+              }).form
+              +input({
+                id: "search-global", 
+                type: "search",
+                placeholder: "Search the site", 
+                  autocomplete: "off", 
+                  attr: {
+                    "class": "form-control",
+                    "autofocus": ""
+                  }
+              })   
+          // End: searchinputcomp
+
+          ul.main-menu
+            // Specialties
+            li
+              +link("Specialties").main-menu-link
+                |Specialties
+                span.icon.icon-caret-white.icon-small(aria-hidden="true")
+              .sub-menu
+                .container
+                  .cells.cells-fixed
+                    +sub-menu-link({text: "Doctors and specialists", icon: "svg/badge-doctors-white.svg"})
+                    +sub-menu-link({text: "Dental professionals", icon: "svg/badge-dentists-white.svg"})
+                    +sub-menu-link({text: "Veterinary professionals", icon: "svg/badge-accountants-white.svg"})
+                    +sub-menu-link({text: "Students and graduates", icon: "svg/badge-students-white.svg"})
+                    +sub-menu-link({text: "Accountants", icon: "svg/badge-accountants-white.svg"})
+            // Personal banking
+            li
+              +link("Personal banking").main-menu-link
+                |Personal <span class="visible-lg-inline">banking</span>
+                span.icon.icon-caret-white.icon-small(aria-hidden="true")
+              .sub-menu 
+                .container
+                  .cells.cells-fixed
+                    +sub-menu-link({text: "Bank accounts", icon: "svg/badge-bank-accounts-white.svg"})
+                    +sub-menu-link({text: "Credit cards", icon: "svg/badge-credit-cards-white.svg"})
+                    +sub-menu-link({text: "Home loans", icon: "svg/badge-home-loans-white.svg"})
+                    +sub-menu-link({text: "Foreign exchange", icon: "svg/badge-foreign-exchange-white.svg"})
+                    +sub-menu-link({text: "Car loans", icon: "svg/badge-car-loans-white.svg"})
+                    +sub-menu-link({text: "Term deposits", icon: "svg/badge-term-deposits-white.svg"})
+            // Practice finance
+            li
+              +link("Practice finance").main-menu-link
+                |Practice <span class="visible-lg-inline">finance</span>
+                span.icon.icon-caret-white.icon-small(aria-hidden="true")
+              .sub-menu
+                .container
+                  .cells.cells-fixed
+                    +sub-menu-link({text: "Equipment finance", icon: "svg/badge-equipment-finance-white.svg"})
+                    +sub-menu-link({text: "Fit-out finance", icon: "svg/badge-fitout-finance-white.svg"})
+                    +sub-menu-link({text: "Vehicle finance", icon: "svg/badge-vehicle-finance-white.svg"})
+                    +sub-menu-link({text: "Commercial finance", icon: "svg/badge-commercial-finance-white.svg"})
+                    +sub-menu-link({text: "Practice purchase", icon: "svg/badge-practice-purchase-white.svg"})
+                    +sub-menu-link({text: "Practice setup", icon: "svg/badge-practice-setup-white.svg"})
+            // Expertise
+            li
+              +link("Expertise").main-menu-link
+                | Expertise
+                span.icon.icon-caret-white.icon-small(aria-hidden="true")
+              .sub-menu
+                .container
+                  .cells.cells-fixed
+                    +sub-menu-link({text: "Studying and training", icon: "svg/badge-studying-and-training-white.svg"})
+                    +sub-menu-link({text: "Owning a practice", icon: "svg/badge-owning-a-practice-white.svg"})
+                    +sub-menu-link({text: "Managing money", icon: "svg/badge-managing-money-white.svg"})
+                    +sub-menu-link({text: "Buying property", icon: "svg/badge-buying-property-white.svg"})
+                    +sub-menu-link({text: "Planning for succession", icon: "svg/badge-planinng-for-succession-white.svg"})
+                    +sub-menu-link({text: "Tools and calculators", icon: "svg/badge-tools-and-calculators-white.svg"})
+          
+          // Mobile extras nav
+          ul.extras-menu.hidden-md.hidden-lg
+            li.active: +link("Contact us").extras-menu-link
+              span.icon.icon-contact-gold 
+              |Contact us
+            li: +link("Find a specialist").extras-menu-link
+              span.icon.icon-find-gold
+              |Find a specialist
+            li: +link("Browser offers").extras-menu-link
+              span.icon.icon-offers-gold
+              |Browse offers
+            li: +link("Events").extras-menu-link
+              span.icon.icon-events-gold
+              |Events      
+
+        .cell.hidden-xs.hidden-sm
+          ul.utility-menu
+            li: +link("Search").btn.btn-link.btn-search
+              span.icon.icon-search-white(aria-hidden="true")
+              span.icon.icon-close-white(aria-hidden="true")
+              span.sr-only Search
+            li: +link("Online banking", "https://secure.boqspecialist.com.au/BOQ/BOQSpecialist")(data-newwindow="").btn.btn-primary.btn-login 
+              span.icon.icon-login-white(aria-hidden="true")
+              |Log in
+            li: +link("Register", "https://secure.boqspecialist.com.au/BOQ/BOQSpecialist")(data-analytics, data-event-label="register-button", data-newwindow).btn.btn-default.btn-register
+              span.icon.icon-register-white(aria-hidden="true")
+              |Register   
+      // End: topnavigationcomp (blue)    
+      
+// End: globalheadercomp

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Ribbon Configuration"
+	width="650"
+    height="800"
+	xtype="dialog">
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<gengeral
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<titlelabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Title Label"
+						name="./titlelabel"
+						allowBlank="{Boolean}false"
+						xtype="textfield"/>
+					
+				</items>
+			</gengeral>
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="First Button">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<firstlabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="First Label"
+						name="./firstlabel"
+						allowBlank="{Boolean}false"
+						xtype="textfield"/>
+					<firsticonpath
+						jcr:primaryType="cq:Widget"
+						name="./firsticonpath"
+						fieldLabel="First Icon Path"
+						rootPath="/content/dam"
+						xtype="pathfield"/>
+					<firsticonpathhover
+						jcr:primaryType="cq:Widget"
+						name="./firsticonpathhover"
+						fieldLabel="First Hover Icon Path"
+						rootPath="/content/dam"
+						xtype="pathfield"/>
+					<firstlink
+						jcr:primaryType="cq:Widget"
+						name="./firstlink"
+						fieldLabel="First Link "
+						xtype="pathfield"/>
+					
+				</items>
+			</tab1>
+			<tab2
+				jcr:primaryType="cq:Panel"
+				title="Second Button">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<secondlabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Second Label"
+						name="./secondlabel"
+						allowBlank="{Boolean}false"
+						xtype="textfield"/>
+					<secondiconpath
+						jcr:primaryType="cq:Widget"
+						name="./secondiconpath"
+						fieldLabel="Second Icon Path"
+						rootPath="/content/dam"
+						xtype="pathfield"/>
+					<secondiconpathhover
+						jcr:primaryType="cq:Widget"
+						name="./secondiconpathhover"
+						fieldLabel="Second Hover Icon Path"
+						rootPath="/content/dam"
+						xtype="pathfield"/>
+					<secondlink
+						jcr:primaryType="cq:Widget"
+						name="./secondlink"
+						fieldLabel="Second Link "
+						xtype="pathfield"/>
+					
+				</items>
+			</tab2>
+			<tab3
+				jcr:primaryType="cq:Panel"
+				title="Third Button">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<thirdlabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Third Label"
+						name="./thirdlabel"
+						allowBlank="{Boolean}false"
+						xtype="textfield"/>
+					<thirdiconpath
+						jcr:primaryType="cq:Widget"
+						name="./thirdiconpath"
+						fieldLabel="Third Icon Path"
+						rootPath="/content/dam"
+						xtype="pathfield"/>
+					<thirdiconpathhover
+						jcr:primaryType="cq:Widget"
+						name="./thirdiconpathhover"
+						fieldLabel="Third Hover Icon Path"
+						rootPath="/content/dam"
+						xtype="pathfield"/>
+					<thirdlink
+						jcr:primaryType="cq:Widget"
+						name="./thirdlink"
+						fieldLabel="Third Link "
+						xtype="pathfield"/>
+					
+				</items>
+			</tab3>
+			<tab4
+				jcr:primaryType="cq:Panel"
+				title="Fourth Button">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<fourthlabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Fourth Label"
+						name="./fourthlabel"
+						allowBlank="{Boolean}false"
+						xtype="textfield"/>
+					<fourthiconpath
+						jcr:primaryType="cq:Widget"
+						name="./fourthiconpath"
+						fieldLabel="Fourth Icon Path"
+						rootPath="/content/dam"
+						xtype="pathfield"/>
+					<fourthiconpathhover
+						jcr:primaryType="cq:Widget"
+						name="./fourthiconpathhover"
+						fieldLabel="Fourth Hover Icon Path"
+						rootPath="/content/dam"
+						xtype="pathfield"/>
+					<fourthlink
+						jcr:primaryType="cq:Widget"
+						name="./fourthlink"
+						fieldLabel="Fourth Link "
+						xtype="pathfield"/>
+					
+				</items>
+			</tab4>
+		</items>
+	</items>
+</jcr:root>

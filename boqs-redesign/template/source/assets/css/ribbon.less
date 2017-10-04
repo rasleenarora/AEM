@@ -1,0 +1,94 @@
+// Ribbon
+.ribbon-block {
+  overflow: hidden;
+  background-color: @ribbon-bg; //fallback
+  background: @ribbon-gradient;
+}
+.ribbon-header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: fade(#fff, 70%);
+
+  .block-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.ribbon-body {
+  overflow: hidden;
+  
+  @media (max-width: @screen-sm-max) {
+    // Reset container
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.ribbon-item {
+  @media (max-width: @screen-xs-max) {
+    border-top: 1px solid @ribbon-border;  
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      border-top: none;
+    }
+    &:nth-child(even) {
+      border-left: 1px solid @ribbon-border;      
+    }
+  }
+}
+
+.ribbon-link {
+  display: block;
+  text-align: center;
+  padding: 15%;
+  .transition(box-shadow .1s ease-out);
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 20px fade(#000, 30%);
+      background-color: fade(#fff, 10%);
+    }   
+  } 
+  @media (min-width: @screen-md-min) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  } 
+}
+.ribbon-link-heading {
+  .font-size(17px);
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0;
+
+  @media (min-width: @screen-md-min) {
+    .font-size(16px);
+  }
+  @media (min-width: @screen-lg-min) {
+    .font-size(24px);
+  }
+}
+
+// Profession icon
+.pro-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  .size(80px);
+
+  @media (min-width: @screen-sm-min) {
+    .size(60px);
+  }
+  @media (min-width: @screen-md-min) {
+    .size(80px);
+  }
+}

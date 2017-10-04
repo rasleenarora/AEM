@@ -1,0 +1,26 @@
+.container
+  .row
+    .col-sm-8.center
+      .event-details
+          .thumb.clearfix
+            .thumb-content
+              .date-time
+                p.desc-1
+                  span.wi-icon.icon-date-time(aria-hidden="true")
+                  span.blue-text Thu 26 February 2015, 3:00pm&nbsp;-&nbsp;6:00pm
+              .location
+                p.desc-1
+                  span.wi-icon.icon-location(aria-hidden="true")
+                  span.blue-text Sydney, NSW2000
+              .event-type
+                p.desc-1
+                  span.wi-icon.icon-event-type(aria-hidden="true")
+                  span.blue-text Award Ceremony
+            .thumb-image
+              +img("event-details.png","event details")
+          .content
+            h3.blue-text Open for registration
+            p.blue-text Let us know you're coming and we will send you more details about event
+            +link("Find out more").btn.btn-primary.center(data-show-event-registration, data-title="", data-time="")
+              span Register
+              span.wi-icon.icon-arrow(aria-hidden="true")

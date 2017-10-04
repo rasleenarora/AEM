@@ -1,0 +1,60 @@
+extends layouts/layout-1
+
+block vars
+  -title = 'Landing Page'
+  -bodyClass = 'landing-template'
+block container
+  main#main.main.grey
+    .landing-page
+      .landing-top
+        .container
+          +link("Logo", "index.html").logo
+            +upload-img("logo.png").img-responsive
+          .img-wrap
+            +img("promo-banner.jpg","promo banner")
+      .header-text
+        .container(style="background-color: #0172cf;")
+          .row
+            .col-sm-8.col-sm-offset-2
+              h1
+                span.h1.bold How many lives are you leading?
+              h1
+                span.h1 We can help with them all.
+      .wrap-area-one
+        .container
+          .inner
+            h3.h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit enean euismod bibendum laoreet.
+            .desc
+              p.normal-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+            .text-center.wrap-btn
+              +link("Apply now").btn.btn-primary
+                span Apply now
+                span.wi-icon.icon-arrow(aria-hidden="true")
+            .text-center.text-image
+              +img("upload/image.jpg","promo banner").img-responsive
+            .desc
+              p.normal-text Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              p.normal-text Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Proin gravida dolor sit amet lacus accumsan.
+            .text-center.wrap-btn
+              +link("Apply now").btn.btn-primary
+                span Apply now
+                span.wi-icon.icon-arrow(aria-hidden="true")
+            .text-center
+              +link("View the terms & conditions").link-btn
+      .landing-footer
+        .container
+          .row
+            .col-sm-4.col-md-push-8
+              .wrap-area-three
+                +link ("Contact us").btn-tertiary
+                  |Contact us
+                  span.wi-icon.icon-arrow(aria-hidden="true")
+                +link('Speciatly BTNs').btn.btn-default
+                  | Send us an enquiry
+                  span.wi-icon.icon-arrow(aria-hidden="true")
+            .col-sm-8.col-md-pull-4
+              .wrap-area-two
+                p.disclaimer-text.text-copyright
+                  strong Copyright © 2015 BOQ SPECIALIST. All rights reserved.
+                p
+                  span.disclaimer-text Disclaimer text... Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci.

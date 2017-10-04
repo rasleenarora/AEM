@@ -1,0 +1,439 @@
+.slick-disabled {
+  display: none!important;
+}
+.photo-gallery {
+  .gallery-thumb {
+    margin: 0;
+    .thumb-image {
+      padding: 1px;
+      a {
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        height: 175px;
+      }
+      span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+}
+.slick-slider {
+  position: relative;
+  display: block;
+  .user-select(none,pan-y,transparent);
+    .slick-track,
+    .slick-list {
+      .transform(translate3d(0,0,0));
+    }
+}
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  &:focus {
+    outline: none;
+  }
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+
+.slick-loading {
+  .slick-track, .slick-slide {
+    visibility: hidden;
+  }
+}
+
+.popup-gallery {
+  text-align: center;
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: @prussian-blue;
+  .size(100%,100%);
+  .close-gallery {
+    padding: 15px;
+    position: relative;
+    p {
+      text-align: left;
+      color: @white;
+      font-size: 1.429em;
+      margin: 0;
+    }
+    .close {
+      top: 15px;
+      right: 15px;
+    }
+  }
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+      img {
+      display: block;
+      width: 100%;
+    }
+    &.slick-loading img {
+      display: none;
+    }
+    &.dragging img {
+      pointer-events: none;
+    }
+    &.slick-active{
+      @media (min-width: @screen-sm-min) {
+        .ie & {
+          transition-duration: 0s !important;
+        }
+      }
+    }
+  }
+  [dir='rtl'] .slick-slide {
+    float: right;
+  }
+
+  .slick-initialized .slick-slide {
+    display: block;
+  }
+
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+
+  .slick-prev,
+  .slick-next {
+    font-size: 0;
+    color: transparent;
+    .size(20px,28px);
+    line-height: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -14px;
+    display: block;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    &:extend(.wi-icon);
+    background-position: -840px -80px;
+    background-color: transparent;
+    &:hover, &:focus {
+      .no-touch & {
+        color: transparent;
+        outline: none;
+        &:extend(.wi-icon-white);
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+    &.slick-disabled:before {
+      opacity: .25;
+    }
+  }
+
+  .slick-prev {
+    left: -25px;
+  }
+  [dir='rtl'] .slick-prev {
+    right: -25px;
+    left: auto;
+  }
+
+  .slick-next {
+    right: -25px;
+    .transform(rotate(180deg));
+  }
+  [dir='rtl'] .slick-next {
+    right: auto;
+    left: -25px;
+  }
+
+  .slick-slider {
+    margin-bottom: 30px;
+  }
+  .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    background-color: @prussian-blue;
+    &:before ,
+    &:after {
+      display: table;
+      content: '';
+    }
+    &:after {
+      clear: both;
+    }
+  }
+  .slider-for {
+    margin: 0;
+    overflow: hidden;
+   .image {
+      position: relative;
+      @media (max-width: @screen-xs-max) and (orientation:portrait) {
+        max-height: 230px;
+        overflow: hidden;
+      }
+      img {
+        min-width: 100%;
+        @media (min-width: @screen-sm-min) {
+          min-height: 100%;
+          width: auto;
+        }
+      }
+      .message-to-landscape {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -47px;
+        margin-left: -63px;
+        padding: 16px 14px;
+        background: @blue-1;
+        .size(126px,94px);
+        font-size: 1.089em;
+        color: @white;
+        .border-radius(5px);
+      }
+    }
+    .slick-next {
+      right: 25px;
+    }
+    .slick-prev {
+      left: 25px;
+    }
+    .slick-next,
+    .slick-prev {
+      background-color: @light-blue;
+      background-origin: content-box;
+      padding: 8px 11px;
+      display: none;
+      .border-radius(4px);
+      .size(44px,44px);
+    }
+  }
+
+  .slider-nav {
+    background: @prussian-blue;
+    padding: 42px 50px 30px;
+    display: none;
+    .slick-next ,
+    .slick-prev {
+      margin-top: -7px;
+    }
+    .image {
+      margin: 7px;
+      overflow: hidden;
+    }
+    .slick-next {
+      right: 20px;
+    }
+    .slick-prev {
+      left: 20px;
+    }
+  }
+  .slick-slide {
+    position: relative;
+    &.photo-active {
+      .image {
+        transform: scale(1.1);
+      }
+    }
+    &:hover {
+      .no-touch & {
+        .social-gallery {
+          display: block;
+        }
+      }
+    }
+  }
+  .social-gallery {
+    background: @blue-overlay;
+    padding: 15px;
+    font-size: 1.143em;
+    color: @white;
+    .pull-left {
+      margin-top: 4px;
+    }
+    a {
+      span {
+        color: @white;
+      }
+    }
+    .download-button {
+      margin-left: 20px;
+      color: @white;
+      text-decoration: underline;
+      float: right;
+      .icon-download {
+        margin-right: 10px;
+        display: inline-block;
+      }
+      .text {
+        vertical-align: middle;
+      }
+      &:hover {
+        .no-touch & {
+          .icon-download {
+            background: url(../images/icon-download-hover.png) no-repeat left center;
+          }
+        }
+      }
+    }
+    .content {
+      text-align: left;
+      margin: 0;
+    }
+
+    .social-sharing {
+      display: inline-block;
+      .window-phone & {
+        max-width: 42px;
+      }
+      .share-button {
+        width: 45px;
+        height: 42px;
+        &:hover {
+          .no-touch & {
+            .entypo-export:before {
+              color: #000;
+            }
+          }
+        }
+        label {
+          color: @white;
+          background-color: transparent;
+          padding: 0;
+          line-height: 1;
+          span {
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            text-decoration: underline;
+            text-transform: capitalize;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: @screen-xs-max) and (orientation:landscape) {
+    .close-gallery {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .slider-for {
+      .slick-next ,
+      .slick-prev {
+        .touch &, .window-phone {
+          display: block;
+          margin-top: -54px;
+        }
+      }
+      .image {
+        .message-to-landscape {
+          display: none;
+        }
+      }
+    }
+    .social-gallery {
+      padding: 10px;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      .social-sharing .share-button {
+        height: 23px;
+      }
+      .no-touch & {
+        display: none;
+      }
+      .window-phone & {
+        display: block;
+      }
+      .content {
+        max-height: (22 * 2px);
+        overflow: auto;
+      }
+    }
+    .pull-left {
+      margin-top: 0;
+    }
+  }
+  @media (min-width: @screen-xs-max) {
+    .slider-for {
+      .slick-next ,
+      .slick-prev {
+        display: none;
+      }
+      .image {
+        height: 100%;
+        .message-to-landscape {
+          display: none;
+        }
+      }
+      &:hover {
+        .no-touch & {
+          .slick-next ,
+          .slick-prev {
+            display: block;
+          }
+        }
+      }
+    }
+    .pull-left {
+      margin-top: 0;
+    }
+    .slider-nav {
+      display: block;
+    }
+    .social-gallery {
+      padding: 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: @blue-overlay;
+      .social-sharing {
+        .share-button {
+          width: 92px;
+          label span {
+            display: inline;
+            vertical-align: middle;
+          }
+        }
+        .ie & {
+          width: 92px;
+          vertical-align: text-top;
+          .entypo-export {
+            &:before {
+              margin-top: -5px;
+            }
+          }
+        }
+      }
+      .no-touch & {
+        display: none;
+      }
+    }
+  }
+}

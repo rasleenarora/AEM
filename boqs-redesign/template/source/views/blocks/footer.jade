@@ -1,0 +1,53 @@
+footer#footer.footer(data-hide-nav)
+  .container
+    .row
+      .col-sm-3.hidden-xs
+        h3.info-hd Distinctive Banking
+        ul.list-unstyled.info-list
+          +items([
+            {title: "Medical Professionals"},
+            {title: "Accountants"},
+            {title: "Financial Planners"},
+            {title: "Private Clients"}
+          ])
+      .col-sm-3.hidden-xs
+        h3.info-hd Expertise
+        ul.list-unstyled.info-list
+          +items([
+            {title: "Search Expertise"},
+            {title: "Browse Guides"},
+            {title: "Publications"},
+            {title: "Online Security"},
+            {title: "Financial Hardship"}
+          ])
+      .col-sm-3.hidden-xs
+        h3.info-hd BOQ Specialist
+        ul.list-unstyled.info-list
+          +items([
+            {title: "About BOQ Specialist"},
+            {title: "Events"},
+            {title: "News"},
+            {title: "Sitemap", dataMobileBottom: true},
+            {title: "Privacy Policy", dataMobileBottom: true}
+          ])
+      .col-sm-3
+        div.info-hd
+          +link("1300131141", "tel:1300131141").link-phone
+            span.icon.icon-phone-white 
+            | 1300 131 141            
+        ul.list-unstyled.info-list
+          li: +link('Contact Us', 'mailto:')
+            span.icon.icon-mail-white
+            | Contact us
+          li: +link('Follow us')
+            span.icon.icon-linkedin-white
+            | Follow us
+    .copyright
+      p(role="contentinfo") Copyright &copy; 2016 BOQ SPECIALIST.&nbsp;
+        span.info All rights reserved.&nbsp;
+          +link("Legal")
+          |&nbsp;
+          span /
+          |&nbsp;
+          +link("Disclaimer")
+

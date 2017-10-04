@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Table of Content Configuration"
+	xtype="dialog">
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<maxlevels
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Max Levels"
+						name="./maxlevels"
+						allowBlank="{Boolean}false"
+						type="select"
+						defaultValue="2"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<one
+								jcr:primaryType="nt:unstructured"
+								text="1"
+								value="1"/>
+							<two
+								jcr:primaryType="nt:unstructured"
+								text="2"
+								value="2"/>
+							<three
+								jcr:primaryType="nt:unstructured"
+								text="3"
+								value="3"/>
+						</options>
+					</maxlevels>
+					<liststyle
+						jcr:primaryType="cq:Widget"
+						fieldLabel="List Style"
+						name="./liststyle"
+						allowBlank="{Boolean}false"
+						type="select"
+						defaultValue="counter"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<numbered
+								jcr:primaryType="nt:unstructured"
+								text="Numbered"
+								value="counter"/>
+							<bullets
+								jcr:primaryType="nt:unstructured"
+								text="Bullets"
+								value="circle"/>
+						</options>
+					</liststyle>
+				</items>
+			</tab1>
+		</items>
+	</items>
+</jcr:root>

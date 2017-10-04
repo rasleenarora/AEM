@@ -1,0 +1,124 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Contact'
+
+block container
+  main#main.main
+    form(action="#", data-required-message="This field is required")
+      .embedded-style
+        .container
+          .row
+            .col-sm-4
+              +btn-wrap({typebtn: "button", title: "Enquire Now", icon: "wi-icon icon-arrow icon-btn"}).btn.btn-default.btn-primary.btn-submit.embedded-hidden#contact-button
+
+        .popup.contact-popup(data-popin, data-showonload="true")
+          .container
+            .modal-dialog
+              .modal-content
+                .modal-header
+                  +btn-icon({typebtn: "button", title: "Close", icon: "wi-icon icon-close-1"}).close
+                .modal-body
+                  +required({icon: "wi-icon icon-required", text: "= Required field"})
+                  .contact-form
+                    .interested-component
+                      .form-group.dropdown-component
+                        .row
+                          .col-sm-6
+                            +label("select","I would like to:")
+                            i.wi-icon.icon-required(aria-hidden="true")
+                        .row
+                          .col-sm-6
+                            .custom-select(data-customselectbox, data-select-info)
+                              select(class="custom-box", id="select-more-info", data-required, data-required-message="Please select an option below")
+                                option(value="") Please select
+                                option(value="0", data-option-info="data-option-info") Become a BOQ Specialist member
+                                option(value="1", data-option-info="data-option-info") Learn more about a product
+                                option(value="2") Ask about an event
+                                option(value="3") Give a compliment
+                                option(value="4") Make a complaint
+                                option(value="5") Make some other enquiry
+                      .form-group.hide(data-more-info)
+                        +label-1({text: "I'm interested in:"})
+                        .row
+                          .col-sm-6
+                            +option-group({id: "checkbox1", type: "checkbox", text: "Savings Accounts", classDiv: "checkbox-group"})
+                            +option-group({id: "checkbox2", type: "checkbox", text: "Credit Cards", classDiv: "checkbox-group"})
+                            +option-group({id: "checkbox3", type: "checkbox", text: "Commercial Property Loan", classDiv: "checkbox-group"})
+                            +option-group({id: "checkbox4", type: "checkbox", text: "Partner buy-ins", classDiv: "checkbox-group"})
+                          .col-sm-6
+                            +option-group({id: "checkbox5", type: "checkbox", text: "Home loans", classDiv: "checkbox-group"})
+                            +option-group({id: "checkbox6", type: "checkbox", text: "Car Loans", classDiv: "checkbox-group"})
+                            +option-group({id: "checkbox7", type: "checkbox", text: "Equipment Finance", classDiv: "checkbox-group"})
+                            +option-group({id: "checkbox8", type: "checkbox", text: "Other - please specify below", classDiv: "checkbox-group"})
+                    .form-group.textarea-component
+                      +label("details","Additional details or comments:")
+                      i.wi-icon.icon-required(aria-hidden="true")
+                      .row
+                        textarea(name="comment", data-required)#comment.textarea-control
+                    h3.static-title Your contact details
+                    +form-group-1({id: "full-name",classForm : "form-group textfield-component", text: "Full Name:", required: "wi-icon icon-required", placeholder: "Enter your first and last names", classIcon: "wi-icon icon-close-2", attr:{"data-required":"", "data-required-message" : "Please enter a valid Full name"}}).custom-box
+                    .twice-component(data-phone-container, data-placeholder-phone="Enter phone number", data-placeholder-email="Enter email address", data-valid-phone="The phone number entered does not appear to be valid", data-valid-email="Please enter a valid Email address", data-title-phone="Alternative contact method", data-title-email="Alternative contact")
+                      .form-group.phone-component
+                        .row
+                          .col-sm-6
+                            +label("phone") Preferred contact method:
+                            i.wi-icon.icon-required(aria-hidden="true")
+                        .row
+                          .col-sm-6
+                            .input-group
+                              +custom-select-1()
+                              .wrap
+                                  +input({id: "phone", type: "input", placeholder: "Enter phone number"})(class="form-control",data-required, data-required-message="Please enter a Preferred contact method", data-phonenumber, data-phonenumber-message="The phone number entered does not appear to be valid", autocomplete="off")
+                      .form-group
+                        +link("+Add another contact method","javascript:;").text-link(data-add-contact, data-validate-required="true", data-title="Alternative contact")
+                    .form-group.dropdown-component
+                      .row
+                        .col-sm-6
+                          +label('state') State:
+                      .row
+                        .col-sm-6
+                          +custom-select([
+                            {value: "", text: "Please select"},
+                            {value: "0", text: "ACT"},
+                            {value: "1", text: "NT"},
+                            {value: "2", text: "NSW"},
+                            {value: "3", text: "QLD"},
+                            {value: "4", text: "SA"},
+                            {value: "5", text: "TAS"},
+                            {value: "6", text: "VIC"},
+                            {value: "7", text: "TAS"}
+                            ])
+                    .form-group.dropdown-component
+                      .row
+                        .col-sm-6
+                          +label("profession") Profession:
+                      .row
+                        .col-sm-6
+                          +custom-select([
+                            {value: "", text: "Please select"},
+                            {value: "0", text: "Medical Professional"},
+                            {value: "1", text: "Accountant"},
+                            {value: "2", text: "Financial Planner"},
+                            {value: "3", text: "Other / Private Client"}
+                            ])
+                        input(data-phone-hidden, type="hidden", name="add-phone")
+                    .row
+                      .col-sm-6
+                        +btn-wrap({typebtn: "submit", title: "Submit Enquiry", icon: "wi-icon icon-arrow icon-btn"}).btn.btn-default.btn-primary.btn-submit
+                      .col-sm-6.text-center
+                        +button({typebtn: "reset", title: "Cancel Enquiry"}).btn-cancel
+
+        .popup.information-popup#submit-success(data-popin)
+          .container
+            .modal-dialog
+              .modal-content
+                .modal-header
+                  +btn-icon({type: "button", title: "Close", icon: "wi-icon icon-close-1"}).close
+                  h4.modal-title You have been registered for event name
+                .modal-body
+                  p.desc We will send you an email shortly with additional information. Thank you for registering, and we look forward to seeing you at the event.
+                  +link
+                  +btn-wrap({typebtn: "text", title: "Continue", icon: "wi-icon icon-arrow icon-btn"}).btn.btn-default.btn-primary
+

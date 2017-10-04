@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Search Input Configuration"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <searchplaceholder
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Search the site"
+                        fieldDescription="If left empty, &quot;Search the site&quot; will be used by default"
+                        fieldLabel="Search field placeholder"
+                        name="./searchPlaceholder"
+                        xtype="textfield"/>
+                    <hinttitle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Press Enter to search"
+                        fieldDescription="If left empty, &quot;Press Enter to search&quot; will be used by default"
+                        fieldLabel="Hint text to Serach"
+                        name="./hinttitle"
+                        xtype="textfield"/>
+                    <filterpro
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="allprofessions"
+                        fieldLabel="Profession Filter"
+                        name="./filterpro"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <allprofessions
+                                jcr:primaryType="nt:unstructured"
+                                text="All Professions"
+                                value="allprofessions"/>
+                            <medicalprofessional
+                                jcr:primaryType="nt:unstructured"
+                                text="Medical Professional"
+                                value="medicalprofessional"/>
+                            <accountant
+                                jcr:primaryType="nt:unstructured"
+                                text="Accountant"
+                                value="accountant"/>
+                            <financialadviser
+                                jcr:primaryType="nt:unstructured"
+                                text="Financial Adviser"
+                                value="financialadviser"/>
+                            <privateclient
+                                jcr:primaryType="nt:unstructured"
+                                text="Private Client"
+                                value="privateclient"/>
+                        </options>
+                    </filterpro>
+                    <filtertype
+                        jcr:primaryType="cq:Widget"
+                        defaultValue=""
+                        fieldLabel="Type Filters"
+                        name="./filtertype"
+                        type="checkbox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <products
+                                jcr:primaryType="nt:unstructured"
+                                text="Products"
+                                value="product"/>
+                            <expertise
+                                jcr:primaryType="nt:unstructured"
+                                text="Expertise"
+                                value="expertise"/>
+                            <events
+                                jcr:primaryType="nt:unstructured"
+                                text="Events"
+                                value="event"/>
+                            <specialistbankers
+                                jcr:primaryType="nt:unstructured"
+                                text="Specialist Bankers"
+                                value="specialistbanker"/>
+                            <news
+                                jcr:primaryType="nt:unstructured"
+                                text="News"
+                                value="news"/>
+                            <legaldocuments
+                                jcr:primaryType="nt:unstructured"
+                                text="Legal Documents"
+                                value="legaldocument"/>
+                        </options>
+                    </filtertype>
+                    <searchresult
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        editable="{Boolean}false"
+                        fieldLabel="Search Result Page"
+                        name="./searchresult"
+                        xtype="pathfield"/>
+                </items>
+            </general>
+            <autosuggestions
+                jcr:primaryType="cq:Panel"
+                title="Auto-Suggestions">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <quicklinkslabel
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Quick links"
+                        fieldDescription="If left empty, &quot;Quick links&quot; will be used by default"
+                        fieldLabel="Quick links Label"
+                        name="./quicklinksLabel"
+                        xtype="textfield"/>
+                    <searchresultslimit
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="10"
+                        fieldDescription="Maximum number of auto suggestions ,displayed to the user.Default value:10"
+                        fieldLabel="Maximum results"
+                        name="./maxautosuggestresults"
+                        xtype="numberfield"/>
+                    <charecterlimit
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="3"
+                        fieldDescription="Number of characters after which search/auto-suggestions will be triggered for end-user. Default value:3 "
+                        fieldLabel="Character input count"
+                        name="./charecterlimit"
+                        xtype="numberfield"/>
+                    <autosuggestionsurl
+                        jcr:primaryType="cq:Widget"
+                        html="&lt;div style=&quot;font-size:14px;&quot;>Click &lt;a href=&quot;#&quot; target=&quot;_blank&quot; onclick=&quot;javascript:getAutosuggestionLink()&quot; style=&quot;color:blue;&quot;>Auto-Suggestions Link&lt;/a> to author  suggestions.Top x results(x is the value of 'Maximum results' field) will be shown as default Suggestions.&lt;/div>"
+                        xtype="label"/>
+                    <autosuggestionjson
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Suggestion List Path"
+                        hidden="{Boolean}true"
+                        name="./suggestionJsonPath"
+                        xtype="textfield">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(){&#xa;var field=this;&#xa;getSearchSuggestionsJson(field);&#xa;}"/>
+                    </autosuggestionjson>
+                </items>
+            </autosuggestions>
+        </items>
+    </items>
+</jcr:root>

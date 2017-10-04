@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Visa Checkout Button Configuration"
+	height="550"
+	xtype="dialog">
+	<listeners
+		jcr:primaryType="nt:unstructured"
+		beforesubmit ="function(dialog) { return checkJavascriptValid(dialog); }"/>
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<buttontext
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Button text"
+						name="./buttontext"
+						allowBlank="{Boolean}false"
+						xtype="textfield"/>
+					<buttonalignment
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Button Alignment"
+						name="./buttonalignment"
+						allowBlank="{Boolean}false"
+						type="select"
+						defaultValue="center"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<left
+								jcr:primaryType="nt:unstructured"
+								text="Left"
+								value="left"/>
+							<centred
+								jcr:primaryType="nt:unstructured"
+								text="Centred"
+								value="center"/>
+							<right
+								jcr:primaryType="nt:unstructured"
+								text="Right"
+								value="right"/>
+						</options>
+					</buttonalignment>
+					<javascriptcode
+						jcr:primaryType="cq:Widget"
+						fieldDescription="Add the javascript code which will run when the user clicks on the visa checkout button."
+						fieldLabel="Javascript Code"
+						allowBlank="{Boolean}false"
+						height="300"
+						name="./javascriptcode"
+						xtype="textarea"/>
+				</items>
+			</tab1>
+			<tab2
+				jcr:primaryType="cq:Panel"
+				title="Analytics">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<buttonanalyticslabel
+						jcr:primaryType="cq:Widget"
+						fieldDescription="This label will be used in google analytics to track it."
+						fieldLabel="Button Analytics Label"
+						name="./buttonanalyticslabel"
+						xtype="textfield"/>
+				</items>
+			</tab2>
+		</items>
+	</items>
+</jcr:root>

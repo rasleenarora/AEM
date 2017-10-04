@@ -1,0 +1,19 @@
+mixin video(videoId)
+  .video-container
+    .video-outer
+      .video-wrapper(data-autoplay="true")
+        object.BrightcoveExperience
+          param(name='bgcolor', value='#FFFFFF')
+          param(name='width', value='480')
+          param(name='height', value='270')
+          param(name='playerID', value='1150189326001')
+          param(name='playerKey', value='AQ~~,AAAA0vRfoQE~,baHF9-H5aHJPAl3cZ-KjgHH9A7WtanGe')
+          param(name='isVid', value='true')
+          param(name='isUI', value='true')
+          param(name='dynamicStreaming', value='true')
+          param(name='@videoPlayer', value=videoId)
+          param(name='templateLoadHandler', value='onTemplateLoaded')
+          param(name='templateReadyHandler', value='onTemplateReady')
+          param(name='includeAPI', value='true')
+          param(name='forceHTML', value='true')
+

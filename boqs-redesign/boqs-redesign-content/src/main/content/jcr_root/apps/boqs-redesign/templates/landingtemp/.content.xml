@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="This is a custom template without any navigation elements, designed to be used for promotional landing pages."
+    jcr:primaryType="cq:Template"
+    jcr:title="BOQS - Landing Page Template"
+    allowedPaths="[/content(/.*)?]"
+    ranking="{Long}20">
+    <jcr:content
+        cq:designPath="/etc/designs/boqs-redesign"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="boqs-redesign/components/pages/landingpage"/>
+</jcr:root>

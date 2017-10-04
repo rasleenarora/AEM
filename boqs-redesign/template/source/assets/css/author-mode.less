@@ -1,0 +1,53 @@
+// This CSS make author layout looking good and which would be a bad user experience for an author using CQ
+.author-mode {
+  .popup {
+    position: static;
+  }
+  .tabs.more-two-tabs.expanded .list-tabs {
+    z-index: 8005;
+  }
+}
+@media (min-width: @screen-sm-min) {
+  .author-mode {
+    .cq-paragraphreference-paragraph .link-panel img {
+      display: none!important;
+    }
+    .header {
+      z-index: 8005;
+    }
+    .ribbon-block {
+      overflow: hidden;
+    }
+    .ribbon-bg {
+      bottom: 0;
+    }
+    .header-subpage .page-header, .page-header {
+      margin-left: 15px;
+    }
+    .buttoncomp {
+      overflow: hidden;
+    }
+    #CQ {
+      .cq-element-globalheadercomp_47topnavigationcomp, .cq-element-globalheadercomp, .cq-element-globalheadercomp_47searchinputcomp {
+        z-index: 8006;
+      }
+    }
+    .panel-block .content-panel.centre .inner {
+      width: 100%;
+    }
+  }
+  #CQ {
+    legend {
+      width: auto;
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+    * {
+      box-sizing: content-box;
+    }
+    label {
+      color: black;
+      font-size: 1em;
+    }
+  }
+}

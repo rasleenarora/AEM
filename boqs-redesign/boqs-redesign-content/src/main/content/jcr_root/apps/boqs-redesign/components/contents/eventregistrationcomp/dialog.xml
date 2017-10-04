@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Event Registration Configuration"
+    width="600"
+    height="700"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1 jcr:primaryType="cq:Panel" title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <registerheading
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Register Heading"
+                        name="./registerheading"
+                        defaultValue="Register for"
+                        xtype="textfield"/>
+                    <requiredsigntext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Required Sign Text"
+                        name="./requiredsigntext"
+                        defaultValue="Required field"
+                        xtype="textfield"/>
+                    <instruction
+                        jcr:primaryType="cq:Widget"
+                        externalStyleSheets="[]"
+                        fieldLabel="Instruction"
+                        height="400"
+                        allowBlank="{Boolean}false"
+                        name="./instruction"
+                        xtype="richtext">
+                            <rtePlugins jcr:primaryType="nt:unstructured"
+                                path="/apps/boqs-redesign/components/contents/wysiwygcomp/rteplugins.infinity.json"
+                                xtype="cqinclude"/>
+                            <htmlRules jcr:primaryType="nt:unstructured">
+                                <links jcr:primaryType="nt:unstructured" protocols="[http://,https://,javascript:,mailto:]">
+                                </links>
+                            </htmlRules>
+                    </instruction>
+                    <submitbuttontext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Submit Button Text"
+                        name="./submitbuttontext"
+                        defaultValue="Submit"
+                        xtype="textfield"/>
+                    <cancelbuttontext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Cancel Button Text"
+                        name="./cancelbuttontext"
+                        defaultValue="Cancel Registration"
+                        xtype="textfield"/>
+                    <errormsg
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Error Message"
+                        name="./errormsg"
+                        allowBlank="{Boolean}false"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+            <tab2 jcr:primaryType="cq:Panel" title="Confirmation Message">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <confirmationheading
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Confirmation Heading"
+                        name="./confirmationheading"
+                        allowBlank="{Boolean}false"
+                        defaultValue="You have been registered for"
+                        xtype="textfield"/>
+                    <confirmationmsg
+                        jcr:primaryType="cq:Widget"
+                        externalStyleSheets="[]"
+                        fieldLabel="Confirmation Message"
+                        height="400"
+                        allowBlank="{Boolean}false"
+                        name="./confirmationmsg"
+                        xtype="richtext">
+                            <rtePlugins jcr:primaryType="nt:unstructured"
+                                path="/apps/boqs-redesign/components/contents/wysiwygcomp/rteplugins.infinity.json"
+                                xtype="cqinclude"/>
+                            <htmlRules jcr:primaryType="nt:unstructured">
+                                <links jcr:primaryType="nt:unstructured" protocols="[http://,https://,javascript:,mailto:]">
+                                </links>
+                            </htmlRules>
+                    </confirmationmsg>
+                    <continuebtnlbl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Continue Button Text"
+                        name="./continuebtnlbl"
+                        defaultValue="Continue"
+                        xtype="textfield"/>
+                </items>
+            </tab2>
+            <tab3 jcr:primaryType="cq:Panel" title="Exception Message">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <exceptionheading
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This heading will be used when there is any exception."
+                        fieldLabel="Exception Message Heading"
+                        name="./exceptionheading"
+                        xtype="textfield"/>
+                    <exceptionmsg
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Exception Message"
+                        name="./exceptionmsg"
+                        allowBlank="{Boolean}false"
+                        xtype="textfield"/>
+                    <exceptionbtnlbl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Exception Continue Button Text"
+                        name="./exceptionbtnlbl"
+                        defaultValue="Continue"
+                        xtype="textfield"/>
+                </items>
+            </tab3>
+        </items>
+    </items>
+</jcr:root>

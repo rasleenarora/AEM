@@ -1,0 +1,29 @@
+extends layouts/layout
+
+block vars
+  -title = 'Search'
+
+block container
+  main#main.main
+    include blocks/page-header
+    
+    include blocks/breadcrumb
+    
+    .search-field-block.grey
+      .container
+        include blocks/search-field
+    .search-parsys-area
+      .container
+        .row
+          .col-sm-3
+            +link("Refine")(data-popover-trigger='filter-control', data-expand-handle, data-target="#filtering-controls").btn.btn-refine.filters-applied
+              span.num-filters 3
+              |Refine
+            include blocks/popover-filter-control
+            include blocks/filtering-controls
+          .col-sm-9
+            include blocks/search-result-section
+            //- include blocks/pagination
+    .parsys-area-1.grey
+      .container
+        include blocks/parsys-area-1

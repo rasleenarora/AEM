@@ -1,0 +1,61 @@
+.well-block {
+  display: none;
+  position: relative;
+  z-index: 3;
+  background-color: @darker-blue;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  p, p a, .close-btn, .well-msg {
+    color: @white-gray;
+  }
+  p {
+    padding-top: 10px;
+    font-size: 16px;
+    a {
+      text-decoration: underline;
+    }
+  }
+  .well-msg {
+    margin-top: 0;
+    padding-top: 0;
+    .font-size(25px);
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+    line-height: 1.1;
+  }
+  /*.close-btn {
+    margin-top: 5px;
+    display: inline-block;
+    .font-size(17px);
+    line-height: 1;
+    .wi-icon {
+      margin-left: 12px;
+      vertical-align: top;
+    }
+  }*/
+  .has-border {
+    padding-top: 10px;
+    position: relative;
+    .icon-1 {
+      display: inline-block;
+      margin-right: 7px;
+      vertical-align: baseline;
+    }
+    &:before {
+      border-top: 2px solid @olive-gray;
+      position: absolute;
+      left: 0;
+      right: (@grid-gutter-width / 2);
+      top: 0;
+      display: block;
+    }
+  }
+  /*@media (min-width: @screen-sm-min) {
+    .btn {
+      max-width: 255px;
+    }
+    .close-btn {
+      margin-right: 12px;
+    }
+  }*/
+}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="850"
+    title="Promo Banner Configuration"
+    width="950"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <promocarousel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Promo carousel"
+                        name="./promocarousel"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            border="true"
+                            hideLabel="true"
+                            layout="form"
+                            padding="10px"
+                            width="800"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <promoimage
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}true"
+                                    dName="promoimage"
+                                    fieldLabel="Promo Image"
+                                    width="400"
+                                    xtype="pathfield"/>
+                                <alternatetext
+                                    jcr:primaryType="cq:Widget"
+                                    dName="alternatetext"
+                                    fieldLabel="Alternate Text"
+                                    width="400"
+                                    xtype="textfield"/>
+                                <promotext
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    dName="promotext"
+                                    externalStyleSheets="[]"
+                                    fieldLabel="Promo Text"
+                                    xtype="richtext">
+                                    <rtePlugins
+                                        jcr:primaryType="nt:unstructured"
+                                        path="/apps/boqs-redesign/components/contents/promobannercomp/rteplugins.infinity.json"
+                                        xtype="cqinclude"/>
+                                </promotext>
+                                <ctatextoverride
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="Learn more"
+                                    dName="ctatextoverride"
+                                    fieldDescription="If left empty, &quot;Learn more&quot; will be used by default"
+                                    fieldLabel="CTA Text Override"
+                                    width="400"
+                                    xtype="textfield"/>
+                                <targeturl
+                                    jcr:primaryType="cq:Widget"
+                                    dName="targeturl"
+                                    fieldDescription="If left empty, the page on which this component is placed, that page's URL will be used by default"
+                                    fieldLabel="Target URL"
+                                    width="400"
+                                    xtype="pathfield"/>
+                                <openinnewtab
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="false"
+                                    dName="openinnewtab"
+                                    fieldDescription="Kindly check this checkbox to open the button link in new tab."
+                                    fieldLabel="Open in new tab"
+                                    type="checkbox"
+                                    width="400"
+                                    xtype="selection"/>
+                                <ctatextoverride2
+                                    jcr:primaryType="cq:Widget"
+                                    defaultValue="View all"
+                                    dName="ctatextoverride2"
+                                    fieldDescription="If left empty, &quot;View All&quot; will be used by default"
+                                    fieldLabel="CTA Text Override"
+                                    width="400"
+                                    xtype="textfield"/>
+                                <targeturl2
+                                    jcr:primaryType="cq:Widget"
+                                    dName="targeturl2"
+                                    fieldDescription="If left empty, the page on which this component is placed, that page's URL will be used by default"
+                                    fieldLabel="Target URL "
+                                    width="400"
+                                    xtype="pathfield"/>
+                            </items>
+                        </fieldConfig>
+                    </promocarousel>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Renditions">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <mobilerenditionname
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="mobile"
+                        fieldDescription="Provide the name of the rendition that will be used to display on mobile and if left empty, 'mobile' as a name will be used by default"
+                        fieldLabel="Mobile rendition"
+                        name="./mobilerenditionname"
+                        xtype="textfield"/>
+                </items>
+            </tab2>
+        </items>
+    </items>
+</jcr:root>

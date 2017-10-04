@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Menu Items Configuration"
+	height="400"
+	xtype="dialog">
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<general
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<globalmenu
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Global Menu Item List"
+						name="./globalmenu"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							fieldLabel="Global Menu Item"
+							xtype="customxtypewithiconfield"/>  
+					</globalmenu>
+					<localmenu
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Local Menu Item List"
+						name="./localmenu"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							fieldLabel="Local Menu Item"
+							xtype="customxtypewithiconfield"/>  
+					</localmenu>
+					<layout
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Layout"
+						allowBlank="{Boolean}false"
+						defaultValue="vertical"
+						name="./layout"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<horizontal
+								jcr:primaryType="nt:unstructured"
+								text="Horizontal"
+								value="horizontal"/>
+							<vertical
+								jcr:primaryType="nt:unstructured"
+								text="Vertical"
+								value="vertical"/>
+						</options>
+					</layout>
+				</items>
+			</general>
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="Renditions">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<hoverrenditionname
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Hover rendition"
+						fieldDescription="Provide the name of the rendition that will be used to display when menu is hovered and if left empty, 'white' as a name will be used by default"
+						name="./hoverrenditionname"
+						defaultValue="white"
+						xtype="textfield"/>
+					<mobilerenditionname
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Mobile rendition"
+						fieldDescription="Provide the name of the rendition that will be used to display on mobile and if left empty, 'mobile' as a name will be used by default"
+						name="./mobilerenditionname"
+						defaultValue="mobile"
+						xtype="textfield"/>
+				</items>
+			</tab1>
+		</items>
+	</items>
+</jcr:root>

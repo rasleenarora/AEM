@@ -1,0 +1,9 @@
+extends layouts/template
+
+block vars
+  -title = 'Event Details'
+block container
+  main#main.main
+    include blocks/event-details
+    include blocks/registration-form
+

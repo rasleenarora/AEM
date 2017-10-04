@@ -1,0 +1,34 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Email'
+
+block container
+  main#main.main(style="background-color: #fff")
+    .container
+      .twice-component
+        .form-group.phone-component
+          .row
+            .col-sm-6
+              +label("phone") Preferred contact method:
+              i.wi-icon.icon-required(aria-hidden="true")
+          .row
+            .col-sm-6
+              .input-group
+                +dropdown-menu({typebtn: "button", title: "Phone", icon: "wi-icon icon-select", item: [{title: "Phone"}, {title: "Email"}]}).btn.btn-primary.btn-dropdown
+                .wrap
+                    +input({id: "phone", type: "input", placeholder: "Enter phone number"}).form-control
+        .form-group.email-component.hidden
+          .row
+            .col-sm-6
+              +label("email") Alternative contact 1:
+              i.wi-icon.icon-required(aria-hidden="true")
+          .row
+            .col-sm-6
+              .input-group
+                +dropdown-menu({typebtn: "button", title: "Email", icon: "wi-icon icon-select", item: [{title: "Email"}, {title: "Phone"}]}).btn.btn-primary.btn-dropdown
+                .wrap
+                  +input({id: "email", type: "input", placeholder: "Enter email address"}).form-control
+        .form-group
+          +link("+Add another contact method","javascript:;").text-link

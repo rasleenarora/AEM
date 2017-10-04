@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Dynamic Result Card Configuration"
+    width="600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <pagecontenttype
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Select Page content type to fetch result cards from selected content type pages"
+                        fieldLabel="Page Content-Type"
+                        name="./pagecontenttype"
+                        optionsProvider="function(){&#xa;var json=[];&#xa;var key=&quot;boqs.pagecontenttype_list&quot;;&#xa;json=loadCategories(key);&#xa;return json;&#xa;}"
+                        type="select"
+                        xtype="selection"/>
+                    <rootpagepath
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select a root page that will be used to search results from selected content type pages. If left empty, rootpage of the site will be used for search."
+                        fieldLabel="Root Page for Search"
+                        name="./pagePath"
+                        xtype="pathfield"/>
+                    <loadMorelabel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Load More label"
+                        name="./loadMore"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+            <tab4
+                jcr:primaryType="cq:Panel"
+                title="No result">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <noresultstext
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="We could not find any %t matching your filters"
+                        fieldDescription="If left empty, &quot;We could not find any %t matching your filters&quot; will be used by default."
+                        fieldLabel="No Result Text"
+                        name="./noresultstext"
+                        xtype="textfield"/>
+                    <clearallfilterstext
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Clear all filters"
+                        fieldDescription="If left empty, &quot;Clear all filters&quot; will be used by default."
+                        fieldLabel="Clear All Filters Text"
+                        name="./clearallfilterstext"
+                        xtype="textfield"/>
+                </items>
+            </tab4>
+            <tab3
+                jcr:primaryType="cq:Panel"
+                title="No more result">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <nomoreresultstext
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="There are no other %t to display"
+                        fieldDescription="If left empty, &quot;There are no other %t to display&quot; will be used by default"
+                        fieldLabel="No More Results Text"
+                        name="./nomoreresultstext"
+                        xtype="textfield"/>
+                    <backtotoptext
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Back to Top"
+                        fieldDescription="If left empty, &quot;Back to Top&quot; will be used by default "
+                        fieldLabel="Back to Top Text"
+                        name="./backtotoptext"
+                        xtype="textfield"/>
+                </items>
+            </tab3>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,183 @@
+html {
+  font-size: @font-size-base; // REM reset
+}
+
+body {
+  position: relative; //needed for scrollspy
+  
+  @media (max-width: @screen-xs-max) {
+    overflow-x: hidden;
+  }
+}
+
+// Typography
+/*body {
+  font-family: @font-family-base;
+}*/
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  .transition(color .2s linear);
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}
+.touch {
+  a {
+    &:hover,
+    &:focus {
+      text-decoration: none;    
+    }
+  }
+}
+/*h1, h2, h3, h4 {
+  font-size: inherit;
+}*/
+.title {
+  font-family: @font-family-Gotham-Book;
+  color: @prussian-blue;
+  strong, 
+  b { 
+    font-family: @font-family-Gotham-Bold; 
+  }
+}
+.text {
+  color: @dark-blue;
+}
+.blue-text { color: @prussian-blue; }
+.text-link {
+  text-decoration: underline;
+  &:hover {
+    .no-touch & {
+    color: lighten(@dark-blue, 30%);
+    text-decoration: none;
+    }
+  }
+}
+.bold-text {
+  font-weight: bold;
+}
+.bold {
+  font-family: @font-family-Gotham-Bold;
+}
+.italic {
+  font-family: @font-family-Gotham-Italic;
+}
+/*.h1, .h2, .h3, .h4 {
+  font-family: @font-family-Gotham-Book;
+  color: @prussian-blue;
+  &.bold {.bold();}
+  &.italic {.italic();}
+}
+.h1 {
+  .font-size(24px);
+  line-height: 1.158;
+}
+.h2 {
+  .font-size(20px);
+  line-height: 1.188;
+}
+.h3 {
+  .font-size(18px);
+  line-height: 1.25;
+}*/
+.large-title,
+.title-1,
+.title-2 {
+  .font-size(24px);
+  line-height: 1.158;
+}
+.normal-title {
+  .font-size(20px);
+  line-height: 1.188;
+}
+.small-title,
+.text-4 {
+  .font-size(18px);
+  line-height: 1.25;
+}
+.large-text {
+  .font-size(20px);
+  line-height: 1.3;
+}
+.normal-text,
+.disclaimer-title,
+.text-3,
+.text-5 {
+  .font-size(16px);
+  line-height: 1.2;
+}
+.small-text,
+.disclaimer-text {
+  .font-size(12px);
+  line-height: 1.4;
+}
+.disclaimer-text { color: @prussian-blue; }
+.disclaimer-title {
+  display: inline-block;
+  font-weight: bold;
+  color: @prussian-blue;
+  text-transform: uppercase;
+}
+.pull-right-sm {
+  @media (min-width: @screen-sm-min) {
+    float: right !important;
+  }
+}
+.expanding-box {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .2s;
+       -o-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-property: height, visibility;
+       -o-transition-property: height, visibility;
+          transition-property: height, visibility;
+}
+
+.grey {
+  background-color: @white-gray;
+}
+.blue {
+  background-color: @prussian-blue;
+}
+.blue-2 {
+  background-color: @blue;
+  color: @white;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+.no-gutter {
+  padding-right:0;
+  padding-left:0;
+}
+.link-more {
+  font-family: @font-family-Gotham-Book;
+  .font-size(18px);
+  color: @prussian-blue;
+  text-align: center;
+  .no-touch &:hover {
+    text-decoration: none;
+    color: lighten(@prussian-blue, 20%);
+  }
+}
+.full-width {
+  margin-left: -(@grid-gutter-width / 2);
+  margin-right: -(@grid-gutter-width / 2);
+  @media (min-width: @screen-sm-min) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+

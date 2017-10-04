@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Home Page Speciality Configuration"
+	height="550"
+	xtype="dialog">
+	<listeners
+		jcr:primaryType="nt:unstructured"
+		beforesubmit ="function(dialog) { return beforeSubmitHomePageSpeciality(dialog); }"/>
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<specialityheading
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Speciality Heading"
+						name="./specialityheading"
+						allowBlank="{Boolean}false"
+						defaultValue="We can also help you with:"
+						xtype="textfield"/>
+					<specialitybuttonlist
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Speciality Button List"
+						name="./specialitybuttonlist"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							xtype="homepagespecialitycustomxtypefield" />
+					</specialitybuttonlist>
+					<seeallspecialitieslabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="See all specialities Label"
+						name="./seeallspecialitieslabel"
+						allowBlank="{Boolean}false"
+						defaultValue="See all specialities"
+						xtype="textfield"/>
+					<seeallspecialitiestargeturl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="See all specialties Target URL"
+						name="./seeallspecialitiestargeturl"
+						allowBlank="{Boolean}false"
+						xtype="pathfield"/>
+					<margins
+						jcr:primaryType="cq:Widget"
+						defaultValue="false"
+						fieldDescription="Add margin top for See all Specialties Button"
+						fieldLabel="Add margin top"
+						name="./margintop"
+						type="checkbox"
+						xtype="selection"/>
+				</items>
+			</tab1>
+		</items>
+	</items>
+</jcr:root>

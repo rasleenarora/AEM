@@ -1,0 +1,31 @@
+extends layouts/layout
+
+block vars
+  -title = 'Filterable'
+  -bodyClass = 'filterable'
+block container
+  main#main.main
+    include blocks/page-header
+    
+    include blocks/breadcrumb
+    
+    .parsys-area-1.grey
+      .container
+        include blocks/parsys-area-6
+    .grey
+      .container
+        .row
+          .col-sm-3.filter-component
+            +link("Refine")(data-popover-trigger='filter-control', data-expand-handle, data-target="#filtering-controls").btn.btn-refine.filters-applied
+              span.num-filters 3
+              |Refine
+            include blocks/popover-filter-control
+            include blocks/filtering-controls
+          .col-sm-9
+            include blocks/event-calendar
+    .parsys-area-3
+      .container
+        include blocks/parsys-area-1
+    .parsys-area-4.grey
+      .container
+        include blocks/parsys-area-7

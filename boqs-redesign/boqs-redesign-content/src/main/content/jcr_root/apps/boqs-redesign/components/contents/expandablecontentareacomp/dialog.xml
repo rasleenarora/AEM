@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="800"
+    title="Expandable Content Area Configuration"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <componentalignment
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="left"
+                        fieldLabel="Component Alignment"
+                        name="./componentalignment"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="left"/>
+                            <centred
+                                jcr:primaryType="nt:unstructured"
+                                text="Centred"
+                                value="center"/>
+                        </options>
+                    </componentalignment>
+                    <width
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="12"
+                        fieldLabel="Width"
+                        name="./width"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <pc50
+                                jcr:primaryType="nt:unstructured"
+                                text="50%"
+                                value="6"/>
+                            <pc75
+                                jcr:primaryType="nt:unstructured"
+                                text="75%"
+                                value="9"/>
+                            <pc100
+                                jcr:primaryType="nt:unstructured"
+                                text="100%"
+                                value="12"/>
+                        </options>
+                    </width>
+                    <visiblecontent
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        externalStyleSheets="[]"
+                        fieldLabel="Visible Content"
+                        height="200"
+                        name="./visiblecontent"
+                        xtype="richtext">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/boqs-redesign/components/contents/wysiwygcomp/rteplugins.infinity.json"
+                            xtype="cqinclude"/>
+                        <htmlRules jcr:primaryType="nt:unstructured">
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                protocols="[http://,https://,javascript:,mailto:]"/>
+                        </htmlRules>
+                    </visiblecontent>
+                    <visiblecontentstyle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="whitetext"
+                        fieldLabel="Style of Visible Content "
+                        name="./visiblecontenttextstyle"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <whitetext
+                                jcr:primaryType="nt:unstructured"
+                                text="White color text with Blue background "
+                                value="whitetext"/>
+                            <bluetext
+                                jcr:primaryType="nt:unstructured"
+                                text="Blue color text with White background"
+                                value="bluetext"/>
+                            <bluetextgreybg
+                                jcr:primaryType="nt:unstructured"
+                                text="Blue color text with grey background"
+                                value="bluetextgreybg"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(field){&#xa;if(field.value=='whitetext'){&#xa;field.setValue('whitetext');&#xa;}else if(field.value=='bluetextgreybg'){&#xa;field.setValue('bluetextgreybg');&#xa;}else{&#xa;field.setValue('bluetextgreybg');&#xa;}&#xa;}"/>
+                    </visiblecontentstyle>
+                    <contenttype
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="text"
+                        fieldLabel="Content Type"
+                        name="./contenttype"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <text
+                                jcr:primaryType="nt:unstructured"
+                                text="Text"
+                                value="text"/>
+                            <parsys
+                                jcr:primaryType="nt:unstructured"
+                                text="Parsys"
+                                value="parsys"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(field){&#xa;var dialog=field.findParentByType('dialog');&#xa;var hiddenfield=dialog.getField('./hiddencontent');&#xa;if(field.value!='parsys'){&#xa;field.setValue('text');&#xa;hiddenfield.show();&#xa;hiddenfield.allowBlank=false;&#xa;}else{&#xa;field.setValue('parsys');&#xa;hiddenfield.hide();&#xa;hiddenfield.allowBlank=true;&#xa;}&#xa;}"
+                            selectionchanged="function(field,value){&#xa;var dialog=field.findParentByType('dialog');&#xa;var hiddenfield=dialog.getField('./hiddencontent');&#xa;if(value!='parsys'){&#xa;hiddenfield.show();&#xa;hiddenfield.allowBlank=false;&#xa;}else{&#xa;hiddenfield.hide();&#xa;hiddenfield.allowBlank=true;&#xa;}&#xa;}"/>
+                    </contenttype>
+                    <hiddencontent
+                        jcr:primaryType="cq:Widget"
+                        externalStyleSheets="[]"
+                        fieldLabel="Hidden Content"
+                        height="300"
+                        name="./hiddencontent"
+                        xtype="richtext">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/boqs-redesign/components/contents/wysiwygcomp/rteplugins.infinity.json"
+                            xtype="cqinclude"/>
+                        <htmlRules jcr:primaryType="nt:unstructured">
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                protocols="[http://,https://,javascript:,mailto:]"/>
+                        </htmlRules>
+                    </hiddencontent>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

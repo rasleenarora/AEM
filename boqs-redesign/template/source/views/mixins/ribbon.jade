@@ -1,0 +1,7 @@
+mixin ribbon-item(title, icon, href, text)
+  - if (typeof(text) === 'undefined') text = title
+  .ribbon-item.col-xs-6.col-sm-3
+    +link(title, href, text).ribbon-link(class!=attributes.class, data-item)
+      i.pro-icon
+        +img(icon).img-responsive
+      h5.ribbon-link-heading!=text

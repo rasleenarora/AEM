@@ -1,0 +1,16 @@
+.tabbed-container(data-tabs="")
+  .tabs
+    +link("Tab number one", "javascript:;").tab-active
+    ul.list-unstyled.list-tabs
+      li.active
+        +link("Active tab label", "#id1")
+          span.img-wrap: +img("icon-calculator.png")
+          span.tab-title Practice Finance
+      li
+        +link("Tab 2", "#id2")
+          span.img-wrap: +img("icon-money.png")
+          span.tab-title Personal Finance
+  .tabs-content
+    .tab-layout.active#id1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque nam labore unde eligendi ea, maxime numquam at, dolorem voluptatibus natus quo nobis praesentium odit eos magni, dignissimos voluptatem officia enim.      
+    .tab-layout#id2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+

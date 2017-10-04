@@ -1,0 +1,181 @@
+// @import "bootstrap/mixins.less";
+// Mixin
+// PX to REM
+.font-size(@target: @font-size-base, @default: @font-size-base) {
+  font-size: round((@target / @default), 4) + 0rem;
+}
+// Sizing shortcuts
+.size(@width, @height: @width) {
+  width: @width;
+  height: @height;
+}
+// Center-align a block level element
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+// Text overflow
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// Placeholder text
+.placeholder-1(@color: @placeholder-color) {
+  &:-moz-placeholder {
+    color: @color;
+  }
+  &::-moz-placeholder {
+    color: @color;
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+}
+
+// Clearfix
+.clearfix() {
+  &:before, &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+.responsive-visibility() {
+  display: block !important;
+  table& {
+    display: table;
+  }
+  tr& {
+    display: table-row !important;
+  }
+  th&,
+  td& {
+    display: table-cell !important;
+  }
+}
+.responsive-invisibility() {
+  display: none !important;
+}
+
+.sprite-icon(@target, @i:1) when(@i <= length(@target)) {
+  @name: extract(extract(@target, @i),1);
+  .icon-@{name} {
+    @width: extract(extract(@target, @i),2);
+    @height: extract(extract(@target, @i),3);
+    & when (isnumber(@height)) {
+      height: @height;
+    }
+    & when not (isnumber(@height)) {
+      height: @width;
+    }
+    width: @width;
+    background-position: -(mod((@i - 1), @grid-max-icon)* @grid-icon-size) -(floor((@i - 1) / @grid-max-icon)*@grid-icon-size);
+  }
+  .sprite-icon(@target,(@i + 1));
+}
+// Placeholder text
+.placeholder(@color: @prussian-blue) {
+  &:-moz-placeholder {
+    color: @color;
+    .font-size(16px);
+  }
+  &::-moz-placeholder {
+    color: @color;
+    .font-size(16px);
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+    .font-size(16px);
+  }
+  &::-webkit-input-placeholder {
+    color: @color;
+    .font-size(16px);
+  }
+}
+// Border radius 
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+.transform(@translates) {
+  -webkit-transform: @translates;
+         -moz-transform: @translates;
+          -ms-transform: @translates;
+           -o-transform: @translates;
+              transform: @translates;
+}
+.user-select(@select,@pan,@transparent) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select;
+          user-select: @select;
+  -webkit-touch-callout: @select;
+  -khtml-user-select: @select;
+  -ms-touch-action: @pan;
+      touch-action:@pan;
+  -webkit-tap-highlight-color: @transparent;
+}
+
+// Custom button :hover override mixin
+/*@button-hover(@color; @background; @border) {
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @color;
+    background-color: darken(@background, 10%);
+        border-color: darken(@border, 12%);
+  }  
+}*/
+
+// Custom button variant mixin, provides optional hover styling support (overrides Bootstrap's mixin)
+.button-variant(@color; @background; @border; @color-hover: @color; @background-hover: darken(@background, 10%); @border-hover: darken(@border, 12%)) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @color-hover;
+    background-color: @background-hover;
+        border-color: @border-hover;
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}
+

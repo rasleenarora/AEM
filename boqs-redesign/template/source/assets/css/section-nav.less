@@ -1,0 +1,64 @@
+.navbar-section {
+  display: none; //hide
+  background-color: @bright-blue;
+
+  @media (min-width: @screen-sm-min) {
+    display: block; //show
+  }
+}
+.section-menu {
+  margin: 0;
+  font-size: 0; //inline-block space hack
+
+  @media (min-width: @screen-sm-min) {
+    margin-left: -@menu-link-padding-x-sm;
+    margin-right: -@menu-link-padding-x-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    margin-left: -@menu-link-padding-x-md;
+    margin-right: -@menu-link-padding-x-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    margin-left: -@menu-link-padding-x-lg;
+    margin-right: -@menu-link-padding-x-lg;
+  }
+
+  > li {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+.section-menu-link {
+  display: block;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  .font-size(15px);
+  
+  @media (min-width: @screen-sm-min) {
+    padding-left: @menu-link-padding-x-sm;
+    padding-right: @menu-link-padding-x-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-left: @menu-link-padding-x-md;
+    padding-right: @menu-link-padding-x-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    padding-left: @menu-link-padding-x-lg;
+    padding-right: @menu-link-padding-x-lg;
+  }
+
+  &,
+  &:hover,
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+  &:hover {
+  // &:focus {
+    box-shadow: 0 -5px 0 fade(#fff, 40%) inset;
+  }
+
+  .active > & {
+    font-family: @font-family-Gotham-Bold;
+  }
+}

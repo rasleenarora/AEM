@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Top Navigation">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <overridelabel
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Leave blank to use the Page Name as the link text"
+            fieldLabel="Override Label:"
+            name="./overridelabel"
+            xtype="textfield"/>
+        <overrideiconpath
+            jcr:primaryType="cq:Widget"
+            defaultValue=""
+            fieldDescription="Leave blank to use the Author-defined icon for that page (if there is one)"
+            fieldLabel="Override Icon Path:"
+            name="./overrideiconpath"
+            rootPath="/content/dam"
+            xtype="pathfield"/>
+        <includestickyheader
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Enable checkbox to add Sticky Header to this page"
+            fieldLabel="Add Sticky Header to this page"
+            name="./includeStickyHeader"
+            type="checkbox"
+            xtype="selection"/>
+    </items>
+</jcr:root>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    title="Testimonials Configuration"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <panel
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <personimage
+                        jcr:primaryType="cq:Widget"
+                        allowUpload="{Boolean}false"
+                        cropParameter="./imageCrop"
+                        ddGroups="[media]"
+                        fieldLabel="Person’s Image"
+                        fileReferenceParameter="./fileReference"
+                        height="{Long}200"
+                        name="./personimage"
+                        rotateParameter="./imageRotate"
+                        width="{Long}200"
+                        xtype="html5smartimage"/>
+                    <alternatetext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Alternate Text"
+                        name="./alternatetext"
+                        xtype="textfield"/>
+                    <quotetext
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Quote text"
+                        name="./quotetext"
+                        xtype="textarea"/>
+                    <personname
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Person’s Name and Role/Profession"
+                        name="./personname"
+                        xtype="textfield"/>
+                    <personrole
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Person’s Role / Profession"
+                        name="./personrole"
+                        xtype="textfield"/>
+                </items>
+            </panel>
+        </items>
+    </items>
+</jcr:root>

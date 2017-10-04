@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root 
+	xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="nt:unstructured">
+    <edit
+        jcr:primaryType="nt:unstructured"
+        features="*"/>
+    <image
+        jcr:primaryType="nt:unstructured"
+        features="[*]"/>
+    <paraformat
+        jcr:primaryType="nt:unstructured"
+        features="*">
+        <formats jcr:primaryType="cq:WidgetCollection">
+            <p
+                jcr:primaryType="nt:unstructured"
+                description="Paragraph"
+                tag="p"/>
+            <h1
+                jcr:primaryType="nt:unstructured"
+                description="Heading 1" 
+                tag="h1"/>
+            <h2
+                jcr:primaryType="nt:unstructured"
+                description="Heading 2"
+                tag="h2"/>
+            <h3
+                jcr:primaryType="nt:unstructured"
+                description="Heading 3" 
+                tag="h3"/>
+            <h4
+                jcr:primaryType="nt:unstructured"
+                description="Heading 4" 
+                tag="h4"/>
+
+        </formats>
+    </paraformat>
+    <styles
+        jcr:primaryType="nt:unstructured"
+        features="*">
+        <styles jcr:primaryType="cq:WidgetCollection">
+            <title-title-2
+                jcr:primaryType="nt:unstructured"
+                cssName="small" 
+                text="H2"/>
+            <title-title-2-strong
+                jcr:primaryType="nt:unstructured"
+                cssName="h2" 
+                text="H2 Strong"/>
+        </styles>
+    </styles>
+    <findreplace
+        jcr:primaryType="nt:unstructured"
+        features="*"/>
+    <subsuperscript
+        jcr:primaryType="nt:unstructured"
+        features="[subscript,superscript]"/>
+    <undo
+        jcr:primaryType="nt:unstructured"
+        features="*"/>
+    <misctools
+        jcr:primaryType="nt:unstructured"
+        features="[sourceedit]"/>
+</jcr:root>

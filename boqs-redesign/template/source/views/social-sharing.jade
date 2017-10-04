@@ -1,0 +1,13 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Social Sharing'
+block container
+  main#main.main
+    .inner(style="padding-left: 50%; padding-top: 10%;")
+      .social-sharing
+        .share-button(data-share-button="", data-url="http://localhost:3000/index.html", data-title="Title", data-description="Description", data-image="images/gallery1.jpg")
+
+
+

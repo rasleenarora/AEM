@@ -1,0 +1,273 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'WYSIWYG'
+
+block container
+  main#main.main
+    .container-fluid.wyg-style
+      h2.title-template Heading
+      //- .row
+      //-   .col-sm-4
+      //-     pre
+      //-       | h1.h1
+      //-   .col-sm-8
+      //-     h1.h1 H1 = Gotham Book 38pt
+      //- .row
+      //-   .col-sm-4
+      //-     pre
+      //-       | h1.h1.italic
+      //-   .col-sm-8
+      //-     h1.h1.italic H1 = Gotham Book 38pt
+      //- .row
+      //-   .col-sm-4
+      //-     pre
+      //-       | h1.h1.bold
+      //-   .col-sm-8
+      //-     h1.h1.bold H1 Strong = Gotham Bold 38pt
+      .row
+        .col-sm-4
+          pre
+            | h2.h2
+        .col-sm-8
+          h2.h2 H2 = Gotham Book 32pt
+      .row
+        .col-sm-4
+          pre
+            | h2.h2.italic
+        .col-sm-8
+          h2.h2.italic H2 = Gotham Book 32pt
+      .row
+        .col-sm-4
+          pre
+            | h2.h2.bold
+        .col-sm-8
+          h2.h2.bold H2 Strong = Gotham Bold 32pt
+      .row
+        .col-sm-4
+          pre
+            | h3.h3
+        .col-sm-8
+          h3.h3 H3 = Gotham Book 24pt
+      .row
+        .col-sm-4
+          pre
+            | h3.h3.italic
+        .col-sm-8
+          h3.h3.italic H3 = Gotham Book 24pt
+      .row
+        .col-sm-4
+          pre
+            | h3.h3.bold
+        .col-sm-8
+          h3.h3.bold H3 = Gotham Bold 24pt
+      .row
+        .col-sm-4
+          pre
+            | h4.h4
+        .col-sm-8
+          h4.h4 H4 = Gotham Book 24pt
+      .row
+        .col-sm-4
+          pre
+            | h3.h3.italic
+        .col-sm-8
+          h4.h4.italic H4 = Gotham Book 24pt
+      .row
+        .col-sm-4
+          pre
+            | h4.h4.bold
+        .col-sm-8
+          h4.h4.bold H4 = Gotham Bold 24pt
+      h2.title-template WYSIWYG
+      .row
+        .col-sm-4
+          pre
+            | h2
+            |   span.h2
+        .col-sm-8.text-center
+          h2: span.h2 Key reasons to join BOQ Specialist
+      .row
+        .col-sm-4
+          pre
+            | p
+            |   span.blue-text.text-4
+        .col-sm-8.text-center
+          p: span.blue-text.text-4 BOQ Specialist has been providing specialist banking services to clients in niche market segments for over 20 years. We aim to build lasting partnerships with our clients through focus, experience and dedication.
+      .row
+        .col-sm-4
+          pre
+            | h2
+            |   span.h2
+        .col-sm-8.text-center
+          h2: span.h2 Not quite what you were looking for?
+      .row
+        .col-sm-4
+          pre
+            | p
+            |   span.blue-text.text-3
+        .col-sm-8.text-center
+          p: span.blue-text.text-3 At BOQ Specialist we pride ourselves on our flexibility – if you can’t find exactly what you’re looking for, try one of these options for getting in touch to see if we can help you.
+      br
+      h3.h3 Button CTAs ------------------------
+      .row
+        .col-sm-4
+          pre
+            | a.btn.btn-default.left
+            | a.btn.btn-default.center
+            | a.btn.btn-default.right
+        .col-sm-8
+          +link("Send us an enquiry").btn.btn-default.left
+            span Send us an enquiry
+            span.wi-icon.icon-arrow(aria-hidden="true")
+      .row
+        .col-sm-4
+          pre
+            | a.btn.btn-primary.left
+            | a.btn.btn-primary.center
+            | a.btn.btn-primary.right
+        .col-sm-8
+          +link("Send us an enquiry").btn.btn-primary.left
+            span Send us an enquiry
+            span.wi-icon.icon-arrow(aria-hidden="true")
+      br
+      h3.h3 Button CTAs: Sidebar ------------------------
+      .row
+        .col-sm-4
+          pre
+            | a.btn.btn-default.left
+            | a.btn.btn-default.center
+            | a.btn.btn-default.right
+        .col-sm-8
+          +link("Send us an enquiry").btn.btn-default.left
+            span Send us an enquiry
+            span.wi-icon.icon-arrow(aria-hidden="true")
+      br
+      h3.h3 Home Loans page ------------------------
+      .row
+        .col-sm-4
+          pre
+            | h3
+            |   span.h3
+        .col-sm-8
+          h3: span.h3 Why a BOQ Specialist Home Loan?
+      .row
+        .col-sm-4
+          pre
+            | p
+            |   span.blue-text.normal-text
+        .col-sm-8
+          p: span.blue-text.normal-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum
+      .row
+        .col-sm-4
+          pre
+            | h3
+            |   span.h3
+        .col-sm-8
+          h3: span.h3 Home Loan features at a glance
+      br
+      h3.h3 Disclaimer ------------------------
+      .row
+        .col-sm-4
+          pre
+            | h3
+            |   span.disclaimer-title
+        .col-sm-8
+          h3: span.disclaimer-title Disclaimer
+      .row
+        .col-sm-4
+          pre
+            | p
+            |   span.disclaimer-text
+        .col-sm-8
+          p: span.disclaimer-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc.
+      br
+      h3.h3 Medical page ------------------------
+      .row
+        .col-sm-4
+          pre
+            | h3
+            |   span.h3
+        .col-sm-8
+          h3: span.h3 We help doctors, dentists, vets and more.
+      .row
+        .col-sm-4
+          pre
+            | p
+            |   span.blue-text.normal-text
+        .col-sm-8
+          p: span.blue-text.normal-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      .row
+        .col-sm-4
+          pre
+            | p
+            |   span.blue-text.text-5
+            |     b
+            |   a.btn-tertiary.text-5
+        .col-sm-8
+          p
+            span.blue-text.text-5
+              b Not a Medical Professional?
+            +link("See all Specialties").btn-tertiary.text-5
+              | See all Specialties
+              span.wi-icon.icon-arrow(aria-hidden="true")
+      br
+      h3.h3 Bullet list ------------------------
+      .row
+        .col-sm-4
+          pre
+            | ul
+            |   li
+            |     span.bullet-list
+            |     ul
+            |       li
+            |         span.bullet-list.level-2
+            |         ul
+            |           li
+            |             span.bullet-list.level-3
+            |       li
+            |         span.bullet-list.level-2
+            |   li
+            |     span.bullet-list
+        .col-sm-8
+          ul
+            li
+              span.bullet-list Bullet Level 1
+              ul
+                li
+                  span.bullet-list.level-2  Bullet Level 2
+                  ul
+                    li
+                      span.bullet-list.level-3 Bullet Level 3
+                li
+                  span.bullet-list.level-2 Another bullet
+            li
+              span.bullet-list Another bullet
+      br
+      h3.h3 Feature list ------------------------
+      .row
+        .col-sm-4
+          pre
+            | ul
+            |   li
+            |     span.feature-list
+        .col-sm-8
+          ul
+            li: span.feature-list Feature list item
+            li: span.feature-list Feature list item
+            li: span.feature-list Feature list item
+      br
+      h3.h3 Tick list ------------------------
+      .row
+        .col-sm-4
+          pre
+            | ul
+            |   li
+            |     span.tick-list
+        .col-sm-8
+          ul
+            li
+              span.tick-list
+                b Sum sociis natoque penatibus et magnis dis
+                | nascetur ridiculus mus. Nam fermentum, nulla luctus phare tranulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien.

@@ -1,0 +1,50 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Tabbed Container'
+block container
+  main#main.main
+    .tabbed-container(data-tabs="")
+      .tabs
+        +link("Tab number one", "javascript:;").tab-active
+        ul.list-unstyled.list-tabs
+          li.active
+            +link("Active tab label", "#id1")
+              span.img-wrap: +img("icon-calculator.png")
+              span.tab-title Tab number one
+          li
+            +link("tab 2 tab 2 tab 2 tab 2 tab 2 tab 2 tab 2 tab 2 tab 2 tab 2 tab 2 tab 2 tab 2 tab 2 tab 2", "#id2")
+              span.img-wrap: +img("icon-money.png")
+              span.tab-title Tab number two
+      .tabs-content
+        .tab-layout.active#id1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .tab-layout#id2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+    .tabbed-container(data-tabs="")
+      .tabs.more-two-tabs
+        +link("Tab number one", "javascript:;").tab-active
+        ul.list-unstyled.list-tabs
+          li.active
+            +link("Tab number one", "#id11")
+              span.img-wrap: +img("icon-calculator.png")
+              span.tab-title Tab number one
+          li
+            +link("tab 2 tab 2 tab 2 tab 2 tab 2 tab 2 tab 2 ", "#id22")
+              span.img-wrap: +img("icon-money.png").hidden-xs
+              span.tab-title Tab number two
+          li
+            +link("tab 3", "#id33")
+              span.img-wrap: +img("icon-money.png")
+              span.tab-title Tab number three
+          li
+            +link("tab 4", "#id44")
+              span.img-wrap: +img("icon-money.png")
+              span.tab-title Tab number four
+      .tabs-content
+        .tab-layout.active#id11 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .tab-layout#id22 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .tab-layout#id33 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .tab-layout#id44 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+

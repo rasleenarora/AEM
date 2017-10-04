@@ -1,0 +1,78 @@
+.app {
+  overflow-x: hidden;
+}
+
+
+// Overlay cover
+.cover {
+  background-color: rgba(0,0,0,.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  z-index: @zindex-cover;
+  visibility: hidden; //hide
+  opacity: 0; //hide
+  transition: all .2s ease-out;
+
+  .navopen &,
+  .searchopen & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// Lock the window scroll
+.noscroll {
+  &,
+  body {
+    overflow: hidden !important;
+    height: 100% !important;
+  }
+}
+
+.arrow-list {
+  padding-bottom: 15px;
+  padding-left: 35px;
+  li {
+    padding-top: 5px;
+    display: block;
+    a {
+      .font-size(16px);
+      color: @brown-light;
+      display: table;
+    }
+    .text-1, .icon {
+      display: table-cell;
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
+/*.main {
+  position: relative;
+  @media (max-width: @screen-xs-max) {
+    margin-top: 51px;
+  }
+}*/
+
+.loader-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,.5);
+  z-index: 100;
+  img {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    margin-top: -32px;
+    margin-left: -32px;
+  }
+}

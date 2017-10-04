@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Search Result Configuration"
+	xtype="dialog">
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<resultslabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Results Label"
+						name="./resultslabel"
+						allowBlank="{Boolean}false"
+						defaultValue="Results"
+						xtype="textfield"/>
+					<startofbreadcrumbinresultssection
+						jcr:primaryType="cq:Widget"
+						fieldDescription="Kindly enter positive numbers only. This is the start of the breadcrumb in the results section. For example, if the value of this field is 2 and if the structure of the pages is /content/boqs/en/home then the breadcrumb will start from /content/boqs/en.This breadcrumb should show till the parent page."
+						fieldLabel="Start of Breadcrumb in Results section"
+						regex="/^0*[1-9][0-9]*$/"
+						regexText="Only positive numbers"
+						name="./startofbreadcrumbinresultssection"
+						allowBlank="{Boolean}false"
+						defaultValue="2"
+						xtype="numberfield"/>
+					<paginationrequired
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If the checkbox is not checked then all the results are shown at once, no pagination will be present."
+						fieldLabel="Pagination Required"
+						name="./paginationrequired"
+						allowBlank="{Boolean}false"
+						type="checkbox"
+						defaultValue="{Boolean}true"
+						xtype="selection" />
+					<numberofresultsperpage
+						jcr:primaryType="cq:Widget"
+						fieldDescription="This is the number of results to be shown page before the pagination kicks in."
+						fieldLabel="Number of results per page"
+						regex="/^0*[1-9][0-9]*$/"
+						regexText="Only positive numbers"
+						allowBlank="{Boolean}false"
+						defaultValue="10"
+						xtype="numberfield"/>
+					<noresultmessage
+						jcr:primaryType="cq:Widget"
+						fieldDescription="This message will be shown to the end user when there are no results to display"
+						fieldLabel="No result message"
+						name="./noresultmessage"
+						allowBlank="{Boolean}false"
+						defaultValue="No result"
+						xtype="textfield"/>
+				</items>
+			</tab1>
+		</items>
+	</items>
+</jcr:root>

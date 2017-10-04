@@ -1,0 +1,159 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  max-width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+// Homepage `promobanner` hero
+.hero-promo {
+  .hero-bg {
+    @media (min-width: @screen-sm-min) {
+      height: 380px;
+    }
+    @media (min-width: @screen-md-min) {
+      height: 425px; //4:1 rartio
+    }
+  }
+  .hero-overlay {
+    @media (max-width: @screen-xs-max) {
+      position: static; //reset
+      top: auto; //reset
+      bottom: auto; //reset
+      left: auto; //reset
+      right: auto; //reset
+    }
+    @media (min-width: @screen-sm-min) {
+      top: 20%;
+      bottom: 50px; //space for dot controls
+      left: 8%; //space for left controls
+      right: 8%; //space for right controls
+    }
+    @media (min-width: @screen-md-min) {
+      top: 30%;
+      left: 0; //reset
+      right: 0; //reset
+    }
+  }
+  .hero-heading {
+    @media (min-width: @screen-sm-min) {
+      margin: 0;
+    }
+  }
+}
+
+// Default page hero
+.hero-page {
+  border-bottom: 1px solid @gray-light;
+
+  @media (min-width: @screen-sm-min) {
+    border-bottom: none;
+  }
+
+  .hero-bg {
+    @media (min-width: @screen-sm-min) {
+      height: 220px;
+    }
+    @media (min-width: @screen-md-min) {
+      height: 283px; //6:1 ratio
+    }
+  }
+  .hero-heading {
+    margin: 0;
+  }
+}
+
+
+.hero-bg {
+  position: relative;
+  min-height: 160px; //just incase an bg image isn't provided on mobile
+
+  // Overlay gradient
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: fade(#fff, 50%); //fallback
+    background: linear-gradient(to right, fade(#fff, 100%) 0%, fade(#fff, 100%) 33%, fade(#fff, 0%) 100%);
+  }
+
+  @media (min-width: @screen-sm-min) {
+  } 
+}
+.hero-picture {
+  @media (min-width: @screen-sm-min) {
+    position: absolute;
+    z-index: 0;
+    top: 0;  
+    bottom: 0;
+
+    .hero-bg-left & { left: 0; }
+    .hero-bg-right & { right: 0; }
+    .hero-bg-center & {
+      left: 50%;
+      img { transform: translateX(-50%); }
+    }
+  } 
+  
+  img { 
+    display: block;
+    max-width: 100%;
+
+    @media (min-width: @screen-sm-min) {
+      // Fit height
+      height: 100%;
+      width: auto;  
+      max-width: none; //reset
+    }
+  }
+}
+
+.hero-overlay {
+  text-align: left;
+  position: absolute;
+  top: 20%; //default
+  bottom: 10%; //default
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+.hero-heading {
+  color: @prussian-blue;
+  font-family: @font-family-Gotham-Bold;
+  // margin: 0;
+
+  @media (max-width: @screen-xs-max) {
+    .font-size(30px);
+  }
+
+  .small {
+    color: @light-blue;
+    font-family: @font-family-Gotham-Book;
+    margin-top: .3em;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 1em;
+
+    @media (min-width: @screen-sm-min) {
+      font-size: 70%;
+      display: block;
+    }
+  }
+}
+.hero-actions {
+  margin-top: 1rem;
+
+  @media (max-width: @screen-xs-max) {
+    .btn {
+      display: block;
+
+      + .btn { margin-top: .5rem; }
+    }
+  }
+}

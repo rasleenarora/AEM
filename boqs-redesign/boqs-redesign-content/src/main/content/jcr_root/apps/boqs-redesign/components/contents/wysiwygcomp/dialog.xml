@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="WYSIWYG Configuration"
+	height="580"
+	width="1200"
+	xtype="dialog">
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="WYSIWYG">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<hideimageonmobile
+						jcr:primaryType="cq:Widget"
+						defaultValue="false"
+						fieldLabel="Hide Images on Mobile"
+						name="./hideimageonmobile"
+						type="checkbox"
+						xtype="selection"/>
+					<wysiwyg
+						jcr:primaryType="cq:Widget"
+						externalStyleSheets="[]"
+						fieldLabel="Message"
+						height="400"
+						name="./wysiwyg"
+						xtype="richtext">
+							<rtePlugins jcr:primaryType="nt:unstructured"
+								path="/apps/boqs-redesign/components/contents/wysiwygcomp/rteplugins.infinity.json"
+								xtype="cqinclude"/>
+							<htmlRules jcr:primaryType="nt:unstructured">
+								<links jcr:primaryType="nt:unstructured" protocols="[http://,https://,javascript:,mailto:]">
+								</links>
+							</htmlRules>
+					</wysiwyg>
+				</items>
+			</tab1>
+		</items>
+	</items>
+</jcr:root>

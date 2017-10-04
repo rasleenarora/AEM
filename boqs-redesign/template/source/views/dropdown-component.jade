@@ -1,0 +1,22 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'dropdown-component'
+
+block container
+  main#main.main(style="background-color: #fff")
+    .container
+      .form-group.dropdown-component
+        .row
+          .col-sm-6
+            +label("profession") Profession:
+        .row
+          .col-sm-6
+            +custom-select([
+              {value: "", text: "Please select"},
+              {value: "0", text: "Medical Professional"},
+              {value: "1", text: "Accountant"},
+              {value: "2", text: "Financial Planner"},
+              {value: "3", text: "Other / Private Client"}
+              ])

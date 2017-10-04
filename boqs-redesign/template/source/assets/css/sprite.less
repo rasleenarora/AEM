@@ -1,0 +1,136 @@
+// Sprite
+.wi-icon,
+.wi-icon-blue,
+.wi-icon-white,
+.wi-icon-1 {
+  background-repeat: no-repeat;
+  text-indent: -99px;
+  // font-size: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.wi-icon {
+  background-image: url('@{img}icon-sprite.png');
+}
+
+.wi-icon-white {
+  background-image: url('@{img}icon-sprite-active.png');
+}
+.wi-icon-blue {
+  background-image: url('@{img}icon-sprite-hover.png');
+}
+@icon: checkbox 16px, radio 16px, checklist 19px, deposits 20px 22px, notice 22px, car 24px 20px, currency 22px, private-account 21px, one-account 28px 21px, home 23px 21px, callback 21px, find 21px, offers 24px, find-events 24px 26px, guide 21px, publication 18px 21px, login 15px 23px, phone 24px, search 34px 26px, search-1 27px, property-finance 24px 20px, cards 30px 20px, checked 16px, radio-check 16px, personal-finance 24px 26px, profession 23px 27px, finance 26px, product 27px, result-type 23px 32px, event-type 25px, event-annual 24px, conference 23px, luncheon 26px, industry 20px 24px, seminar 23px 30px, sporting 20px 26px, workshop 28px, share 23px 18px, message 19px 12px, clear-filters 15px 20px, saving 21px, gallery 27px, assets-finance 29px 21px, practice-finance 21px, file 15px 20px, event 21px 20px, arrow 8px 11px, linked 20px, search-2 19px, phone-1 17px 18px, lock 12px 18px, find-more 8px 11px, close-3 16px, personal-finance-1 20px, practice-finance-1 30px 20px, home-loan 23px 21px, property-finance-1 24px 26px, arrow-1 19px 28px, arrow-up 11px 8px, zero 32px 32px, time 16px, required 16px 14px, close 22px 23px , close-1 16px, thumb 10px 10px, pre 20px 28px, close-2 12px;
+.sprite-icon(@icon);
+
+.icon-close-2 {
+  .size(12px);
+  background-position: 0px -120px;
+}
+
+.icon-checkbox {
+  // .size(16px);
+  background-position: 0 0;
+}
+
+.icon-checked {
+  .size(16px);
+  background-position: 0 -40px;
+}
+
+.icon-professionals {
+  .size(70px);
+  background-position: 0 -160px;
+}
+.icon-accountants {
+  .size(70px);
+  background-position: -80px -160px;
+}
+.icon-advisers {
+  .size(70px);
+  background-position: -160px -160px;
+}
+.icon-clients {
+  .size(70px);
+  background-position: -240px -160px;
+}
+.icon-document {
+  .size(15px,20px);
+  background-position:  0 -80px;
+}
+.icon-finder-lg {
+  .size(58px, 60px);
+  background-position:  -320px -160px;
+}
+.icon-tick {
+  background-image: url('@{img}icon-tick.png');
+  .size(25px);
+}
+.icon-arrow-right-olive {
+  .size(8px, 11px);
+  background-position: -80px -80px;
+}
+.icon-arrow-right-white {
+  background-position: -280px -80px;
+  .size(8px, 14px);
+}
+.icon-close-popover {
+  background-position: -760px -80px;
+  .size(16px);
+  //Change icon when popover have left arrow
+  // .arrow-left & {background-position: -320px -80px;}
+}
+
+.icon-arrow-gray-sm {
+  .size(11px, 8px);
+  background-position: -560px -80px;
+}
+
+.icon-download {
+  background: url(../images/icon-download.png) no-repeat left center;
+  .size(23px,20px);
+}
+
+// Icon without Sprite
+.medical-icon { background-image: url('@{img}icon-medical-color.png'); }
+.accountant-icon { background-image: url('@{img}icon-accountant-color.png'); }
+.financial-advisers-icon { background-image: url('@{img}icon-financial-advisers-color.png'); }
+.private-clients-icon { background-image: url('@{img}icon-private-clients-color.png'); }
+.icon-home-1 {
+  background-image: url('@{imgUpload}icon-home.png');
+  .size(23px,21px);
+}
+.icon-data-picker {
+  background-image: url('@{img}icon-date-picker.png');
+  .size(23px,21px);
+}
+.icon-select {
+  border-right: 6px solid transparent;
+  border-top: 8px solid white;
+  border-left: 6px solid transparent;
+}
+
+.icon-pin {
+  background-image: url('@{img}icon-pin.png');
+  .square(22px);
+}
+
+.icon-date-time {
+  .size(16px, 16px);
+  background-image: url('@{img}icon-time.png');
+    background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+.icon-location {
+  .size(11px, 17px);
+  background-image: url('@{img}icon-location.png');
+  background-repeat: no-repeat;
+  background-size: 11px 17px;
+}
+
+.icon-event-type {
+  .size(17px, 14px);
+  background-image: url('@{img}icon-event-type.png');
+  background-repeat: no-repeat;
+  background-size: 17px 14px;
+}

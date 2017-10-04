@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Container Configuration"
+	xtype="dialog">
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<backgroundstyle
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Background Style"
+						name="./backgroundstyle"
+						allowBlank="{Boolean}false"
+						type="select"
+						defaultValue="none"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<none
+								jcr:primaryType="nt:unstructured"
+								text="None"
+								value="none"/>
+							<grey
+								jcr:primaryType="nt:unstructured"
+								text="Grey"
+								value="grey"/>
+						</options>
+					</backgroundstyle>
+					<dividecomponentarea
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Divide Component Area"
+						name="./dividecomponentarea"
+						allowBlank="{Boolean}false"
+						type="select"
+						defaultValue="pc100"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<pc100
+								jcr:primaryType="nt:unstructured"
+								text="100%"
+								value="pc100"/>
+							<pc7525
+								jcr:primaryType="nt:unstructured"
+								text="75% / 25%"
+								value="pc7525"/>
+							<pc5050
+								jcr:primaryType="nt:unstructured"
+								text="50% / 50%"
+								value="pc5050"/>
+							<pc333333
+								jcr:primaryType="nt:unstructured"
+								text="33% / 33% / 33%"
+								value="pc333333"/>
+							<pc25252525
+								jcr:primaryType="nt:unstructured"
+								text="25% / 25% / 25% / 25%"
+								value="pc25252525"/>
+							<pc255025
+								jcr:primaryType="nt:unstructured"
+								text="25% / 50% / 25%"
+								value="pc255025"/>
+						</options>
+					</dividecomponentarea>
+					<visiblecontainer
+						jcr:primaryType="cq:Widget"
+						fieldDescription="Full width takes the whole area where the it is placed and when 960 resolution is used, it can only take 960px space max. of the area where it is placed"
+						fieldLabel="Container Layout"
+						name="./visiblecontainer"
+						type="select"
+						defaultValue="fullwidth"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<fullwidth
+								jcr:primaryType="nt:unstructured"
+								text="Full width"
+								value="fullwidth"/>
+							<resolution960
+								jcr:primaryType="nt:unstructured"
+								text="960 Resolution"
+								value="resolution960"/>
+						</options>
+					</visiblecontainer>
+				</items>
+			</tab1>
+		</items>
+	</items>
+</jcr:root>

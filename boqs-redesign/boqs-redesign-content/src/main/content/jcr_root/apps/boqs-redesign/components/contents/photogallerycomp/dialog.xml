@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Photo Gallery Configuration"
+	xtype="dialog">
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<galleryname
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Gallery Name"
+						name="./galleryname"
+						allowBlank="{Boolean}false"
+						xtype="textfield"/>
+					<!-- <photolist
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Photo List"
+						name="./photolist"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							fieldLabel="Photo"
+							xtype="photolistfield"/>
+					</photolist> -->
+					<photodirectorypath
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Photo Directory Path"
+						name="./photodirectorypath"
+						allowBlank="{Boolean}false"
+						rootPath="/content/dam"
+						xtype="pathfield"/>
+				</items>
+			</tab1>
+		</items>
+	</items>
+</jcr:root>

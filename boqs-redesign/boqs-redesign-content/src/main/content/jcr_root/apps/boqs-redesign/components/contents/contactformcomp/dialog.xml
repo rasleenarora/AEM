@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="650"
+    title="Contact Form Configuration"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <formmode
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="embeddedinpage"
+                        fieldLabel="Form Mode"
+                        name="./formmode"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <embeddedinpage
+                                jcr:primaryType="nt:unstructured"
+                                text="Embedded in page"
+                                value="embeddedinpage"/>
+                            <modal
+                                jcr:primaryType="nt:unstructured"
+                                text="Modal"
+                                value="modal"/>
+                        </options>
+                    </formmode>
+                    <formheading
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Send us an enquiry"
+                        fieldDescription="If left empty, &quot;Send us an enquiry&quot; will be used by default"
+                        fieldLabel="Form Heading"
+                        name="./formheading"
+                        xtype="textfield"/>
+                    <requiredsignlbl
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Required Field"
+                        fieldLabel="Required Sign Text"
+                        name="./requiredsignlbl"
+                        xtype="textfield"/>
+                    <submitbtnlbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Submit Enquiry"
+                        fieldDescription="If left empty, &quot;Submit Enquiry&quot; will be used by default"
+                        fieldLabel="Submit Button Text"
+                        name="./submitbtnlbl"
+                        xtype="textfield"/>
+                    <errormsg
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Error Message"
+                        name="./errormsg"
+                        xtype="textfield"/>
+                </items>
+            </general>
+            <tab0
+                jcr:primaryType="cq:Panel"
+                title="CTA Button">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <ctabuttonlbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Enquire Now"
+                        fieldDescription="If left empty, &quot;Enquire Now&quot; will be used by default"
+                        fieldLabel="CTA Button Text"
+                        name="./ctabuttonlbl"
+                        xtype="textfield"/>
+                    <buttonstyle
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="primary"
+                        fieldLabel="Button Style"
+                        name="./buttonstyle"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <primary
+                                jcr:primaryType="nt:unstructured"
+                                text="Primary"
+                                value="primary"/>
+                            <secondary
+                                jcr:primaryType="nt:unstructured"
+                                text="Secondary"
+                                value="secondary"/>
+                            <tertiary
+                                jcr:primaryType="nt:unstructured"
+                                text="Tertiary"
+                                value="tertiary"/>
+                        </options>
+                    </buttonstyle>
+                    <buttonalignment
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="center"
+                        fieldLabel="Button Alignment"
+                        name="./buttonalignment"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="left"/>
+                            <centred
+                                jcr:primaryType="nt:unstructured"
+                                text="Centred"
+                                value="center"/>
+                            <right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="right"/>
+                        </options>
+                    </buttonalignment>
+                    <margins
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="false"
+                        fieldDescription="Select this checkbox to add top margin"
+                        fieldLabel="Add Top Margin"
+                        name="./addtopmargin"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </tab0>
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Confirmation">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <confirmationheading
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Thank you for enquiry"
+                        fieldLabel="Confirmation Heading"
+                        name="./confirmationheading"
+                        xtype="textfield"/>
+                    <confirmationmsg
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        allowUpload="{Boolean}false"
+                        externalStyleSheets="[]"
+                        fieldLabel="Confirmation Message"
+                        height="400"
+                        name="./confirmationmsg"
+                        xtype="richtext">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/boqs-redesign/components/contents/wysiwygcomp/rteplugins.infinity.json"
+                            xtype="cqinclude"/>
+                        <htmlRules jcr:primaryType="nt:unstructured">
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                protocols="[http://,https://,javascript:,mailto:]"/>
+                        </htmlRules>
+                    </confirmationmsg>
+                    <continuebtnlbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="OK"
+                        fieldDescription="If left empty, &quot;OK&quot; will be used by default"
+                        fieldLabel="Continue Button Text"
+                        name="./continuebtnlbl"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Exception Message">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <exceptionheading
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This heading will be used when there is any exception."
+                        fieldLabel="Exception Message Heading"
+                        name="./exceptionheading"
+                        xtype="textfield"/>
+                    <exceptionmsg
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Exception Message"
+                        name="./exceptionmsg"
+                        xtype="textfield"/>
+                    <exceptionbtnlbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Continue"
+                        fieldDescription="If left empty, &quot;Continue&quot; will be used by default"
+                        fieldLabel="Exception Continue Button Text"
+                        name="./exceptionbtnlbl"
+                        xtype="textfield"/>
+                </items>
+            </tab2>
+            <unsubscription
+                jcr:primaryType="cq:Panel"
+                title="Unsubscription Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <enableUnsub
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enable this checkbox to enable the unsubscription functionality for this form."
+                        fieldLabel="Enable Unsubscription"
+                        name="./enableUnsubscription"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <adobeCampaignUrl
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Kindly add the Adobe Campaign URL. It is an external URL. For example : http://boqspecialist-dev.neolane.net/r/"
+                        fieldLabel="Enter Adobe Campaign URL"
+                        name="./adobeCampaignUrl"
+                        xtype="pathfield"/>
+                </items>
+            </unsubscription>
+            <download
+                jcr:primaryType="cq:Panel"
+                title="Download Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <enableDownload
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enable this checkbox to enable the download functionality on the success page. If this is enabled, then please provide the download URL as well."
+                        fieldLabel="Enable Download"
+                        name="./enableDownload"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <downloadlinkid
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Please provide the identifier for the download link. Make sure that if for any reason, there are more than 1 form on the same page, then this field's value must be unique for the page."
+                        fieldLabel="Enter Download Link Identifier"
+                        name="./downloadLinkId"
+                        regex="/^[a-z]+[a-z-_]*$/"
+                        regexText="Start with a lowercase alphabet and only lowercase alphabet, hyphen(-) and underscore(_) are allowed."
+                        xtype="textfield"/>
+                    <downloadlinklabel
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Download"
+                        fieldDescription="Please provide the download link label. By default, &quot;Download&quot; will be used."
+                        fieldLabel="Enter Download Link Label"
+                        name="./downloadLinkLabel"
+                        xtype="textfield"/>
+                    <downloadUrl
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Please add the URL of the file which will be downloaded when user gets to the success page."
+                        fieldLabel="Enter Download URL"
+                        name="./downloadUrl"
+                        xtype="pathfield"/>
+                </items>
+            </download>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){var unsubScenario = checkUnsubsciptionScenario(dialog);var downloadScenario = checkDownloadScenario(dialog);return (unsubScenario &amp;&amp; downloadScenario);}"/>
+</jcr:root>

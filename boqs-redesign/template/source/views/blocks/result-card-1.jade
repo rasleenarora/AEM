@@ -1,0 +1,37 @@
+.card-container(data-mymasonry, data-item-selector=".card-item", data-desktop-only, data-number-more="2", data-result-type="result", data-result-type-plural="results")
+  .grid-sizer
+  .gutter-sizer
+  .card-item
+    +tab({id: "expand-card-1", title1: "Home Loans", title2: "Home loans", text1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem maxime consequatur soluta, ex omnis! Quaerat nisi omnis aperiam repellat tenetur!", text2: "More details", text3: "Home buyers guide"})
+  .card-item
+    +tab({id: "#expand-card-2", title1: "Savings & Deposits", title2: "Savings & Deposits", text1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur officiis, perspiciatis nam fuga rerum ipsa. Nisi dignissimos exercitationem praesentium rem, autem sint omnis ipsum. Accusamus magnam officiis officia distinctio excepturi cumque odio, architecto consequuntur expedita.", text2: "More details", text3: "Home buyers guide"})
+  .card-item
+    +tab({id: "#expand-card-3", title1: "Car Loans", title2: "Car Loans", text1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, cupiditate!", text2: "More details", text3: "Home buyers guide"})
+  .card-item.no-filter
+    +tab({id: "#expand-card-4", title1: "Credit Cards", title2: "Car Loans", text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.", text2: "More details", text3: "Home buyers guide"})
+  .card-item
+    +tab({id: "#expand-card-5", title1: "Everyday Banking", title2: "Car Loans", text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.", text2: "More details", text3: "Home buyers guide"})
+  .card-item
+    +tab({id: "#expand-card-6", title1: "Foreign Exchange", title2: "Car Loans", text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.", text2: "More details", text3: "Home buyers guide"})
+  .card-item
+    +tab({id: "#expand-card-7", title1: "AVA Members", title2: "Car Loans", text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.", text2: "More details", text3: "Home buyers guide"})
+  .card-item
+    +tab({id: "#expand-card-8", title1: "RACDGC Members", title2: "Car Loans", text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.", text2: "More details", text3: "Home buyers guide"})
+  .card-item.no-filter
+    +tab({id: "#expand-card-9", title1: "Just", title2: "Car Loans", text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.", text2: "More details", text3: "Home buyers guide"})
+  .card-item
+    +tab({id: "#expand-card-10", title1: "Everyday Banking", title2: "Car Loans", text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.", text2: "More details", text3: "Home buyers guide"})
+  .card-item
+    +tab({id: "#expand-card-11", title1: "Foreign Exchange", title2: "Car Loans", text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.", text2: "More details", text3: "Home buyers guide"})
+  .card-item
+    +tab({id: "#expand-card-12", title1: "AVA Members", title2: "Car Loans", text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.", text2: "More details", text3: "Home buyers guide"})
+  .card-item
+    +tab({id: "#expand-card-13", title1: "RACDGC Members", title2: "Car Loans", text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.", text2: "More details", text3: "Home buyers guide"})
+  .card-item
+    +tab({id: "#expand-card-14", title1: "Just", title2: "Car Loans", text1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra just commodo fermentum.", text2: "More details", text3: "Home buyers guide"})
+
+  .card-item.control-result.load-more-trigger
+    include control-more-result
+
+  .card-item.control-result.no-more-result.hidden
+    include control-no-result

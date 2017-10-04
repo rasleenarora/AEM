@@ -1,0 +1,192 @@
+{
+  "currentPage": 3,
+  "resultCount": 35,
+  "numberToDisplay": 3,
+  "resultslabel": "Showing results 1 - 10 of 30",
+  "startOfBreadcrumb": 2,
+  "paginationRequired": true,
+  "searchResultBeans": [
+    {
+      "title": "Medical Professional 13",
+      "url": "/content/boqs-redesign/specialities/medical-professional2",
+      "iconPath": "images/upload/icon-document-brown.png",
+      "breadcrumbItems": [
+        {
+          "heading": "Home",
+          "link": "/content/boqs-redesign/specialities.html"
+        }
+      ]
+    },
+    {
+      "description": "Description example...",
+      "title": "Medical Professional 12",
+      "url": "/content/boqs-redesign/specialities/medical-professional1",
+      "iconPath": "images/upload/icon-document-brown.png",
+      "breadcrumbItems": [
+        {
+          "heading": "Home",
+          "link": "/content/boqs-redesign/specialities.html"
+        },
+        {
+          "heading": "ddd",
+          "link": "/content/boqs-redesign/specialities1/ddd.html"
+        }
+      ]
+    },
+    {
+      "title": "Medical Professional 21",
+      "url": "/content/boqs-redesign/specialities1/ddd/medical-professional",
+      "iconPath": "images/upload/icon-document-brown.png",
+      "breadcrumbItems": [
+        {
+          "heading": "Home",
+          "link": "/content/boqs-redesign/specialities1.html"
+        },
+        {
+          "heading": "ddd",
+          "link": "/content/boqs-redesign/specialities1/ddd.html"
+        }
+      ]
+    },
+    {
+      "description": "Description example...",
+      "title": "Medical Professional 22",
+      "url": "/content/boqs-redesign/specialities1/ddd/medical-professional/medical-professional1",
+      "iconPath": "images/upload/icon-document-brown.png",
+      "breadcrumbItems": [
+        {
+          "heading": "Home",
+          "link": "/content/boqs-redesign/specialities1.html"
+        },
+        {
+          "heading": "ddd",
+          "link": "/content/boqs-redesign/specialities1/ddd.html"
+        },
+        {
+          "heading": "Medical Professional 21",
+          "link": "/content/boqs-redesign/specialities1/ddd/medical-professional.html"
+        }
+      ]
+    },
+    {
+      "description": "Description example...",
+      "title": "Medical Professional 22",
+      "url": "/content/boqs-redesign/specialities1/ddd/medical-professional/medical-professional1",
+      "iconPath": "images/upload/icon-document-brown.png",
+      "breadcrumbItems": [
+        {
+          "heading": "Home",
+          "link": "/content/boqs-redesign/specialities1.html"
+        },
+        {
+          "heading": "ddd",
+          "link": "/content/boqs-redesign/specialities1/ddd.html"
+        },
+        {
+          "heading": "Medical Professional 21",
+          "link": "/content/boqs-redesign/specialities1/ddd/medical-professional.html"
+        }
+      ]
+    },
+    {
+      "description": "Description example...",
+      "title": "Medical Professional 22",
+      "url": "/content/boqs-redesign/specialities1/ddd/medical-professional/medical-professional1",
+      "iconPath": "images/upload/icon-document-brown.png",
+      "breadcrumbItems": [
+        {
+          "heading": "Home",
+          "link": "/content/boqs-redesign/specialities1.html"
+        },
+        {
+          "heading": "ddd",
+          "link": "/content/boqs-redesign/specialities1/ddd.html"
+        },
+        {
+          "heading": "Medical Professional 21",
+          "link": "/content/boqs-redesign/specialities1/ddd/medical-professional.html"
+        }
+      ]
+    },
+    {
+      "description": "Description example...",
+      "title": "Medical Professional 22",
+      "url": "/content/boqs-redesign/specialities1/ddd/medical-professional/medical-professional1",
+      "iconPath": "images/upload/icon-document-brown.png",
+      "breadcrumbItems": [
+        {
+          "heading": "Home",
+          "link": "/content/boqs-redesign/specialities1.html"
+        },
+        {
+          "heading": "ddd",
+          "link": "/content/boqs-redesign/specialities1/ddd.html"
+        },
+        {
+          "heading": "Medical Professional 21",
+          "link": "/content/boqs-redesign/specialities1/ddd/medical-professional.html"
+        }
+      ]
+    },
+    {
+      "description": "Description example...",
+      "title": "Medical Professional 22",
+      "url": "/content/boqs-redesign/specialities1/ddd/medical-professional/medical-professional1",
+      "iconPath": "images/upload/icon-document-brown.png",
+      "breadcrumbItems": [
+        {
+          "heading": "Home",
+          "link": "/content/boqs-redesign/specialities1.html"
+        },
+        {
+          "heading": "ddd",
+          "link": "/content/boqs-redesign/specialities1/ddd.html"
+        },
+        {
+          "heading": "Medical Professional 21",
+          "link": "/content/boqs-redesign/specialities1/ddd/medical-professional.html"
+        }
+      ]
+    },
+    {
+      "description": "Description example...",
+      "title": "Medical Professional 22",
+      "url": "/content/boqs-redesign/specialities1/ddd/medical-professional/medical-professional1",
+      "iconPath": "images/upload/icon-document-brown.png",
+      "breadcrumbItems": [
+        {
+          "heading": "Home",
+          "link": "/content/boqs-redesign/specialities1.html"
+        },
+        {
+          "heading": "ddd",
+          "link": "/content/boqs-redesign/specialities1/ddd.html"
+        },
+        {
+          "heading": "Medical Professional 21",
+          "link": "/content/boqs-redesign/specialities1/ddd/medical-professional.html"
+        }
+      ]
+    },
+    {
+      "description": "Description example...",
+      "title": "Medical Professional 22",
+      "url": "/content/boqs-redesign/specialities1/ddd/medical-professional/medical-professional1",
+      "iconPath": "images/upload/icon-document-brown.png",
+      "breadcrumbItems": [
+        {
+          "heading": "Home",
+          "link": "/content/boqs-redesign/specialities1.html"
+        },
+        {
+          "heading": "ddd",
+          "link": "/content/boqs-redesign/specialities1/ddd.html"
+        },
+        {
+          "heading": "Medical Professional 21",
+          "link": "/content/boqs-redesign/specialities1/ddd/medical-professional.html"
+        }
+      ]
+    }
+  ]
+}

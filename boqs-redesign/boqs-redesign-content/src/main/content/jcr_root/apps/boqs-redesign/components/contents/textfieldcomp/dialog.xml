@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="450"
+    title="Text Field Configuration"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <textfieldlbl
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Full Name:"
+                        fieldDescription="If left empty, &quot;Full Name:&quot; will be used by default."
+                        fieldLabel="Textfield Label"
+                        name="./textfieldlbl"
+                        xtype="textfield"/>
+                    <textfieldplaceholder
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Enter your full name"
+                        fieldDescription="If left empty, &quot;Enter your full name&quot; will be used by default."
+                        fieldLabel="Textfield Placeholder"
+                        name="./textfieldplaceholder"
+                        xtype="textfield"/>
+                    <textfieldname
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="fullname"
+                        fieldLabel="Textfield Element Name"
+                        name="./textfieldname"
+                        regex="/^[a-zA-Z0-9_./:-]+$/"
+                        regexText="Element name should only contain characters, numbers or _./:-"
+                        xtype="textfield"/>
+                    <requiredmsg
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="It is required."
+                        fieldDescription="Add the required message which will be shown to the end user when the user doesn't enter in this field if it is mandatory. If left empty, &quot;It is required&quot; will be used by default."
+                        fieldLabel="Required Message"
+                        name="./requiredmsg"
+                        xtype="textfield"/>
+                    <phonenumbervaliditymessage
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="The phone number entered does not appear to be valid"
+                        fieldDescription="This message will be shown to the user, when the user has entered an invalid phone number. If left empty, &quot;The phone number entered does not appear to be valid&quot; will be used by default"
+                        fieldLabel="Phone Number Validity Message"
+                        name="./phonenumbervaliditymessage"
+                        xtype="textfield"/>
+                    <emailvalidationmessage
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="The email entered does not appear to be valid"
+                        fieldDescription="This message will be shown to the user, when the user has entered an invalid email address. If left empty, &quot;The email entered does not appear to be valid&quot; will be used by default."
+                        fieldLabel="Email Validity Message"
+                        name="./emailValidityMessage"
+                        xtype="textfield"/>
+                    <isrequire
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="yes"
+                        fieldLabel="Is required"
+                        name="./isrequire"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </isrequire>
+                    <fieldtype
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="text"
+                        fieldLabel="Field Type"
+                        name="./fieldtype"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <text
+                                jcr:primaryType="nt:unstructured"
+                                text="Text"
+                                value="text"/>
+                            <phone
+                                jcr:primaryType="nt:unstructured"
+                                text="Phone"
+                                value="phone"/>
+                            <email
+                                jcr:primaryType="nt:unstructured"
+                                text="Email"
+                                value="email"/>
+                        </options>
+                    </fieldtype>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

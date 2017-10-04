@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    boqs.redesign.publish.host=""
+    boqs.redesign.google.analytics.id="UA-65332818-1"
+    boqs.redesign.mail.template.root.path="/content/dam/boqs-redesign/mailtemplate"/>

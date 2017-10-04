@@ -1,0 +1,10 @@
+extends layouts/simple
+
+block vars
+  -title = 'Key Reasons'
+
+block container
+  main#main.main(data-hide-nav="")    
+    section.panel
+      .container(data-team)
+        include blocks/key-reasons

@@ -1,0 +1,24 @@
+.detail
+  .thumb-image.hidden-xs
+    +upload-img("photo-event-1.jpg","event details").img-responsive
+  .event-content
+    +link-icon({text: "Annual Event", icon: "icon-calendar.png"})
+    .date-time
+      +link("Thu 26 February 2015, 3:00pm - 6:00pm").link-1
+        span.wi-icon.icon-date-time(aria-hidden="true")
+        span.blue-text Thu 26 February 2015, 3:00pm - 6:00pm
+    .location
+      +link("Sydney, NSW2000").link-1
+        span.wi-icon.icon-location(aria-hidden="true")
+        span.blue-text Sydney, NSW 2000
+    .desc.hidden-xs
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit amet, consectetur adipiscing.
+    .btn-group
+      .item
+        +link('More Details').btn.btn-default
+          span More Details
+          span.wi-icon.icon-arrow(aria-hidden="true")
+      .item
+        +link("Find out more").btn.btn-primary.btn-register
+          span Register
+          span.wi-icon.icon-arrow(aria-hidden="true")

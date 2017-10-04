@@ -1,0 +1,11 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Static link list'
+
+block container
+  main#main.main
+    .container: .row
+      .col-sm-4
+        include blocks/static-link-list

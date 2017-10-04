@@ -1,0 +1,223 @@
+// For dev
+.main-menu-NEW {
+  .inner {
+    min-height: 300px;
+  }
+}
+.main-menu-OLD {
+  display: none !important;
+}
+
+.main-menu {
+  padding-left: 0;
+  padding-top: 3px;
+  margin-bottom: 4px;
+}
+
+.main-menu .inner {
+  display: none;
+}
+
+.main-menu a.logo {
+  // padding-left: 20px;
+}
+
+.main-menu .link-lever-1 {
+  position: relative;
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  font-size: 1.429em;
+  color: #fff;
+}
+
+.main-menu .link-lever-1 .wi-icon {
+  position: absolute;
+  right: 0;
+  top: 25px;
+}
+
+.main-menu .desc,
+.main-menu a,
+.main-menu h3 {
+  color: #fff;
+  font-family: Gotham-Book,Arial,Helvetica,sans-serif;
+}
+
+.main-menu h3 {
+  font-size: 1.714em;
+}
+
+.main-menu .link-style-1 {
+  display: inline-block;
+  width: 100%;
+  height: 99px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid #aaa486;
+  // border-radius: 5px;
+  text-align: center;
+  font-size: 1.714em;
+}
+
+.main-menu .link-style-1:before {
+  content: "";
+  height: 100%;
+}
+
+.main-menu .link-style-1 .text-2,
+.main-menu .link-style-1:before {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-menu .link-style-1 + .link-style-1 {
+  margin-top: 10px;
+}
+
+.main-menu .link-style-1.btn-find-1 {
+  position: relative;
+  padding-left: 53px;
+  padding-right: 10px;
+}
+
+.main-menu .link-style-1.btn-find-1 .text-2 {
+  letter-spacing: -.02em;
+}
+
+.main-menu .link-style-1.btn-find-1 .icon {
+  width: 60px;
+  display: inline-block;
+  position: absolute;
+  top: 25px;
+  left: -7px;
+}
+
+.main-menu .link-style-1.btn-find-1 .icon:before {
+  content: "";
+  border-left: 4px solid #09354b;
+  height: 25px;
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  top: 40px;
+  z-index: 0;
+}
+
+.main-menu .link-style-1.btn-find-1 .icon img {
+  position: relative;
+  z-index: 1;
+}
+
+.no-touch .main-menu .link-style-1:hover,
+.touch .main-menu .link-style-1.active,
+.touch .main-menu .link-style-1:hover {
+  text-decoration: none;
+}
+
+.no-touch .main-menu .link-style-1:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .main-menu {
+    // margin-right: -7px;
+    // margin-left: -20px;
+    margin-bottom: 0;
+    padding-top: 0;
+    // position: relative;
+  }
+
+  .main-menu h3 {
+    padding-bottom: 13px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #aaa486;
+  }
+
+  .main-menu h3 + .link-style-1 {
+    margin-top: 15px;
+  }
+
+  .main-menu li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .no-touch .main-menu li:hover .inner,
+  .touch .main-menu li.active .inner {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .no-touch .main-menu li:hover .link-lever-1,
+  .touch .main-menu li.active .link-lever-1 {
+    text-decoration: none;
+    background-color: $main-menu-item-hover-bg; //#09354b;
+  }
+
+  // old
+  .main-menu li.logo-sticky {
+    width: 25%;
+  }
+  // new
+  .main-menu li.logo-static {
+    width: 200px;
+    margin-right: 30px;
+  }
+
+  // old
+  .main-menu li.logo-sticky + li .link-lever-1 {
+    padding-left: 20px;
+  }
+  // new
+  .main-menu li.logo-static + li .link-lever-1 {
+    padding-left: 20px;
+  }
+
+  .main-menu .desc {
+    padding-top: 15px;
+    margin-bottom: 18px;
+  }
+
+  .main-menu .link-lever-1 {
+    -webkit-transition: all .2s linear .2s;
+    transition: all .2s linear .2s;
+    display: inline-block;
+    padding: 18px 10px;
+    font-size: .857em;
+  }
+
+  .main-menu .link-lever-1 .icon-arrow {
+    position: static;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  .main-menu .icon-arrow {
+    margin-left: 10px;
+  }
+
+  .main-menu .inner {
+    -webkit-transition: opacity .2s linear .2s;
+    transition: opacity .2s linear .2s;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    // width: 100%;
+    right: 0;
+    padding: 30px 40px;
+    // border-radius: 0 0 10px 10px;
+    background-color: $main-menu-inner-bg; //#09354b;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-menu .link-lever-1 {
+    font-size: 1.143em;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

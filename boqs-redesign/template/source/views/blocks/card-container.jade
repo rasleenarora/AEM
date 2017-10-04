@@ -1,0 +1,52 @@
+// Begin: Card container
+p.num-cards
+  | <span>4</span> results to display
+.card-listing.filter-container(data-item-selector=".card", data-number-more="8", data-result-type="result", data-result-type-plural="results")
+  .row.row-ib.row-ib-left(data-sameheight)
+    - var i = 1
+    - var variation = "para"
+    - var heading = "Managing money"
+    - var attributes = {'class': 'col-xs-12 col-sm-6', 'data-filter-related-profession': 'medicalprofessional'}
+    include card
+
+    - var i = 2
+    - var variation = "ticks"
+    - var heading = "Signature with Velocity points"
+    - var attributes = {'class': 'col-xs-12 col-sm-6', 'data-filter-related-profession': 'medicalprofessional'}
+    include card
+
+    - var i = 3
+    - var variation = "ticks"
+    - var heading = "Platinum with Velocity points"
+    - var attributes = {'class': 'col-xs-12 col-sm-6', 'data-filter-related-profession': 'medicalprofessional|financialplanner'}
+      include card
+
+    - var i = 1
+    - var variation = "para"
+    - var heading = "Buying property"
+    - var attributes = {'class': 'col-xs-12 col-sm-6', 'data-filter-related-profession': 'medicalprofessional|privateclient'}
+    include card
+
+    - var i = 2
+    - var variation = "para"
+    - var heading = "Owning a practice"
+    - var attributes = {'class': 'col-xs-12 col-sm-6', 'data-filter-related-profession': 'privateclient'}
+    include card
+
+    - var i = 3
+    - var variation = "ticks"
+    - var heading = "Signature with Qantas points"
+    - var attributes = {'class': 'col-xs-12 col-sm-6', 'data-filter-related-profession': 'financialplanner'}
+    include card
+
+  .control-result.no-more-result.hidden
+    include control-no-result
+
+  .control-result.load-more-trigger.hidden
+    include control-more-result
+
+  .control-result.zero-result.hidden
+    include control-zero-result
+// End: Card container
+
+  

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Video Player Configuration"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <Tab_x0020_1
+                jcr:primaryType="cq:Panel"
+                title="Properties">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <video
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select MP4 video from DAM"
+                        fieldLabel="Video"
+                        name="./asset"
+                        xtype="pathfield"/>
+                    <autoplay
+			            jcr:primaryType="cq:Widget"
+			            defaultValue="false"
+			            fieldLabel="Autoplay"
+			            name="./autoplay"
+			            type="checkbox"
+			            xtype="selection"/>
+                </items>
+            </Tab_x0020_1>            
+        </items>
+    </items>
+</jcr:root>

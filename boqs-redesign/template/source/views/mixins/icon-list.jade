@@ -1,0 +1,9 @@
+mixin icon-list(items)
+  ul&attributes(attributes)
+    each item in items
+      - if (typeof(item.className) === 'undefined') item.className = 'wrap-icon'
+      - if (typeof(item.classIcon) === 'undefined') item.classIcon = 'wi-icon ' + item.icon
+        li
+          div(class=item.className)
+            i(class=item.classIcon, aria-hidden="true")
+          span!=item.text

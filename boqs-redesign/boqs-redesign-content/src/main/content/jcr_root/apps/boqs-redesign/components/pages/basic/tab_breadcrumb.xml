@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Panel"
+          title="Breadcrumb">
+    <items jcr:primaryType="cq:WidgetCollection">
+		<parentlevel
+			jcr:primaryType="cq:Widget"
+            fieldLabel="Parent Level(absolute)"
+            defaultValue="2"
+            regex="/\\d+$/"
+            name="./parentlevel"
+            xtype="textfield"/>
+		<stoplevel
+        	jcr:primaryType="cq:Widget"
+            fieldLabel="Relative Stop Level"
+            regex="/\\d+$/"
+            name="./stoplevel"
+            xtype="textfield"/>
+		<delimiter
+        	jcr:primaryType="cq:Widget"
+            fieldLabel="Delimiter"
+            name="./delimiter"
+            xtype="textfield"/>
+        <training
+        	jcr:primaryType="cq:Widget"
+            fieldLabel="Training Delimiter"
+            name="./training"
+            xtype="textfield"/>
+    </items>
+</jcr:root>

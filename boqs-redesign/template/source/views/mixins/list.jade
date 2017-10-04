@@ -1,0 +1,75 @@
+mixin link-list(items)
+  ul(class!=attributes.class)
+    each item, key in items
+      li(class=item.class)
+        +link(item.title, item.href, item.text)
+
+mixin arrow-list(items)
+  ul.arrow-list(class!=attributes.class)
+    each item, key in items
+      li(class=item.class)
+        +link(item.title)
+          span.text-1
+            !=item.title
+          span.icon
+            span.wi-icon.icon-arrow(aria-hidden="true")
+mixin static-icon-list(items)
+  ul(class!=attributes.class)
+    each item in items
+      - if (typeof(item.alt) === 'undefined') item.alt = item.text
+      - if (typeof(item.title) === 'undefined') item.title = item.text
+        li(class=item.class)
+          +link(item.title).static-link
+            .icon-box
+              +upload-img(item.src, item.alt).img-responsive
+            .text-box
+              span.text!=item.text
+mixin static-link-list(items)
+  ul(class!=attributes.class)
+    each item in items
+      - if (typeof(item.title) === 'undefined') item.title = item.text
+        li(class=item.class)
+          +link(item.title).static-link
+            .text-box
+              span.text!=item.text
+              span.desc!=item.desc
+mixin tick-list(items)
+  ul(class!=attributes.class)
+    each item in items
+      - if (typeof(item.classIcon) === 'undefined') item.classIcon = 'wi-icon ' + item.icon
+        li(class=item.class)
+          .icon-box
+            i(class=item.classIcon, aria-hidden="true")
+          .text-box
+            p!=item.text
+mixin result-container-list(items)
+  ul(class!=attributes.class)
+    each item in items
+      - if (typeof(item.alt) === 'undefined') item.alt = item.title
+        li(class=item.class)
+          .result-container-block
+            .icon-box
+              +upload-img(item.src, item.alt).img-responsive
+            .text-box
+              ol.breadcrumb
+                li: +link ("Products")
+                  span Products
+                  span.wi-icon.icon-arrow(aria-hidden="true")
+                li: +link ("Creadit cards")
+                  span Creadit cards
+                  span.wi-icon.icon-arrow(aria-hidden="true")
+              +link(item.title, item.href, item.text).text
+              p.hidden-xs.desc!=item.desc
+mixin event-link-list(items)
+  ul(class!=attributes.class)
+    each item in items
+      - if (typeof(item.alt) === 'undefined') item.alt = item.text
+      - if (typeof(item.title) === 'undefined') item.title = item.text
+        li(class=item.class)
+          .icon-box
+            +upload-img(item.src, item.alt).img-responsive
+          .text-box
+            +link(item.title).title.name-event
+            p.date
+              span!=item.date
+              span!=item.time

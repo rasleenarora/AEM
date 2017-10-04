@@ -1,0 +1,39 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Card'
+block container
+  main#main.main
+    .container
+      .row.row-ib.row-ib-left
+        .col-xs-12.col-sm-6.col-md-4
+          - var i = 1
+          - var variation = "para"
+          - var heading = "Managing money"
+          include blocks/card
+        .col-xs-12.col-sm-6.col-md-4
+          - var i = 2
+          - var variation = "ticks"
+          - var heading = "Signature with Velocity points"
+          include blocks/card
+        .col-xs-12.col-sm-6.col-md-4
+          - var i = 3
+          - var variation = "ticks"
+          - var heading = "Platinum with Velocity points"
+          include blocks/card
+        .col-xs-12.col-sm-6.col-md-4
+          - var i = 1
+          - var variation = "para"
+          - var heading = "Buying property"
+          include blocks/card
+        .col-xs-12.col-sm-6.col-md-4
+          - var i = 2
+          - var variation = "para"
+          - var heading = "Owning a practice"
+          include blocks/card
+        .col-xs-12.col-sm-6.col-md-4
+          - var i = 3
+          - var variation = "ticks"
+          - var heading = "Signature with Qantas points"
+          include blocks/card

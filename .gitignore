@@ -1,0 +1,6 @@
+boqs-redesign/.idea/
+boqs-redesign/boqs-redesign-content/target/
+boqs-redesign/boqs-redesign-bundle/target/
+*.iml
+*.vlt
+boqs-redesign/boqs-redesign-web-service/target/

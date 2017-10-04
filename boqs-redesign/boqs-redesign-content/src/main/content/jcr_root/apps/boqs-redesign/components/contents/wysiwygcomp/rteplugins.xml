@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+		  jcr:primaryType="nt:unstructured">
+              <links jcr:primaryType="nt:unstructured">
+                  <linkDialogConfig
+                      jcr:primaryType="nt:unstructured"
+                      height="{Long}316">
+                      <linkAttributes jcr:primaryType="cq:WidgetCollection">
+                          <linkAdvanced
+                              jcr:primaryType="cq:Widget"
+                              collapsed="{Boolean}true"
+                              collapsible="{Boolean}true"
+                              inputValue="advanced"
+                              name="./linkdialog/cq:adhocLinkTrackingTab"
+                              title="Link tracking"
+                              xtype="dialogfieldset">
+                              <items jcr:primaryType="cq:WidgetCollection">
+                                  <enable
+                                      jcr:primaryType="nt:unstructured"
+                                      attribute="enabletracking"
+                                      fieldDescription="override analytics framework settings"
+                                      fieldLabel="Custom link tracking"
+                                      name="./linkdialog/cq:adhocLinkTrackingEnableTracking"
+                                      xtype="checkbox">
+                                      <listeners
+                                          jcr:primaryType="nt:unstructured"
+                                          check="function(component){var dlg=component.findParentByType('rtelinkdialog');dlg.enableSCFields(component.checked);}"/>
+                                  </enable>
+                                  <events
+                                      jcr:primaryType="nt:unstructured"
+                                      attribute="adhocevents"
+                                      fieldDescription="e.g.: event2, event7"
+                                      fieldLabel="Include SiteCatalyst events"
+                                      name="./linkdialog/cq:adhocLinkTrackingEvents"
+                                      xtype="textfield"/>
+                                  <evars
+                                      jcr:primaryType="nt:unstructured"
+                                      attribute="adhocevars"
+                                      fieldDescription="e.g.: eVar1: pagedata.url, prop4: 'const'"
+                                      fieldLabel="Include SiteCatalyst variables"
+                                      name="./linkdialog/cq:adhocLinkTrackingEvars"
+                                      xtype="textfield"/>
+                              </items>
+                          </linkAdvanced>
+                      </linkAttributes>
+                  </linkDialogConfig>
+              </links>
+              <edit
+                  jcr:primaryType="nt:unstructured"
+                  features="*"/>
+              <image
+                  jcr:primaryType="nt:unstructured"
+                  features="[*]"/>
+              <paraformat
+                  jcr:primaryType="nt:unstructured"
+                  features="*">
+                  <formats jcr:primaryType="cq:WidgetCollection">
+                      <p
+                          jcr:primaryType="nt:unstructured"
+                          description="Paragraph"
+                          tag="p"/>
+                      <h1
+                          jcr:primaryType="nt:unstructured"
+                          description="Heading 1" 
+                          tag="h1"/>
+                      <h2
+                          jcr:primaryType="nt:unstructured"
+                          description="Heading 2"
+                          tag="h2"/>
+                      <h3
+                          jcr:primaryType="nt:unstructured"
+                          description="Heading 3" 
+                          tag="h3"/>
+					  <h4
+                          jcr:primaryType="nt:unstructured"
+                          description="Heading 4" 
+                          tag="h4"/>
+
+                  </formats>
+              </paraformat>
+              <styles
+                  jcr:primaryType="nt:unstructured"
+                  features="*">
+                  <styles jcr:primaryType="cq:WidgetCollection">
+                      <title-title-2
+                          jcr:primaryType="nt:unstructured"
+                          cssName="h2" 
+                          text="Title h2"/>
+                      <title-title-3
+                          jcr:primaryType="nt:unstructured"
+                          cssName="h3" 
+                          text="Title h3"/>
+                      <title-title-4
+                          jcr:primaryType="nt:unstructured"
+                          cssName="h4" 
+                          text="Title h4"/>
+                      
+                      <blue-text-normal-text-1
+                          jcr:primaryType="nt:unstructured"
+                          cssName="blue-text" 
+                          text="Description 1"/>
+                      <blue-text-normal-text
+                          jcr:primaryType="nt:unstructured"
+                          cssName="blue-text normal-text" 
+                          text="Description 2"/>
+                      <blue-text-text-3
+                          jcr:primaryType="nt:unstructured"
+                          cssName="blue-text text-3" 
+                          text="Description 3"/>
+                      <blue-text-text-4
+                          jcr:primaryType="nt:unstructured"
+                          cssName="blue-text text-4" 
+                          text="Description 4"/>
+                      <blue-text-text-5
+                          jcr:primaryType="nt:unstructured"
+                          cssName="blue-text text-5" 
+                          text="Description 5"/>
+                      
+                      <btn-btn-primary
+                          jcr:primaryType="nt:unstructured"
+                          cssName="btn btn-primary" 
+                          text="Button Primary"/>
+                      <btn-btn-default
+                          jcr:primaryType="nt:unstructured"
+                          cssName="btn btn-default" 
+                          text="Button Secondary"/>
+                      <btn-tertiary-text-5
+                          jcr:primaryType="nt:unstructured"
+                          cssName="btn-tertiary text-5" 
+                          text="Button Tertiary"/>
+                      
+                      <bullet-list
+                          jcr:primaryType="nt:unstructured"
+                          cssName="bullet-list" 
+                          text="Bullet List Level 1"/>
+                      <bullet-list-level-2
+                          jcr:primaryType="nt:unstructured"
+                          cssName="bullet-list level-2" 
+                          text="Bullet List Level 2"/>
+                      <bullet-list-level-3
+                          jcr:primaryType="nt:unstructured"
+                          cssName="bullet-list level-3" 
+                          text="Bullet List Level 3"/>
+                      <feature-list
+                          jcr:primaryType="nt:unstructured"
+                          cssName="feature-list" 
+                          text="Feature List"/>
+                      <tick-list
+                          jcr:primaryType="nt:unstructured"
+                          cssName="tick-list" 
+                          text="Tick List"/>
+                      
+                      <disclaimer-title
+                          jcr:primaryType="nt:unstructured"
+                          cssName="disclaimer-title" 
+                          text="Disclaimer Title"/>
+                      <disclaimer-text
+                          jcr:primaryType="nt:unstructured"
+                          cssName="disclaimer-text" 
+                          text="Disclaimer Text"/>
+                      <btn
+                          jcr:primaryType="nt:unstructured"
+                          cssName="btn"
+                          text="Button"/>
+                      <btn-tertiary
+                          jcr:primaryType="nt:unstructured"
+                          cssName="btn-tertiary" 
+                          text="Button2"/>
+                  </styles>
+              </styles>
+              <findreplace
+                  jcr:primaryType="nt:unstructured"
+                  features="*"/>
+              <spellcheck
+                  jcr:primaryType="nt:unstructured"
+                  features="*"/>
+              <subsuperscript
+                  jcr:primaryType="nt:unstructured"
+                  features="[subscript,superscript]"/>
+              <undo
+                  jcr:primaryType="nt:unstructured"
+                  features="*"/>
+              <table 
+          		jcr:primaryType="nt:unstructured" 
+          		features="*" />
+          	<htmlColorPicker 
+          		jcr:primaryType="nt:unstructured" 
+          		features="*" />
+              <misctools
+                  jcr:primaryType="nt:unstructured"
+                  features="[sourceedit]"/>
+</jcr:root>

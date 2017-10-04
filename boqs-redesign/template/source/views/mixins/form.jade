@@ -1,0 +1,117 @@
+//- Form
+mixin label(id,text)
+  label(for=id)&attributes(attributes)!=text
+    if block
+      block
+
+mixin label-1(obj)
+  label(for=obj.id)&attributes(attributes)!=obj.text
+    if block
+      block
+
+mixin input(obj,attr)
+  - if(typeof(obj.value)=== 'undefined') obj.value = ''
+  - if(typeof(obj.name)=== 'undefined') obj.name = obj.id
+  - if(typeof(obj.type)=== 'undefined') obj.type = 'text'
+  - if(obj.type === 'text') obj.autocomplete = 'off'
+  input(id=obj.id, name=obj.name,type=obj.type,value=obj.value,placeholder=obj.placeholder, checked=obj.checked, readonly=obj.readonly, autocomplete=obj.autocomplete)&attributes(attributes)&attributes(obj.attr ? obj.attr : {})
+
+mixin button(obj)
+  - if (typeof(obj.text)=== 'undefined') obj.text = obj.title
+    button(type=obj.typebtn, id=obj.name, name=obj.name)&attributes(attributes)!=obj.text
+      if block
+        block
+
+mixin btn-wrap(obj)
+  +button(obj)&attributes(attributes)
+    span(class=obj.icon, aria-hidden="true")
+
+
+mixin btn-icon(obj,attrbtn)
+    button(type=obj.typebtn, id=obj.name, name=obj.name)&attributes(attributes)&attributes(obj.attrbtn ? obj.attrbtn : {})
+      span(class=obj.icon, aria-hidden="true") 
+      if block
+        block
+      //- !=obj.title
+
+mixin form(obj)
+  - if (typeof(obj.name) === 'undefined') obj.name = obj.id
+  form(action=obj.action, method=obj.method, id=obj.id, name=obj.name)&attributes(attributes)&attributes(obj.attrbtn ? obj.attrbtn : {})
+    if block
+      block
+
+mixin form-group(obj)
+  - if(typeof(obj.classForm) === 'undefined') obj.classForm = 'form-group'
+  - if(typeof(obj.classInput) === 'undefined') obj.classInput = 'input-group'
+  - if(typeof(obj.classInput1) === 'undefined') obj.classInput1 = 'wrap'
+  - if(typeof(obj.classHidden) === 'undefined') obj.classHidden = 'hidden-xs'
+  div(class=obj.classForm)
+    if(obj.text)
+      +label(obj.id, obj.text)(class=obj.classHidden)
+    div(class=obj.classInput)
+      div(class=obj.classInput1)
+        +input(obj)
+      if(obj.typebtn)
+        button(type=obj.typebtn, name=obj.name, class=obj.classBtn)
+          span(class=obj.icon, aria-hidden="true")
+
+mixin form-group-2(obj)
+  - if(typeof(obj.classForm) === 'undefined') obj.classForm = 'form-group'
+  - if(typeof(obj.classInput) === 'undefined') obj.classInput = 'input-group'
+  - if(typeof(obj.classInput1) === 'undefined') obj.classInput1 = 'wrap'
+  - if(typeof(obj.classHidden) === 'undefined') obj.classHidden = 'hidden-xs'
+  div(class=obj.classForm)
+    div(class=obj.classInput)
+      +btn-icon(obj)(class=obj.classBtn)
+      div(class=obj.classInput1)
+        +input(obj)
+
+mixin form-group-1(obj)
+  - if(typeof(obj.classForm) === 'undefined') obj.classForm = 'form-group'
+  - if(typeof(obj.classInput) === 'undefined') obj.classInput = 'form-control'
+  - if(typeof(obj.classLabel) === 'undefined') obj.classLabel = 'label-1'
+  - if(typeof(obj.classInput1) === 'undefined') obj.classInput1 = 'input-1'
+  - if(typeof(obj.classCol) === 'undefined') obj.classCol = 'sm-6'
+  - if(typeof(obj.row) === 'undefined') obj.row = 'row'
+    div(class=obj.classForm)
+      div(class=obj.row)
+        div(class="col-#{obj.classCol}")
+          +label(obj.id, obj.text)
+          - if(typeof(obj.required) !== 'undefined') {
+            i(class=obj.required)
+          - }
+      div(class=obj.row)
+        div(class="col-#{obj.classCol} #{obj.classInput1}")&attributes(attributes)
+          +input(obj)(class=obj.classInput)
+
+mixin option-group(obj)
+  div(class=obj.classDiv)
+    +input(obj)&attributes(attributes)
+    +label(obj.id, obj.text).label-text
+      if block
+        block
+
+mixin dropdown-menu(obj)
+  -if(typeof(obj.classDropdown) === 'undefined') obj.classDropdown = 'dropdown'
+  -if(typeof(obj.classList) === 'undefined') obj.classList = 'dropdown-menu'
+    div(class=obj.classDropdown)
+      +button(obj)&attributes(attributes)
+        span(class=obj.icon, aria-hidden="true")
+      ul(class=obj.classList)
+        each item in obj.item
+          li
+            +link(item.title, item.href, item.text)
+
+mixin custom-select(obj)
+  -if(typeof(obj.class) === 'undefined') obj.class = 'custom-box'
+  .custom-select(data-customselectbox)
+    select(class=obj.class)
+      each item in obj
+        option(value=item.value)!=item.text
+
+mixin custom-select-1()
+  .dropdown
+    .custom-select(data-customselectbox)
+      select.custom-box
+        option(value="phone") Phone
+        option(value="email") Email

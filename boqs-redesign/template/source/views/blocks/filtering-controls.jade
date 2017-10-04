@@ -1,0 +1,99 @@
+#filtering-controls.filtering-controls(data-accordion, data-expand-content, data-hidehandler="true", data-close=".close, .text-link, .btn-submit")
+  header
+    h3(data-template='[data-popover-template="filter-control"]', data-close='.close, .btn-ok',
+          data-offsettop='5', data-offsetleft= '10',data-autoshow='true', data-removewhenclose='true', data-triggeroffsettop='5', data-popover, data-placementtrigger='bottom',data-trigger='[data-popover-trigger="filter-control"]') Refine results
+    //- +link("Close").close.visible-xs
+      i.wi-icon-blue.icon-close(aria-hidden="true")
+  .clear-btn
+    +btn-icon({typebtn: "reset", nam: "btn-reset", title: "Clear all filters", icon: "icon icon-bin"}).btn-reset-filters.title Clear all filters
+  +form({action: "data/ajax-event.json", method: "get"})(data-filters).filtering-controls-form
+    fieldset.item.active(data-type="related-profession")
+      .handle
+        h4.title Related profession
+          span.decs Medical Professional
+      .form-group.content
+        +option-group({id: "allprofessions", name: "radio", type: "radio", text: "All Professions", classDiv: "radio-group"})(checked="checked", value="allprofessions", data-default="")
+        +option-group({id: "medicalprofessional", name: "radio", type: "radio", text: "Medical professional", classDiv: "radio-group"})(value="medicalprofessional")
+        +option-group({id: "accountant", name: "radio", type: "radio", text: "Accountant", classDiv: "radio-group"})(value="accountant")
+        +option-group({id: "financialplanner", name: "radio", type: "radio", text: "Financial Planner", classDiv: "radio-group"})(value="financialplanner")
+        +option-group({id: "privateclient", name: "radio", type: "radio", text: "Private Client", classDiv: "radio-group"})(value="privateclient")
+    fieldset.item(data-type="finance")
+      .handle
+        h4.title Finance
+          span.decs Personal Finance
+      .form-group.content
+        +option-group({id: "radio6", name: "radio-1", type: "radio", text: "All categories", classDiv: "radio-group"})(checked="checked", value="allcate", data-default="")
+        +option-group({id: "radio7", name: "radio-1", type: "radio", text: "Personal Finance", classDiv: "radio-group"})(value="1")
+        +option-group({id: "radio8", name: "radio-1", type: "radio", text: "Practice Finance", classDiv: "radio-group"})(value="2")
+        +option-group({id: "radio9", name: "radio-1", type: "radio", text: "Finance for my client", classDiv: "radio-group"})(value="3", disabled)
+    fieldset.item(data-type="related-product")
+      .handle
+        h4.title Related products
+      .form-group.content
+        +option-group({id: "checkbox1", type: "checkbox", text: "All products", classDiv: "checkbox-group"})(checked="checked", value="allproduct", data-check-all, data-default="")
+        p.note-text Or only
+        +option-group({id: "checkbox2", type: "checkbox", text: "Savings Accounts", classDiv: "checkbox-group"})(value="1")
+        +option-group({id: "checkbox3", type: "checkbox", text: "Credit Cards", classDiv: "checkbox-group"})(value="2")
+        +option-group({id: "checkbox4", type: "checkbox", text: "Property Finance", classDiv: "checkbox-group"})(value="3")
+        +option-group({id: "checkbox5", type: "checkbox", text: "Asset Finance", classDiv: "checkbox-group"})(value="4")
+    fieldset.item(data-type="type-event")
+      .handle
+        h4.title Type of Event
+      .form-group.content
+        +option-group({id: "checkbox6", type: "checkbox", text: "Show all Event", classDiv: "checkbox-group"})(checked="checked", value="all", data-check-all, data-default="")
+        p.note-text Or only
+        +option-group({id: "checkbox7", type: "checkbox", text: "Annual Event", classDiv: "checkbox-group"})(value="1")
+        +option-group({id: "checkbox8", type: "checkbox", text: "Conference", classDiv: "checkbox-group"})(value="2")
+        +option-group({id: "checkbox9", type: "checkbox", text: "Luncheon", classDiv: "checkbox-group"})(value="3")
+        +option-group({id: "checkbox10", type: "checkbox", text: "Industry Event", classDiv: "checkbox-group"})(value="4")
+        +option-group({id: "checkbox11", type: "checkbox", text: "Seminar", classDiv: "checkbox-group"})(value="5")
+        +option-group({id: "checkbox12", type: "checkbox", text: "Sporting Event", classDiv: "checkbox-group"})(value="6")
+        +option-group({id: "checkbox13", type: "checkbox", text: "Workshop", classDiv: "checkbox-group"})(value="7")
+    fieldset.item(data-type="states")
+      .handle
+        h4.title States
+      .form-group.states-group.content
+        .custom-select(data-customselectbox)
+          select(name="selStates")
+            option(value="allstates", data-default="") All states
+            option(value="0") English
+            option(value="1") Vietnam
+    fieldset.item(data-type="date-range")
+      .handle
+        h4.title Date range
+      .form-group.content
+        +form-group-1({id: "date-range-from", classForm: "date-picker-group", classCol: "sm-12", classInput1: "date-picker", text: "From:", value:"Today", error: "wrap-error", classIcon: "wi-icon icon-close-2", textError: "Please choose a valid date", readonly: "readonly"})(data-template='[data-popover-template="date-range-from"]', data-close='.icon-close-popover, [data-today="data-today"], .btn-cancel',
+          data-offsettop='25', data-offsetleft= '-5', data-popover)
+        +form-group-1({id: "date-range-to", classForm: "date-picker-group", classCol: "sm-12",classInput1: "date-picker", text: "To:", value:"Mar 2015", error: "wrap-error", classIcon: "wi-icon icon-close-2", textError: "Please choose a valid date", readonly: "readonly"})(data-template='[data-popover-template="date-range-to"]', data-close='.icon-close-popover, [data-today="data-today"], .btn-cancel',
+          data-offsettop='25', data-offsetleft= '-5', data-popover)
+
+    //- input(type="hidden", id="search-page", name="search-page", value="/content/boqs-redesign/sssssssssssssssssssssssss.html")
+    //- input(type="hidden", id="term", name="term", value="medical")
+    //- input(type="hidden", id="type", name="type", value="product|event")
+    .filtering-submit.visible-xs
+      .row.group-btn
+        .col-xs-6
+          +link("Cancel").text-link
+        .col-xs-6
+          +btn-wrap({typebtn: "submit", title: "Apply"}).btn.btn-primary.btn-submit.pull-right
+
+
+.popover.right-bottom(data-calendar='#date-range-from', data-popover-template='date-range-from')
+  .inner
+    h3.title Select start date:
+    a.close.hidden-xs(href='#', title='Close')
+      span.wi-icon-blue.icon-close-popover
+    .calendar(data-init-calendar='')
+    .group-btn
+      a.btn.btn-primary.btn-ok(href='#', title='Today', data-today='data-today') Today
+      a.btn-cancel.title.visible-xs(href='#', title='Cancel') Cancel
+
+.popover.right-bottom(data-calendar='#date-range-to', data-popover-template='date-range-to')
+  .inner
+    h3.title Select start date:
+    a.close.hidden-xs(href='#', title='Close')
+      span.wi-icon-blue.icon-close-popover
+    .calendar(data-init-calendar='')
+    .group-btn
+      a.btn.btn-primary.btn-ok(href='#', title='Today', data-today='data-today') Today
+      a.btn-cancel.title.visible-xs(href='#', title='Cancel') Cancel

@@ -1,0 +1,19 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Register'
+
+block container
+  main#main.main
+    .popup.information-popup
+      .container
+        .modal-dialog
+          .modal-content
+            .modal-header
+              +btn-icon({type: "button", title: "Close", icon: "wi-icon icon-close-1"}).close
+              h4.modal-title You have been registered for event name
+            .modal-body
+              p.desc We will send you an email shortly with additional information. Thank you for registering, and we look forward to seeing you at the event.
+              +link
+              +btn-wrap({typebtn: "text", title: "Continue", icon: "wi-icon icon-arrow icon-btn"}).btn.btn-default.btn-primary

@@ -1,0 +1,68 @@
+// Lists
+
+
+.tick-list,
+.bullet-list {
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.3; //tighter
+  position: relative;
+  display: block;
+
+  // Tick icon 
+  // - See grunticon settings in Gruntfile.js
+  &:before {
+    &:extend(.icon, .icon-medium);
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: .2em; //tweak
+  }
+}
+
+
+// List:  Bullet - Feature - Tick
+/*.bullet-list,
+.feature-list,
+.tick-list {
+  display: block;
+  position: relative;
+  .font-size(16px);
+  color: @prussian-blue;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+}
+.bullet-list {
+  padding-left: 10px;
+  padding-bottom: 6px;
+  &:before {
+    top: 8px;
+    .size(4px);
+    background-color: @blue;
+    .border-radius(50%);
+  }
+  &.level-2 { margin-left: 18px; }
+  &.level-3 { margin-left: 36px; }
+}
+.feature-list {
+  padding-left: 29px;
+  padding-bottom: 7px;
+  &:before {
+    top: 4px;
+    .size(14px, 12px);
+    background-image: url('@{img}icon-check-brown.png');
+  }
+}
+.tick-list {
+  padding: 0 0 45px 35px;
+  &:before {
+    top: 0;
+    .size(25px);
+    background-image: url('@{img}icon-tick.png');
+  }
+}*/

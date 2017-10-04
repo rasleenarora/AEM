@@ -1,0 +1,84 @@
+// Begin Container Component
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Container'
+
+block container
+  main#main.main.container-cpn-nav
+    .block
+      .container
+        | 100% - Default - No background Color
+    .block
+      .container
+        .row
+          .col-sm-9
+            strong 75% - Column 1
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          .col-sm-3
+            strong 25% - Column 2
+            | Lorem Ipsum is simply dummy
+    .block
+      .container
+        .row
+          .col-sm-6
+            strong 50% - Column 1
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          .col-sm-6
+            strong 50% - Column 2
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    .block
+      .container
+        .row
+          .col-sm-6.pull-right-sm
+            strong 50% - Column 1 on the Right - has class pull-right-sm
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          .col-sm-6
+            strong 50% - Column 2
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    .block
+      .container
+        .row
+          .col-sm-4
+            strong 33% - Column 1
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          .col-sm-4
+            strong 33% - Column 2
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          .col-sm-4
+            strong 33% - Column 3
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    .block
+      .container
+        .row
+          .col-sm-3
+            strong 25% - Column 1
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          .col-sm-3
+            strong 25% - Column 2
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          .col-sm-3
+            strong 25% - Column 3
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry
+          .col-sm-3
+            strong 25% - Column 4
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    .block.grey
+      .container
+        strong Grey block - Add more one class "grey-block"
+        | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    .block
+      .container-fluid
+        strong 100% of Screen
+        | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    .block
+      .container-fluid
+        .row
+          .col-sm-6
+            strong 50% of Screen - Column 1
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          .col-sm-6
+            strong 50% of Screen - Column 2
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    // End Container Component

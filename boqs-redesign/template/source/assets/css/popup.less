@@ -1,0 +1,246 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  z-index: 1100;
+  background: @blue-1;
+  .modal-dialog {
+    margin: 20px auto;
+  }
+  .modal-header {
+    border: none;
+    margin-bottom: 10px;
+    .wrap-error {
+      padding-right: 15px;
+      margin-bottom: -35px;
+      .icon-close-2 {
+        float: left;
+        margin-right: 10px;
+      }
+    }
+  }
+  .modal-title {
+    font-family: @font-family-Gotham-Book;
+    .font-size(22px);
+    line-height: 1.2;
+    color: @prussian-blue;
+    padding-bottom: 15px;
+    margin-top: 40px;
+    border-bottom: 2px solid @brown-light;
+  }
+  .modal-body {
+    padding-top: 0;
+  }
+  .modal-content {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .desc {
+    .font-size(16px);
+    color: @prussian-blue;
+  }
+}
+.register-popup {
+  .checkbox-group {
+    label {
+      font-family: @font-family-sans-serif;
+      .font-size(16px);
+      a {
+        color: @light-blue;
+        text-decoration: underline;
+        .no-touch & {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+.event-group {
+  .wi-icon {
+    float: left;
+    margin-right: 15px;
+  }
+  .desc {
+    overflow: hidden;
+    line-height: 1;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.required {
+  .error {
+    float: left;
+    margin-right: 15px;
+  }
+  p {
+    overflow: hidden;
+  }
+}
+.policy-link {
+  text-decoration: underline;
+  .no-touch & {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.error {
+  .form-control {
+    border: 2px solid @red;
+  }
+  .wrap-error {
+    display: block;
+  }
+  .checkbox-group + .wrap-error {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+.wrap-error {
+  margin-top: 10px;
+  i {
+    float: left;
+    margin-right: 5px;
+  }
+  p {
+    color: @red;
+    .font-size(12px);
+    line-height: 1.2;
+    font-weight: bold;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 1;
+  &:focus {
+    outline: none;
+  }
+}
+.information-popup {
+  .btn-primary {
+    display: block;
+    margin: 30px auto 20px;
+    .wi-icon.icon-arrow {
+      position: static;
+      margin-top: -3px;
+    }
+  }
+  .modal-title {
+    border: none;
+    padding: 0;
+    margin-top: 30px;
+  }
+  .modal-header {
+    padding: 20px;
+  }
+  .modal-body {
+    padding: 0 20px 20px;
+  }
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+.contact-popup,.register-popup {
+  display: none;
+  &.popup {
+    @media (max-width: @screen-xs-max) {
+      &.show-animate {
+        .modal-dialog {
+          .translate(0, 0);
+        }
+      }
+      .modal-dialog {
+        .translate(0, 1000px);
+        .transition(transform .5s ease-out);
+      }
+    }
+    @media (min-width: @screen-sm-min) {
+      &.show-animate {
+        .modal-dialog {
+          .opacity(1);
+        }
+      }
+      .modal-dialog {
+        max-width: 660px;
+        width: auto;
+        .transition(opacity .5s ease-out);
+        .opacity(0);
+      }
+    }
+  }
+}
+.embedded-style {
+  .embedded-hidden {
+    display: none;
+  }
+  .contact-popup {
+    overflow-y: auto;
+    position: static;
+    background-color: transparent;
+    .btn-cancel, .close {
+      display: none;
+    }
+    .modal-dialog {
+        margin-top: 0;
+    }
+  }
+}
+.contact-popup {
+  .static-title {
+    margin: 30px 0;
+    font-weight: bold;
+  }
+  .btn-submit {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .btn-cancel {
+    display: none;
+  }
+  .event-group {
+    margin-top: 40px;
+    .desc {
+      color: @blue;
+    }
+  }
+  .form-control {
+    .placeholder(@prussian-blue);
+    .font-size(13px);
+  }
+  @media (min-width: @screen-sm-min) {
+    .event-group {
+      margin-top: 0;
+    }
+  }
+  @media (min-width: @screen-md-min) {
+    .btn-cancel {
+      display: inline-block;
+      margin: 30px 0;
+    }
+    .static-title {
+      margin: 20px 0;
+    }
+    .text-link {
+      margin-bottom: 0;
+    }
+  }
+}
+

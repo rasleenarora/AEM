@@ -1,0 +1,16 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Result Card'
+block container
+  main#main.main
+    .container
+      .row
+        h2.title-template Style 1
+        .col-sm-4
+          include blocks/result-card
+      .row
+        h2.title-template Style 2
+        .col-sm-4
+          include blocks/result-card-2

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Card Container Configuration"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <numcardsstring
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="We have %n %t matching your filters:"
+                        fieldDescription="Type %n to insert the number of results, and %t to insert the type of result. If it is empty, &quot;We have %n %t matching your filters:&quot; will be used by default "
+                        fieldLabel="Num cards String"
+                        name="./numcardsstring"
+                        xtype="textfield"/>
+                    <resulttypeoverride
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="result"
+                        fieldDescription="This field's value will be used when the number of results is 1. If left empty, &quot;result&quot; will be used by default"
+                        fieldLabel="Result Type Override"
+                        name="./resulttypeoverride"
+                        xtype="textfield"/>
+                    <resulttypepluraloverride
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="results"
+                        fieldDescription="This field's value will be used when the number of results is more than 1 or less than 1. If left empty, &quot;results&quot; will be used by default "
+                        fieldLabel="Result Type(Plural) Override"
+                        name="./resulttypepluraloverride"
+                        xtype="textfield"/>
+                    <paginateresults
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="no"
+                        fieldLabel="Paginate Results"
+                        name="./paginateresults"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </paginateresults>
+                    <numberofcardstoshowperpage
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="10"
+                        fieldDescription="This field's value will be used to show the number of cards which will be shown before the pagination gets applied, if paginate results is &quot;Yes&quot;. If left empty, &quot;10&quot; will be used by default. Only positive numbers should be added to this field "
+                        fieldLabel="Number of Cards to Show Per Page"
+                        name="./numberofcardstoshowperpage"
+                        regex="/^0*[1-9][0-9]*$/"
+                        regexText="Only positive numbers are allowed."
+                        xtype="numberfield"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Load More">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <loadmoreiconpath
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Load More Icon Path"
+                        name="./loadmoreiconpath"
+                        rootPath="/content/dam"
+                        xtype="pathfield"/>
+                    <moreresultstext
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="There are %n more %t to display"
+                        fieldDescription="If left empty, &quot;There are %n more %t to display&quot; will be used by default"
+                        fieldLabel="More Results Text"
+                        name="./moreresultstext"
+                        xtype="textfield"/>
+                    <loadmoretext
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Load More %t"
+                        fieldDescription="If left empty, &quot;Load More %t&quot; will be used by default"
+                        fieldLabel="Load More Text"
+                        name="./loadmoretext"
+                        xtype="textfield"/>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="cq:Panel"
+                title="No more result">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <nomoreresultstext
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="There are no other %t to display"
+                        fieldDescription="If left empty, &quot;There are no other %t to display&quot; will be used by default"
+                        fieldLabel="No More Results Text"
+                        name="./nomoreresultstext"
+                        xtype="textfield"/>
+                    <backtotoptext
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Back to Top"
+                        fieldDescription="If left empty, &quot;Back to Top&quot; will be used by default "
+                        fieldLabel="Back to Top Text"
+                        name="./backtotoptext"
+                        xtype="textfield"/>
+                </items>
+            </tab3>
+            <tab4
+                jcr:primaryType="cq:Panel"
+                title="No result">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <noresultstext
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="We could not find any %t matching your filters"
+                        fieldDescription="If left empty, &quot;We could not find any %t matching your filters&quot; will be used by default."
+                        fieldLabel="No Result Text"
+                        name="./noresultstext"
+                        xtype="textfield"/>
+                    <clearallfilterstext
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Clear all filters"
+                        fieldDescription="If left empty, &quot;Clear all filters&quot; will be used by default."
+                        fieldLabel="Clear All Filters Text"
+                        name="./clearallfilterstext"
+                        xtype="textfield"/>
+                </items>
+            </tab4>
+            <tab5
+                jcr:primaryType="cq:Panel"
+                title="Additonal Information">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <isExpertisePage
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Check this checkbox if the page is an expertise filter page"
+                        fieldLabel="Is Expertise Page"
+                        name="./expertisePage"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </tab5>
+        </items>
+    </items>
+</jcr:root>

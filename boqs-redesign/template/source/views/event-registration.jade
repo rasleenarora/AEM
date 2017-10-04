@@ -1,0 +1,9 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Register'
+
+block container
+  main#main.main
+    include blocks/registration-form-show

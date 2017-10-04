@@ -1,0 +1,38 @@
+mixin link(title, href, text)
+  - if (typeof(text) === 'undefined') text = title
+  - if (typeof(href) === 'undefined') href = '#'
+  a(href=href)&attributes(attributes)
+    if block
+      block
+    else
+      !=text
+
+mixin items(items, activeIndex)
+  - var active = ''
+  - each item,index in items
+    - active = index === activeIndex ? 'active': ''
+    - if(item.dataMobileBottom)
+      li(class=active, data-mobile-bottom)
+        +link(item.title)(class=item.linkClass)
+    - else
+      li(class=active)
+        +link(item.title)(class=item.linkClass)
+
+mixin link-wrap(obj)
+  +link(obj.title, obj.href, obj.text)&attributes(attributes)
+    span(class=obj.icon)
+
+mixin sub-menu-link(obj)
+  +link(obj.text).cell.sub-menu-link
+    span.icon
+      +img(obj.icon).img-responsive
+    span.link-text!=obj.text
+      if block
+        block
+
+mixin link-icon(obj)
+  .event-box
+    .icon-box
+      +upload-img(obj.icon).img-responsive
+    +link(obj.text).text-box.title
+

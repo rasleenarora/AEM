@@ -1,0 +1,39 @@
+.card-container {
+  min-height: 80px;
+}
+
+.resultcardcomp.basecomp.section {
+  display: inline-block;
+  width: 100%;
+  display: none;
+  margin-bottom: 10px;
+}
+.par_card_container {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .resultcardcomp.basecomp.section {
+    width:33%;
+  }
+  .card-container .control-result {
+    position: absolute;
+  }
+}
+@media (max-width: 767px) {
+  .par_card_container {
+    position: static!important;
+  }
+  .card-container {
+    height: auto!important;
+  }
+  .card-container .card-item {
+    position: relative!important;
+    left: 0!important;
+    top: 0!important;
+    transform: translate3d(0, 0, 0)!important;
+  }
+}
+.author-mode .resultcardcomp.basecomp.section {
+  display: block;
+  width: 100%;
+}

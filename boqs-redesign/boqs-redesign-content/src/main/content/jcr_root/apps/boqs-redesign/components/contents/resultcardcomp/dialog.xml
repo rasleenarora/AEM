@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Result Card Configuration"
+	height="850"
+	width="600"
+	xtype="dialog">
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<headinglbl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Heading"
+						name="./headinglbl"
+						allowBlank="{Boolean}false"
+						xtype="textfield"/>
+					<headingtargeturl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Heading Target URL"
+						name="./headingtargeturl"
+						fieldDescription="Please enter or select the target URL where the user will be taken to when the user clicks on the heading"
+						xtype="pathfield"/>
+					<iconpath
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Icon Path"
+						name="./iconpath"
+						rootPath="/content/dam"
+						xtype="pathfield"/>
+					<thumbnailimage
+						jcr:primaryType="cq:Widget"
+						cropParameter="./thumbnailimage"
+						ddGroups="[media]"
+						fieldLabel="Thumbnail Image"
+						fileNameParameter="./fileName"
+						fileReferenceParameter="./fileReference"
+						height="{Long}200"
+						allowUpload="{Boolean}false"
+						name="./thumbnailimage"
+						rotateParameter="./imageRotate"
+						width="{Long}200"
+						xtype="html5smartimage"/>
+					<alternatetext
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Alternate Text"
+						name="./alternatetext"
+						xtype="textfield"/>
+					<content
+						jcr:primaryType="cq:Widget"
+						externalStyleSheets="[]"
+						fieldLabel="Content"
+						height="400"
+						name="./content"
+						allowBlank="{Boolean}false"
+						xtype="richtext">
+							<rtePlugins jcr:primaryType="nt:unstructured"
+								path="/apps/boqs-redesign/components/contents/resultcardcomp/rteplugins.infinity.json"
+								xtype="cqinclude"/>
+							<htmlRules jcr:primaryType="nt:unstructured">
+								<links jcr:primaryType="nt:unstructured" protocols="[http://,https://,javascript:,mailto:]">
+								</links>
+							</htmlRules>
+					</content>
+				</items>
+			</tab1>
+			<tab2
+				jcr:primaryType="cq:Panel"
+				title="Buttons">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<mainbuttonlbl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Main Button Label"
+						name="./mainbuttonlbl"
+						fieldDescription="If left empty, &quot;More details&quot; will be used by default"
+						defaultValue="More details"
+						xtype="textfield"/>
+					<targeturl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Target URL"
+						name="./targeturl"
+						fieldDescription="If no target URL is selected, no button will be displayed"
+						xtype="pathfield"/>
+					<additionalbuttonlist
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Additional Button List"
+						name="./additionalbuttonlist"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							xtype="additionalbuttonfield"></fieldConfig> 
+							<listeners
+                       	    jcr:primaryType="nt:unstructured"
+                            beforeadd="function(list,component,index){if(index==3){CQ.Ext.Msg.alert('Add Item error', 'This field is limited within 3 items.');return false;}}"/>
+					</additionalbuttonlist>
+				</items>
+			</tab2>
+			<tab3
+				jcr:primaryType="cq:Panel"
+				title="Filtering">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<relatedprofessions
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Related Profession(s)"
+						name="./relatedprofessions"
+						fieldDescription="Leave all options unselected for ‘All professions’"
+						type="checkbox"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<medicalprofessionals
+								jcr:primaryType="nt:unstructured"
+								text="Medical Professionals"
+								value="medicalprofessional"/>
+							<accountants
+								jcr:primaryType="nt:unstructured"
+								text="Accountants"
+								value="accountant"/>
+							<financialadviser
+								jcr:primaryType="nt:unstructured"
+								text="Financial Adviser"
+								value="financialadviser"/>
+							<privateclients
+								jcr:primaryType="nt:unstructured"
+								text="Private Clients"
+								value="privateclient"/>
+						</options>
+					</relatedprofessions>
+					<relatedproducttypes
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Related Product Type(s)"
+						name="./relatedproducttypes"
+						fieldDescription="Leave all options unselected for ‘All Products’"
+						type="checkbox"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<savingsaccounts
+								jcr:primaryType="nt:unstructured"
+								text="Savings Accounts"
+								value="savingsaccount"/>
+							<creditcards
+								jcr:primaryType="nt:unstructured"
+								text="Credit Cards"
+								value="creditcard"/>
+							<propertyfinance
+								jcr:primaryType="nt:unstructured"
+								text="Property Finance"
+								value="propertyfinance"/>
+							<assetfinance
+								jcr:primaryType="nt:unstructured"
+								text="Asset Finance"
+								value="assetfinance"/>
+						</options>
+					</relatedproducttypes>
+					<relatedfinancecategorys
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Related Finance Category(s)"
+						name="./relatedfinancecategorys"
+						fieldDescription="Leave all options unselected for ‘All Finance Categories’"
+						type="checkbox"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<personalfinance
+								jcr:primaryType="nt:unstructured"
+								text="Personal Finance"
+								value="personalfinance"/>
+							<practicefinance
+								jcr:primaryType="nt:unstructured"
+								text="Practice Finance"
+								value="practicefinance"/>
+							<financeforclients
+								jcr:primaryType="nt:unstructured"
+								text="Finance for Clients"
+								value="financeforclient"/>
+						</options>
+					</relatedfinancecategorys>
+					<relatedstates
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Related State(s)"
+						name="./relatedstates"
+						fieldDescription="Leave all options unselected for ‘All States’"
+						type="checkbox"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<act
+								jcr:primaryType="nt:unstructured"
+								text="ACT"
+								value="act"/>
+							<nt
+								jcr:primaryType="nt:unstructured"
+								text="NT"
+								value="nt"/>
+							<nsw
+								jcr:primaryType="nt:unstructured"
+								text="NSW"
+								value="nsw"/>
+							<qld
+								jcr:primaryType="nt:unstructured"
+								text="QLD"
+								value="qld"/>
+							<sa
+								jcr:primaryType="nt:unstructured"
+								text="SA"
+								value="sa"/>
+							<tas
+								jcr:primaryType="nt:unstructured"
+								text="TAS"
+								value="tas"/>
+							<vic
+								jcr:primaryType="nt:unstructured"
+								text="VIC"
+								value="vic"/>
+							<wa
+								jcr:primaryType="nt:unstructured"
+								text="WA"
+								value="wa"/>
+						</options>
+					</relatedstates>
+				</items>
+			</tab3>
+		</items>
+	</items>
+</jcr:root>

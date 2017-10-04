@@ -1,0 +1,35 @@
+mixin tab(objs)
+  .collapse-cmp.result-card-cmp
+    .heading(data-expand-handle="", data-target="#"+objs.id)
+      h2.title(data-expand-title="")!=objs.title1
+      +link("", "javascript:;").link-1
+        span.wi-icon.icon-arrow(aria-hidden="true")
+    .content(data-expand-content="", id=objs.id)
+      .thumb
+        +img("upload/image-2.jpg").img-responsive
+      .desc
+        -if(objs.img){
+          h2.title(data-expand-title="")
+            img(src=objs.img, alt="objs.title1")
+            span!=objs.title2
+        -}else{
+          h2.title(data-expand-title="")          
+            span!=objs.title2
+        -}
+        -if(objs.text1){
+          p!=objs.text1
+        -}else{
+          ul
+            li: span.feature-list Feature list item
+            li: span.feature-list Feature list item
+            li: span.feature-list Feature list item
+        -}
+      ul.list-unstyled.list-link-1
+        li
+          +link(objs.text2,objs.href).btn.btn-default
+            span!=objs.text2
+            span.wi-icon.icon-arrow-1(aria-hidden="true")
+        li
+          +link(objs.text3,objs.href).btn.btn-default
+            span!=objs.text3
+            span.wi-icon.icon-arrow-1(aria-hidden="true")

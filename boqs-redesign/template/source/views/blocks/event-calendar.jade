@@ -1,0 +1,23 @@
+.event-calendar(data-event-calendar, data-event-calendar-path="", data-result-type="event", data-result-type-plural="events")
+  .feature-event
+    h3.static-title Featured Events
+    .events
+  .event-card-block
+    .events
+    .event-result
+      .row
+        .col-md-4.col-sm-6.result
+          .control-result.load-more
+            include ../blocks/control-more-result
+          .control-result.zero-result
+            include ../blocks/control-zero-result
+          .control-result.no-more-result
+            include ../blocks/control-no-result
+  nav.control-nav
+    button.prev(data-role="none", aria-label="previous").visible-xs
+      span.wi-icon-white.icon-arrow(aria-hidden="true")
+    .main-control
+      button(data-role="none", aria-label="control navigation").control-active.visible-xs Feature Event
+      ul.list-unstyled.list-control
+    button.next(data-role="none", aria-label="next").visible-xs
+      span.wi-icon-white.icon-arrow(aria-hidden="true")

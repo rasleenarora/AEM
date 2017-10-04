@@ -1,0 +1,69 @@
+extends layouts/layout
+
+block vars
+  -title = 'Home loans'
+
+block container
+  main#main.main
+    - var heading = "Home loans"
+    include blocks/page-header
+    
+    include blocks/breadcrumb
+    
+    section.panel
+      .container
+        .block.wysiwygcomp
+          include blocks/parsys-area-2
+
+    section.panel
+      .container
+        .block
+          .wysiwygcomp
+            h3 BOQ Specialist home loan benefits:
+            ul
+              li: span.tick-list Owner occupiers can borrow up to 100%
+              li: span.tick-list Borrow up to 95% for an investment property
+              li: span.tick-list No Lender's Mortgage Insurance
+              li: span.tick-list Discounted fixed and variable interest rate options
+              li: span.tick-list Interest only or principal and interest home loans available
+              li: span.tick-list Offset accounts for variable rate home loans
+              li: span.tick-list Ability to make accelerated payments on variable loans
+              li: span.tick-list Secure online and mobile banking functionality
+            +link("Enquire now").btn.btn-default.btn-lg
+
+            h3 Our Banking Package
+            p If you want a home loan that offers more, our Banking Package could be the answer. More than just a home loan, the package allows you to manage your finances in one place with the help of a dedicated financial specialist.
+            p It combines a home loan with a credit card and an everyday bank account. What’s more, you are able to establish up to five separate loan accounts and the Banking Package includes initial valuations to a combined cost of $1 100 under the one annual package fee of $395.
+            p The package also includes an optional offset account on variable loans to reduce the interest repayments you make on your mortgage and the convenience of an optional overdraft facility for variable rate loans.
+
+            h4 Our Banking Package includes:
+            ul
+              li: span.tick-list Choose between a variable or a fixed rate home loan
+              li: span.tick-list Borrow up to 100% LVR with no LMI
+              li: span.tick-list Optional offset transaction account with the variable rate home loan to reduce interest payments
+              li: span.tick-list A Platinum credit card that comes with premium rewards and benefits
+              li: span.tick-list Up to 5 loans in the one package, to easily manage your finances in one location
+              li: span.tick-list Everyday banking with the One Account, featuring a favourable interest rate on credit balances in your account, and an optional overdraft should you need it
+            +link("Enquire now").btn.btn-default.btn-lg
+
+        .block
+          include blocks/tab
+
+    //- section.panel
+      .container: .row
+        .col-sm-8.parsys-main
+          include blocks/parsys-main
+        .col-sm-4.parsys-sidebar
+          .block
+            include blocks/parsys-sidebar
+
+    include blocks/similar
+
+    section.panel
+      .container
+        include blocks/recommended        
+
+    section.panel
+      .container
+        .block.wysiwygcomp
+          include blocks/disclaimer

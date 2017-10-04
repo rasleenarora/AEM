@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Panel Configuration"
+	height="450"
+	xtype="dialog">
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<backgroundimage
+						jcr:primaryType="cq:Widget"
+						cropParameter="./imageCrop"
+						ddGroups="[media]"
+						fieldLabel="Background Image"
+						fileReferenceParameter="./fileReference"
+						name="./backgroundimage"
+						rotateParameter="./imageRotate"
+						height="{Long}200"
+						width="{Long}200"
+						allowUpload="{Boolean}false"
+						xtype="html5smartimage"/>
+					<alttext
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Alt Text for Background image"
+						name="./alttext"
+						xtype="textfield"/>
+					<targeturl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Target URL"
+						name="./targeturl"
+						xtype="pathfield"/>
+					<verticalalignment
+						jcr:primaryType="cq:Widget"
+						defaultValue="centre"
+						fieldLabel="Vertical Alignment"
+						name="./verticalalignment"
+						type="select"
+						allowBlank="{Boolean}false"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<option1
+								jcr:primaryType="nt:unstructured"
+								text="Top"
+								value="top"/>
+							<option2
+								jcr:primaryType="nt:unstructured"
+								text="Centre"
+								value="centre"/>
+							<option3
+								jcr:primaryType="nt:unstructured"
+								text="Bottom"
+								value="bottom"/>
+						</options>
+					</verticalalignment>
+				</items>
+			</tab1>
+			<tab2
+				jcr:primaryType="cq:Panel"
+				title="Renditions">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<mobilerenditionname
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Mobile rendition"
+						fieldDescription="Provide the name of the rendition that will be used to display on mobile and if left empty, 'mobile' as a name will be used by default"
+						name="./mobilerenditionname"
+						defaultValue="mobile"
+						xtype="textfield"/>
+				</items>
+			</tab2>
+		</items>
+	</items>
+</jcr:root>

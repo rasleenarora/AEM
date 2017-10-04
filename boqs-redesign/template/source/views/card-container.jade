@@ -1,0 +1,74 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Card Container'
+
+block container
+  main#main.main
+    .container
+      p.num-cards
+        | We have
+        span  15
+        |  products matching your filters:
+      .card-container(data-mymasonry, data-item-selector=".card-item", data-desktop-only)
+        .grid-sizer
+        .gutter-sizer
+        .card-item
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .card-item
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .card-item.control-result
+          include blocks/control-more-result
+        .card-item
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .card-item
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .card-item.control-result
+          include blocks/control-no-result
+        .card-item
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .card-item
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          br
+          | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        .card-item.control-result
+          include blocks/control-zero-result

@@ -1,0 +1,10 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Video Player'
+block container
+  main#main.main
+    .container
+      video(style="width:100%;height:100%" id="video-1" preload="none" data-autoplay src="http://techslides.com/demos/sample-videos/small.mp4")
+        source(type="video/mp4" src="http://techslides.com/demos/sample-videos/small.mp4")

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Card Details">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <readcarddetails
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Enable checkbox to use card information dynamically"
+            name="./readCardDetails"
+            type="checkbox"
+            xtype="selection">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                loadcontent="function(){&#xa;var field=this;&#xa;makeMandatoryField(field);&#xa;}"
+                selectionchanged="function(){&#xa;var field=this;&#xa;makeMandatoryField(field);&#xa;}"/>
+        </readcarddetails>
+        <carddetails
+            jcr:primaryType="cq:Widget"
+            collapsible="{Boolean}true"
+            title="Card Information"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <title
+                    jcr:primaryType="cq:Widget"
+                    fielddescription="This text will appear as 'Title' of the ResultCard Component for this category Page. "
+                    fieldLabel="Card Title"
+                    name="./headinglbl"
+                    xtype="textfield"/>
+                <thumbnailimage
+                    jcr:primaryType="cq:Widget"
+                    allowUpload="{Boolean}false"
+                    cropParameter="./thumbnailImage"
+                    ddGroups="[media]"
+                    fielddescription="This image will appear as 'Thumbnail Image' of the ResultCard Component for this category Page. "
+                    fieldLabel="Thumbnail Image"
+                    fileNameParameter="./fileName"
+                    fileReferenceParameter="./fileReference"
+                    height="{Long}180"
+                    name="./categoryThumbnailImage"
+                    rotateParameter="./imageRotate"
+                    width="{Long}200"
+                    xtype="html5smartimage"/>
+                <alternatetext
+                    jcr:primaryType="cq:Widget"
+                    fielddescription="Alternate text for Thumbnail Image"
+                    fieldLabel="Alternate Text"
+                    name="./alternatetext"
+                    xtype="textfield"/>
+                <content
+                    jcr:primaryType="cq:Widget"
+                    fielddescription="This text will appear as 'description/content' of the ResultCard Component for this category Page. "
+                    fieldLabel="Content"
+                    height="230"
+                    name="./content"
+                    xtype="richtext">
+                    <rtePlugins
+                        jcr:primaryType="nt:unstructured"
+                        path="/apps/boqs-redesign/components/contents/category/rteplugins.infinity.json"
+                        xtype="cqinclude"/>
+                    <htmlRules jcr:primaryType="nt:unstructured">
+                        <links
+                            jcr:primaryType="nt:unstructured"
+                            protocols="[http://,https://,javascript:,mailto:]"/>
+                    </htmlRules>
+                </content>
+            </items>
+        </carddetails>
+    </items>
+</jcr:root>

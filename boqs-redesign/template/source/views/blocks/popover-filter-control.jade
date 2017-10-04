@@ -1,0 +1,12 @@
+.popover-filter-control(data-popover-template='filter-control')
+  .inner
+    h3.title We've applied filters:
+    +link("Close").close
+      span.icon.icon-close-gold(aria-hidden="true")
+    h4.title Profession:
+    p.text-2 Medical Professional
+    h4.title Finance:
+    p.text-2 Personal Finance
+    .group-btn
+      +link("OK").btn.btn-primary.btn-ok OK
+      +btn-icon({typebtn: "reset", name: "btn-popover-reset", title: "Clear all filters", icon: "icon icon-bin"}).btn-reset-filters.title Clear all filters

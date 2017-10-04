@@ -1,0 +1,57 @@
+mixin item-gallery()
+  div
+    .image
+      +link("photo gallery")
+        +img("gallery1.jpg","gallery")
+      .message-to-landscape Tilt your phone for a larger version
+    .social-gallery
+      .clearfix
+        .pull-left 2 of 12
+        .pull-right
+          .social-sharing
+            .share-button(data-share-button="")
+          +link("Download").download-button
+            span.icon-download(aria-hidden="true")
+            span.text.hidden-xs Download
+      p.content Photo Caption Lorem ipsum dolor sit amet, ius singulis conceptam te. Utroque lucilius sententiae vix in, vix feugait appareat ei. Ne aperiam euismod quo, decore melius interpretaris his et. Atqui tantas inimicus an vis.
+mixin thumb-gallery()
+  div
+    .image
+      +link("photo gallery")
+        +img("gallery1.jpg","gallery")
+.photo-gallery(data-gallery data-name="Name of gallery" data-gallery-source='[{"caption":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.","src":"images/gallery1.jpg","thumbSrc":"images/gallery1.jpg"},{"caption":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.","src":"images/gallery2.jpg","thumbSrc":"images/gallery2.jpg"},{"caption":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.","src":"images/gallery3.jpg","thumbSrc":"images/gallery3.jpg"},{"caption":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.","src":"images/gallery4.jpg","thumbSrc":"images/gallery4.jpg"},{"caption":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.","src":"images/gallery5.jpg","thumbSrc":"images/gallery5.jpg"},{"caption":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.","src":"images/gallery1.jpg","thumbSrc":"images/gallery1.jpg"},{"caption":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.","src":"images/gallery2.jpg","thumbSrc":"images/gallery2.jpg"},{"caption":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.","src":"images/gallery3.jpg","thumbSrc":"images/gallery3.jpg"},{"caption":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.","src":"images/gallery4.jpg","thumbSrc":"images/gallery4.jpg"},{"caption":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.","src":"images/gallery5.jpg","thumbSrc":"images/gallery5.jpg"},{"caption":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.","src":"images/gallery1.jpg","thumbSrc":"images/gallery1.jpg"},{"caption":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.","src":"images/gallery2.jpg","thumbSrc":"images/gallery2.jpg"}]')
+  .row.gallery-thumb
+    .col-md-2.col-sm-3.col-xs-6.thumb-image
+      +link("photo gallery")
+        span(style="background-image: url('../images/gallery1.jpg');")
+    .col-md-2.col-sm-3.col-xs-6.thumb-image
+      +link("photo gallery")
+        span(style="background-image: url('../images/gallery2.jpg');")
+    .col-md-2.col-sm-3.col-xs-6.thumb-image
+      +link("photo gallery")
+        span(style="background-image: url('../images/gallery3.jpg');")
+    .col-md-2.col-sm-3.col-xs-6.thumb-image
+      +link("photo gallery")
+        span(style="background-image: url('../images/gallery4.jpg');")
+    .col-md-2.col-sm-3.col-xs-6.thumb-image
+      +link("photo gallery")
+        span(style="background-image: url('../images/gallery5.jpg');")
+    .col-md-2.col-sm-3.col-xs-6.thumb-image
+      +link("photo gallery")
+        span(style="background-image: url('../images/gallery1.jpg');")
+    .col-md-2.col-sm-3.col-xs-6.thumb-image
+      +link("photo gallery")
+        span(style="background-image: url('../images/gallery2.jpg');")
+    .col-md-2.col-sm-3.col-xs-6.thumb-image
+      +link("photo gallery")
+        span(style="background-image: url('../images/gallery3.jpg');")
+    .col-md-2.col-sm-3.col-xs-6.thumb-image
+      +link("photo gallery")
+  .popup-gallery
+    .close-gallery
+      p Gallery name lorem ipsum
+      +link("close").close
+        span.wi-icon.icon-close(aria-hidden="true")
+    .slider.slider-for(data-slide)
+    .slider.slider-nav(data-nav)
+

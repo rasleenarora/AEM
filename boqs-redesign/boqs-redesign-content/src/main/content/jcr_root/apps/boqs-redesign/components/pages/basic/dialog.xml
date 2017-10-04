@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="660"
+    stateful="false"
+    width="560"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <basic
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_basic.infinity.json"
+                    xtype="cqinclude"/>
+                <advance
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/boqs-redesign/components/pages/basic/tab_advanced.infinity.json"
+                    xtype="cqinclude"/>
+                <boqgeneralsettings
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/boqs-redesign/components/pages/basic/tab_boqgeneralsettings.infinity.json"
+                    xtype="cqinclude"/>
+                <topnavigation
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/boqs-redesign/components/pages/basic/tab_topnavigation.infinity.json"
+                    xtype="cqinclude"/>
+                <filtering
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/boqs-redesign/components/pages/basic/tab_filtering.infinity.json"
+                    xtype="cqinclude"/>
+                <carddetails
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/boqs-redesign/components/pages/basic/tab_carddetails.infinity.json"
+                    xtype="cqinclude"/>
+                <image
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/boqs-redesign/components/pages/basic/tab_image.infinity.json"
+                    xtype="cqinclude"/>
+                <cloudservices
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_cloudservices.infinity.json"
+                    xtype="cqinclude"/>
+                <googleanalytics
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/boqs-redesign/components/pages/basic/tab_googleanalytics.infinity.json"
+                    xtype="cqinclude"/>
+                <blueprint
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_blueprint.infinity.json"
+                    xtype="cqinclude"/>
+                <livecopy
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_livecopy.infinity.json"
+                    xtype="cqinclude"/>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

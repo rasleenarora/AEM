@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="600"
+    title="Top Navigation Configuration"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <specialties
+                jcr:primaryType="cq:Panel"
+                title="Specialties">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Specialties"
+                        fieldDescription="If left empty, &quot;Specialties&quot; will be used by default"
+                        fieldLabel="SpecialtiesTitle"
+                        name="./specialtiestitle"
+                        xtype="textfield"/>
+                    <specialitiesmultifield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Sub Items"
+                        name="./specialitiesitems"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            anchor="98%"
+                            border="true"
+                            collapsible="{Boolean}true"
+                            header="{Boolean}true"
+                            layout="form"
+                            limit="6"
+                            padding="10px"
+                            title="Sub Item"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <title
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="95%"
+                                    dName="title"
+                                    fieldLabel="Title"
+                                    xtype="textfield"/>
+                                <icon
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="95%"
+                                    dName="iconsrc"
+                                    fieldLabel="Icon Path"
+                                    xtype="pathfield"/>
+                                <targeturl
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="95%"
+                                    dName="path"
+                                    fieldLabel="Target URL"
+                                    xtype="pathfield"/>
+                                <openinnewtab
+                                    jcr:primaryType="cq:Widget"
+                                    dName="openinnewtab"
+                                    fieldDescription="Kindly check this checkbox to open the button link in new tab."
+                                    fieldLabel="Open in new tab"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            beforeadd="function(list,component,index) {&#xa;var itemCount = list.items.getCount();&#xa;    if(this.fieldConfig.limit!=0) {&#xa;        if(this.fieldConfig.limit == (itemCount-1)) { &#xa;            CQ.Ext.Msg.show(&#xa;                {title: 'Limit reached',  msg: 'You are only allowed to add '+this.fieldConfig.limit+' items to this module',icon:CQ.Ext.MessageBox.WARNING,buttons: CQ.Ext.Msg.OK}&#xa;            );return false;&#xa;        }&#xa;    }&#xa;}"/>
+                    </specialitiesmultifield>
+                </items>
+            </specialties>
+            <personalbanking
+                jcr:primaryType="cq:Panel"
+                title="Personal Banking">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Personal Banking"
+                        fieldDescription="If left empty, &quot;Personal Banking&quot; will be used by default"
+                        fieldLabel="Personal Banking Title"
+                        name="./personalbankingtitle"
+                        xtype="textfield"/>
+                    <personalbankingmultifield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Sub Items"
+                        name="./personalbankingitems"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            anchor="98%"
+                            border="true"
+                            header="{Boolean}true"
+                            hideLabel="true"
+                            layout="form"
+                            limit="6"
+                            padding="10px"
+                            title="Sub Item"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <title
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="95%"
+                                    dName="title"
+                                    fieldLabel="Title"
+                                    xtype="textfield"/>
+                                <icon
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="95%"
+                                    dName="iconsrc"
+                                    fieldLabel="Icon Path"
+                                    xtype="pathfield"/>
+                                <targeturl
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="95%"
+                                    dName="path"
+                                    fieldLabel="Target URL"
+                                    xtype="pathfield"/>
+                                <openinnewtab
+                                    jcr:primaryType="cq:Widget"
+                                    dName="openinnewtab"
+                                    fieldDescription="Kindly check this checkbox to open the button link in new tab."
+                                    fieldLabel="Open in new tab"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            beforeadd="function(list,component,index) {&#xa;var itemCount = list.items.getCount();&#xa;    if(this.fieldConfig.limit!=0) {&#xa;        if(this.fieldConfig.limit == (itemCount-1)) { &#xa;            CQ.Ext.Msg.show(&#xa;                {title: 'Limit reached',  msg: 'You are only allowed to add '+this.fieldConfig.limit+' items to this module',icon:CQ.Ext.MessageBox.WARNING,buttons: CQ.Ext.Msg.OK}&#xa;            );return false;&#xa;        }&#xa;    }&#xa;}"/>
+                    </personalbankingmultifield>
+                </items>
+            </personalbanking>
+            <practicefinance
+                jcr:primaryType="cq:Panel"
+                title="Practice Finance">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Practice Finance"
+                        fieldDescription="If left empty, &quot;Practice Finance&quot; will be used by default"
+                        fieldLabel="Practice Finance Title"
+                        name="./practicefinancetitle"
+                        xtype="textfield"/>
+                    <practicefinancemultifield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Sub Items"
+                        name="./practicefinanceitems"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            anchor="98%"
+                            border="true"
+                            header="{Boolean}true"
+                            hideLabel="true"
+                            layout="form"
+                            limit="6"
+                            padding="10px"
+                            title="Sub Item"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <title
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="95%"
+                                    dName="title"
+                                    fieldLabel="Title"
+                                    xtype="textfield"/>
+                                <icon
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="95%"
+                                    dName="iconsrc"
+                                    fieldLabel="Icon Path"
+                                    xtype="pathfield"/>
+                                <targeturl
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="95%"
+                                    dName="path"
+                                    fieldLabel="Target URL"
+                                    xtype="pathfield"/>
+                                <openinnewtab
+                                    jcr:primaryType="cq:Widget"
+                                    dName="openinnewtab"
+                                    fieldDescription="Kindly check this checkbox to open the button link in new tab."
+                                    fieldLabel="Open in new tab"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            beforeadd="function(list,component,index) {&#xa;var itemCount = list.items.getCount();&#xa;    if(this.fieldConfig.limit!=0) {&#xa;        if(this.fieldConfig.limit == (itemCount-1)) { &#xa;            CQ.Ext.Msg.show(&#xa;                {title: 'Limit reached',  msg: 'You are only allowed to add '+this.fieldConfig.limit+' items to this module',icon:CQ.Ext.MessageBox.WARNING,buttons: CQ.Ext.Msg.OK}&#xa;            );return false;&#xa;        }&#xa;    }&#xa;}"/>
+                    </practicefinancemultifield>
+                </items>
+            </practicefinance>
+            <expertise
+                jcr:primaryType="cq:Panel"
+                title="Expertise">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="Expertise "
+                        fieldDescription="If left empty, &quot;Expertise &quot; will be used by default"
+                        fieldLabel="Expertise Title"
+                        name="./expertisetitle"
+                        xtype="textfield"/>
+                    <targeturl
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        anchor="95%"
+                        fieldLabel="Default Navigation URL for Expertise Sub-Items"
+                        name="./expertiseTargeturl"
+                        xtype="pathfield"/>
+                    <expertisemultifield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Sub Items"
+                        name="./expertiseitems"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            anchor="98%"
+                            border="true"
+                            header="{Boolean}true"
+                            hideLabel="true"
+                            layout="form"
+                            limit="6"
+                            padding="10px"
+                            title="Sub Item"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <title
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="95%"
+                                    dName="title"
+                                    fieldLabel="Title"
+                                    xtype="textfield"/>
+                                <icon
+                                    jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
+                                    anchor="95%"
+                                    dName="iconsrc"
+                                    fieldLabel="Icon Path"
+                                    options="$/content/public_meta/categories_list/topic_list.json"
+                                    xtype="pathfield"/>
+                                <topics
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    dName="topics"
+                                    fieldDescription="Associate a filter with this Sub-Item"
+                                    fieldLabel="Topic Filter"
+                                    optionsKey="boqs.topic_list"
+                                    type="select"
+                                    xtype="selection"/>
+                                <targeturl
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    dName="path"
+                                    fieldDescription="If left empty, Default Navigation URL will be used for navigation."
+                                    fieldLabel="Target URL"
+                                    xtype="pathfield"/>
+                                <openinnewtab
+                                    jcr:primaryType="cq:Widget"
+                                    dName="openinnewtab"
+                                    fieldDescription="Kindly check this checkbox to open the button link in new tab."
+                                    fieldLabel="Open in new tab"
+                                    type="checkbox"
+                                    xtype="selection"/>
+                            </items>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            beforeadd="function(list,component,index) {&#xa;var itemCount = list.items.getCount();&#xa;    if(this.fieldConfig.limit!=0) {&#xa;        if(this.fieldConfig.limit == (itemCount-1)) { &#xa;            CQ.Ext.Msg.show(&#xa;                {title: 'Limit reached',  msg: 'You are only allowed to add '+this.fieldConfig.limit+' items to this module',icon:CQ.Ext.MessageBox.WARNING,buttons: CQ.Ext.Msg.OK}&#xa;            );return false;&#xa;        }&#xa;    }&#xa;}"/>
+                    </expertisemultifield>
+                </items>
+            </expertise>
+        </items>
+    </items>
+</jcr:root>

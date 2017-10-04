@@ -1,0 +1,72 @@
+.card {
+  margin-bottom: 1.5rem;
+  font-size: @font-size-base;
+}
+.card-inner {
+  display: block;
+  box-shadow: 0 0 10px fade(#000, 20%);
+  border-radius: .5rem;
+  background-color: #fff;
+  overflow: hidden;
+
+  @media (max-width: @screen-xs-max) {
+    height: auto !important;
+  }
+
+  a& {
+    &,
+    &:hover {
+      text-decoration: none;
+    }
+    &:hover {
+      box-shadow: 0 0 15px fade(#000, 25%);
+
+      .card-thumb { opacity: .8; }
+    }
+  }
+}
+
+.card-heading {
+  margin: 0 @card-padding-x;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+  padding-right: 20%; //for arrow icon
+  border-bottom: 1px solid @gray-light;
+  position: relative;
+  .font-size(24px);
+
+  // Icon (see Gruntfile for hookup)
+  &:after {
+    &:extend(.icon);
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    bottom: 1rem;
+    right: 0;
+    top: auto;
+  }
+}
+.card-body {
+  padding: @card-padding-y @card-padding-x;
+  color: @text-color; //reset to default
+}
+
+/*.zero-result {
+  text-align: center;
+
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    .font-size(24px);
+    color: @prussian-blue;
+  }
+}*/
+
+.num-cards {
+  display: none;
+  color: @prussian-blue;
+  @media (min-width: @screen-sm-min) {
+    .font-size(20px);
+  }
+}

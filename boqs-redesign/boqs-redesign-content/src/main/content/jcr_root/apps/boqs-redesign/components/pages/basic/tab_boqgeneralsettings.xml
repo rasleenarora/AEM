@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="BOQ General Settings">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <pageheading
+            jcr:primaryType="cq:Widget"
+            externalStyleSheets="[]"
+            fieldDescription="Page heading field is used for showing the page heading on the page. If it is left blank, then page title field will be shown and if page title is left blank, the title field will be used to show the heading. Page title and title field are present in the basic tab of page properties"
+            fieldLabel="Page Heading:"
+            height="200"
+            name="./pageheading"
+            xtype="richtext">
+            <rtePlugins
+                jcr:primaryType="nt:unstructured"
+                path="/apps/boqs-redesign/components/pages/basic/rteplugins_pageheading.infinity.json"
+                xtype="cqinclude"/>
+            <htmlRules jcr:primaryType="nt:unstructured">
+                <links
+                    jcr:primaryType="nt:unstructured"
+                    protocols="[http://,https://,javascript:,mailto:]"/>
+            </htmlRules>
+        </pageheading>
+        <pageicon
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Page Icon:"
+            name="./pageicon"
+            rootPath="/content/dam"
+            xtype="pathfield"/>
+        <preventClickJacking
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Kindly enable the checkbox in order to prevent the page from clickjacking. Normally it is to be enabled on the pages which has visa checkout enrollment component placed on it."
+            fieldLabel="Prevent Clickjacking"
+            name="./preventClickJacking"
+            type="checkbox"
+            xtype="selection"/>
+        <excludeexternalsearch
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Enable this checkbox to exclude this page from the external search"
+            fieldLabel="Exclude External Search"
+            name="./excludeexternalsearch"
+            type="checkbox"
+            xtype="selection"/>
+         <excludeinternalsearch
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Enable this checkbox to exclude this page from the internal search"
+            fieldLabel="Exclude Internal Search"
+            name="./excludeinternalsearch"
+            type="checkbox"
+            xtype="selection"/>
+    </items>
+</jcr:root>

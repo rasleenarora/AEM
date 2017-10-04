@@ -1,0 +1,232 @@
+extends layouts/template
+
+block vars
+  -title = 'Style Guide'
+
+//- Mixin
+mixin list-cmp(label, title, href, text)
+  dd
+    !=label
+    +link(title, href, text)
+mixin color-chart-sg(text1, text2)
+  .col-sm-2
+    span&attributes(attributes)
+    label!=text1
+    label!=text2
+block container
+  .container
+    h1.title Style Guide
+    dl.list-cmp
+      dt All style guide
+      +list-cmp('01: ', 'Color chart', '#color-chart-guide')
+      +list-cmp('02: ', 'Typography', '#typography-guide')
+      +list-cmp('03: ', 'All List', '#all-list-guide')
+      +list-cmp('04: ', 'Static link list', '#static-guide')
+      +list-cmp('05: ', 'Form group', '#form-group-guide')
+      +list-cmp('06: ', 'Button CTAs', '#btn-cta-guide')
+      +list-cmp('00: ', 'Profession btn', '#ribbon-guide')
+    dl.list-cmp
+      dt All parsys component
+      +list-cmp('01: ', 'Parsys area 1', '#parsys-area-1-guide')
+      +list-cmp('02: ', 'Parsys area 2', '#parsys-area-2-guide')
+      +list-cmp('03: ', 'Parsys area 3: Main and sidebar', '#parsys-area-3-guide')
+      +list-cmp('04: ', 'Parsys area 4', '#parsys-area-4-guide')
+      +list-cmp('05: ', 'Parsys area 5 ', '#parsys-area-5-guide')
+    #color-chart-guide
+      h2.title-template Color chart
+      .row
+        +color-chart-sg('#ebeff2', '@white-gray')(style="background-color: #ebeff2")
+        +color-chart-sg('#abc1cd', '@gray-blue')(style="background-color: #abc1cd")
+        +color-chart-sg('#0172cf', '@blue')(style="background-color: #0172cf")
+        +color-chart-sg('#0b446e', '@prussian-blue')(style="background-color: #0b446e")
+        +color-chart-sg('#00293f', '@black-blue')(style="background-color: #00293f")
+        +color-chart-sg('#aba584', '@olive-gray')(style="background-color: #aba584")
+        +color-chart-sg('#799bbd', '@pastel-blue')(style="background-color: #799bbd")
+        +color-chart-sg('#8bc5c1', '@powder-blue')(style="background-color: #8bc5c1")
+        +color-chart-sg('rgba(228, 238, 246, .95)', '@pastel-cyan')(style="background-color: rgba(228, 238, 246, .95)")
+        +color-chart-sg('#8b6fad', '@violet')(style="background-color: #8b6fad")
+        +color-chart-sg('#9d968f', '@gray-brown')(style="background-color: #9d968f")
+    .group-1#typography-guide
+      h2.title-template Typography
+      h1.h1 H1 = Gotham Book 38pt
+      h1.h1.bold H1 Strong = Gotham Bold 38pt
+      h1.h1.italic H1 Strong = Gotham Bold 38pt
+      h2.h2 H2 = Gotham Book 32pt
+      h2.h2.bold H2 Strong = Gotham Bold 32pt
+      h2.h2.italic H2 Strong = Gotham Bold 32pt
+      h3.h3 H3 = Gotham Book 24pt
+      h3.h3.bold H3 Strong = Gotham Bold 24pt
+      h3.h3.italic H3 Strong = Gotham Bold 24pt
+      h3.disclaimer-title
+        strong Disclaimer
+      h3.static-title Showing results 1 - 10 of 32
+      hr
+      p.text.large-text
+        | Large Text = Arial Regular 20pt
+        strong Bold text here and here.
+        | Emphasis text Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+        a.text-link(href="#", title="hyperlink") Hyperlink
+      p.text.normal-text
+        | Normal Text = Arial Regular 16pt.
+        strong Bold text here and here.
+        | Lorem ipsum dolor sit ametconsectetur adipiscing elit. Underline text Aenean euismod bibendum laoreet. Proin sodales pulvinar tempor.
+        a.text-link(href="#", title="hyperlink") Hyperlink
+      p.text.small-text
+        | Small Text = Arial Regular 14pt.
+        strong Bold text here and here.
+        | Lorem ipsum dolor sit amet, bold text consectetur adipiscing elit. Underline text Aenean euismod bibendum laoreet. Parturient montes, nascetur ridiculus mus.
+        a.text-link(href="#", title="hyperlink") Hyperlink
+      p.text.disclaimer-text
+        | Disclaimer Text  = Arial Regular 12pt.
+        strong Bold text here and here.
+        | Lorem ipsum dolor sit amet, bold text consectetur adipiscing elit. Underline text Aenean euismod bibendum laoreet.
+        a.text-link(href="#", title="hyperlink") Hyperlink
+    .group-1#all-list-guide
+      h2.title-template All list
+      .row
+        .col-sm-3
+          ul
+            li
+              span.bullet-list Bullet Level 1
+              ul
+                li
+                  span.bullet-list.level-2  Bullet Level 2
+                  ul
+                    li
+                      span.bullet-list.level-3 Bullet Level 3
+                li
+                  span.bullet-list.level-2 Another bullet
+            li
+              span.bullet-list Another bullet
+        .col-sm-3
+          ul
+            li: span.feature-list Feature list item
+            li: span.feature-list Feature list item
+            li: span.feature-list Feature list item
+        .col-sm-6
+          ul
+            li
+              span.tick-list
+                b Sum sociis natoque penatibus et magnis dis
+                | nascetur ridiculus mus. Nam fermentum, nulla luctus phare tranulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien.
+
+    .group-1#static-guide
+      h2.title-template Static link list
+      .row
+        .col-sm-4
+          include blocks/static-link-list
+        .col-sm-6
+          include blocks/event-calendar-condensed
+    .group-1#form-group-guide
+      h2.title-template Form group
+      +option-group({id: 'checkbox1', type: 'checkbox', text: 'Check box selected', classDiv: 'checkbox-group'})(checked='checked')
+        | &nbsp;
+        +link ('Hyperlink').text-link
+      +option-group({id: 'checkbox2', type: 'checkbox', text: 'Check box unselected', classDiv: 'checkbox-group'})
+        | &nbsp;
+        +link ('Hyperlink').text-link
+      +option-group({id: 'radio1', name: 'radio', type: 'radio', text: 'Radio button selected', classDiv: 'radio-group'})(checked='checked')
+      +option-group({id: 'radio2', name: 'radio', type: 'radio', text: 'Radio button unselected', classDiv: 'radio-group'})
+    .group-1#btn-cta-guide
+      h2.title-template Button CTAs
+      h5 Event Card Secondary CTA BTNs
+      .row
+        .col-sm-4
+          +link('More details').btn.btn-secondary
+            span More details
+            span.wi-icon.icon-arrow(aria-hidden="true")
+      h5 Secondary CTA BTNs
+      .row
+        .col-sm-4
+          +link('Send us an enquiry').btn.btn-default
+            span Send us an enquiry
+            span.wi-icon.icon-arrow(aria-hidden="true")
+       h5 Primary CTA BTNs
+      .row
+        .col-sm-4
+          +link('Send us an enquiry').btn.btn-primary
+            span Send us an enquiry
+            span.wi-icon.icon-arrow(aria-hidden="true")
+      h5 Terciary CTA BTNs
+      .row
+        .col-sm-4
+          +link ("See all specialties").btn-tertiary
+            | See all specialties
+            span.wi-icon.icon-arrow(aria-hidden="true")
+        .col-sm-4
+          +link ("See all specialties").btn-tertiary
+            | See all specialties
+            span.wi-icon.icon-arrow(aria-hidden="true")
+        .col-sm-4
+          +link ("See all specialties").btn-tertiary
+            | See all specialties
+            span.wi-icon.icon-arrow(aria-hidden="true")
+      h5 Speciatly menu item
+      .row
+        .col-sm-4
+          +link ("Everyday Banking").btn.btn-special
+        .col-sm-4
+          +link ("Everyday Banking").btn.btn-special
+        .col-sm-4
+          +link ("Everyday Banking").btn.btn-special
+    .group-1#btn-side-guide
+      h2.title-template Main Nav Action side BTN's:
+      .action-link.horizontal
+        include blocks/action-link
+  .group-1#parsys-area-1-guide
+    h2.title-template Parsys area 1
+    .parsys-area-1.text-center
+      .container
+        include blocks/parsys-area-1
+  .group-1#parsys-area-2-guide
+    h2.title-template Parsys area 2
+    .parsys-area-2
+      .container
+        include blocks/parsys-area-2
+  .group-1#parsys-area-3-guide
+    h2.title-template Parsys area with sidebar
+    .parsys-area-3
+      .container: .row
+        .col-sm-8.parsys-main
+          include blocks/parsys-main
+        .col-sm-4.parsys-sidebar
+          .block
+            include blocks/parsys-sidebar
+  .group-1#parsys-area-4-guide
+    h2.title-template Parsys area 4
+    .parsys-area-4
+      .container
+        include blocks/parsys-area-4
+  .group-1#parsys-area-5-guide
+    h2.title-template Parsys area 5
+    .parsys-area-5
+      .container: .row
+        .col-sm-6.block
+          h3.title.title-1 Tips, Guides and FAQs
+          +form({action: "#", id: "search-field-form", method: "post"})(data-search).search-form.full-width
+            +form-group-2({id: "search-field", icon: "wi-icon-white icon-search", title: "Search", typebtn: "submit", classBtn: "search-btn", placeholder: "Enter search terms", autocomplete: "off", attr: {class: "form-control"}})
+          include blocks/tip-guide-faqs
+        .col-sm-6.block
+          h3.title.title-1 Upcoming Events
+          include blocks/event-calendar-condensed
+  #ribbon-guide
+    .container
+      h2.title-template Profession btn
+    section(data-sameheight)
+      h3.title-2 Default
+      +ribbon-item('Medical Professionals', 'pro-icon medical-icon').pastel-blue-bgd
+      +ribbon-item('Accountants', 'pro-icon accountant-icon').violet-bgd
+      +ribbon-item('Financial Advisers', 'pro-icon financial-advisers-icon').powder-blue-bgd
+      +ribbon-item('Private Clients', 'pro-icon private-clients-icon').gray-brown-bgd
+      h3.title-2 Hover
+      +ribbon-item('Medical Professionals', 'pro-icon medical-icon').pastel-blue-bgd.hover
+      +ribbon-item( 'Accountants', 'pro-icon accountant-icon').violet-bgd.hover
+      +ribbon-item('Financial Advisers', 'pro-icon financial-advisers-icon').powder-blue-bgd.hover
+      +ribbon-item('Private Clients', 'pro-icon private-clients-icon').gray-brown-bgd.hover
+      h3.title-2 Active
+      .active
+        +ribbon-item('Medical Professionals', 'pro-icon medical-icon').pastel-blue-bgd.active
+        +ribbon-item( 'Accountants', 'pro-icon accountant-icon').violet-bgd.active
+        +ribbon-item('Financial Advisers', 'pro-icon financial-advisers-icon').powder-blue-bgd.active
+        +ribbon-item('Private Clients', 'pro-icon private-clients-icon').gray-brown-bgd.active
+  .margin-b-50

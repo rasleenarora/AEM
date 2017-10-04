@@ -1,0 +1,19 @@
+extends layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -menuIndex = 0
+
+block container
+  main#main.main(data-hide-nav="")
+    include blocks/promo-banner
+    include blocks/ribbon.jade
+    
+    section.panel
+      .container
+        include blocks/button-items
+    
+    section.panel
+      .container(data-team)
+        include blocks/key-reasons

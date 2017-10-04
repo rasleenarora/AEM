@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Heading Configuration"
+	xtype="dialog">
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<heading
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Heading"
+						name="./heading"
+						allowBlank="{Boolean}false"
+						xtype="textfield"/>
+					<headingtype
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Heading Type"
+						name="./headingtype"
+						allowBlank="{Boolean}false"
+						type="select"
+						defaultValue="h2"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<h2
+								jcr:primaryType="nt:unstructured"
+								text="H2"
+								value="h2"/>
+							<h3
+								jcr:primaryType="nt:unstructured"
+								text="H3"
+								value="h3"/>
+							<h4
+								jcr:primaryType="nt:unstructured"
+								text="H4"
+								value="h4"/>
+						</options>
+					</headingtype>
+					<style
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Style"
+						name="./style"
+						type="select"
+						defaultValue="none"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<none
+								jcr:primaryType="nt:unstructured"
+								text="None"
+								value="none"/>
+							<bold
+								jcr:primaryType="nt:unstructured"
+								text="Bold"
+								value="bold"/>
+							<italic
+								jcr:primaryType="nt:unstructured"
+								text="Italic"
+								value="italic"/>
+							<static-title
+								jcr:primaryType="nt:unstructured"
+								text="Static Title"
+								value="static-title"/>
+						</options>
+					</style>
+					<dontshowintoc
+						jcr:primaryType="cq:Widget"
+						defaultValue="false"
+						fieldLabel="Don’t show in TOC"
+						name="./dontshowintoc"
+						type="checkbox"
+						xtype="selection"/>
+				</items>
+			</tab1>
+		</items>
+	</items>
+</jcr:root>

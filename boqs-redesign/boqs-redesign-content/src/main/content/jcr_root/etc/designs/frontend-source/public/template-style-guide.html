@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Style Guide</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, user-scalable=0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
+    <style>
+      .template { margin: 20px 0; background: #eee; }
+      .margin-b-50 { margin-bottom: 50px; }
+      .group-1 { overflow: hidden; }
+      #color-chart-guide span {
+        display: block;
+        width: 100%;
+        height: 50px;
+      }
+      #color-chart-guide label {
+        display: block;
+        margin-top: 5px;
+      }
+      #ribbon-guide section {
+        overflow: hidden;
+        margin-left: 10px;
+        padding-top: 10px;
+        background: url('images/upload/bgd-ribbon-guide.jpg') no-repeat top left;
+        background-size: cover;
+      }
+      #ribbon-guide .title-2 {
+        margin: 10px 20px;
+        color: #fff;
+        text-align: left;
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom: 1px solid #fff;
+      }
+      .icon-list {
+        margin-top: 43px;
+      }
+      .icon-list li {
+        margin: 42px 0;
+      }
+      .icon-list li .wrap-icon {
+        display: table-cell;
+        min-width: 70px;
+        text-align: center;
+      }
+      .icon-list li:first-child {
+        margin-top: 0;
+      }
+      .icon-list li:last-child {
+        margin-bottom: 0;
+      }
+      .icon-list.first-list li:nth-child(1),
+      .icon-list.first-list li:nth-child(2),
+      .icon-list.first-list li:nth-child(3),
+      .icon-list.first-list li:nth-child(4) {
+        margin: 30px 0;
+      }
+      .icon-list.first-list li:first-child {
+        margin-top: 0;
+      }
+      .icon-list.first-list li:last-child {
+        margin-bottom: 0;
+      }
+      .icon-list span {
+        color: #09354b;
+        font-size: 1.143em;
+        font-family: "Gotham-Book", Arial, Helvetica, sans-serif;
+        line-height: 1.2em;
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 20px;
+      }
+      .container-cpn-nav .block {
+        border: 1px solid #9D9D9D;
+        margin-bottom: 20px;
+      }
+      .container-cpn-nav strong {
+        display: block;
+        padding-bottom: 10px;
+      }
+      .container-cpn-nav [class*="col-"] {
+        background-color: #DDD9D9;
+      }
+      .container-cpn-nav [class*="col-"]:nth-child(2n+1) {
+        background-color: #C3C3C3;
+        z-index: 1;
+      }
+      .title-template {
+        padding-bottom: 2px;
+        margin: 20px 0;
+        color: #207AD1;
+        border-bottom: 1px solid #207AD1;
+        font-size: 20px;
+      }
+      .list-cmp {
+        margin: 20px 0;
+        overflow: hidden;
+      }
+      .list-cmp dt {
+        margin-left: 15px;
+        font-size: 1.429em;
+        font-weight: bold;
+      }
+      .list-cmp dd {
+        margin-top: 10px;
+        padding: 0 1.5%;
+        float: left;
+        width: 30%;
+      }
+      .template .container {
+        max-width: 960px;
+      }
+      .option-group .label-text{ font-family: "Gotham-Book", Arial, Helvetica, sans-serif; }
+      .option-group input:checked + label{
+        font-family: "Gotham-Bold", Arial, Helvetica, sans-serif;
+      }
+      .text .text-link { color: #09354b; }
+      .text .text-link:hover { color: #337ab7; }
+      .wyg-style pre { min-height: 65px; }
+    </style>
+    <script src="js/modernizr.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXX-Y', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body class="template">
+    <div class="container">
+      <h1 class="title">Style Guide</h1>
+      <dl class="list-cmp">
+        <dt>All style guide</dt>
+        <dd>01: <a href="#color-chart-guide">Color chart</a>
+        </dd>
+        <dd>02: <a href="#typography-guide">Typography</a>
+        </dd>
+        <dd>03: <a href="#all-list-guide">All List</a>
+        </dd>
+        <dd>04: <a href="#static-guide">Static link list</a>
+        </dd>
+        <dd>05: <a href="#form-group-guide">Form group</a>
+        </dd>
+        <dd>06: <a href="#btn-cta-guide">Button CTAs</a>
+        </dd>
+        <dd>00: <a href="#ribbon-guide">Profession btn</a>
+        </dd>
+      </dl>
+      <dl class="list-cmp">
+        <dt>All parsys component</dt>
+        <dd>01: <a href="#parsys-area-1-guide">Parsys area 1</a>
+        </dd>
+        <dd>02: <a href="#parsys-area-2-guide">Parsys area 2</a>
+        </dd>
+        <dd>03: <a href="#parsys-area-3-guide">Parsys area 3: Main and sidebar</a>
+        </dd>
+        <dd>04: <a href="#parsys-area-4-guide">Parsys area 4</a>
+        </dd>
+        <dd>05: <a href="#parsys-area-5-guide">Parsys area 5 </a>
+        </dd>
+      </dl>
+      <div id="color-chart-guide">
+        <h2 class="title-template">Color chart</h2>
+        <div class="row">
+          <div class="col-sm-2"><span style="background-color: #ebeff2"></span>
+            <label>#ebeff2</label>
+            <label>@white-gray</label>
+          </div>
+          <div class="col-sm-2"><span style="background-color: #abc1cd"></span>
+            <label>#abc1cd</label>
+            <label>@gray-blue</label>
+          </div>
+          <div class="col-sm-2"><span style="background-color: #0172cf"></span>
+            <label>#0172cf</label>
+            <label>@blue</label>
+          </div>
+          <div class="col-sm-2"><span style="background-color: #0b446e"></span>
+            <label>#0b446e</label>
+            <label>@prussian-blue</label>
+          </div>
+          <div class="col-sm-2"><span style="background-color: #00293f"></span>
+            <label>#00293f</label>
+            <label>@black-blue</label>
+          </div>
+          <div class="col-sm-2"><span style="background-color: #aba584"></span>
+            <label>#aba584</label>
+            <label>@olive-gray</label>
+          </div>
+          <div class="col-sm-2"><span style="background-color: #799bbd"></span>
+            <label>#799bbd</label>
+            <label>@pastel-blue</label>
+          </div>
+          <div class="col-sm-2"><span style="background-color: #8bc5c1"></span>
+            <label>#8bc5c1</label>
+            <label>@powder-blue</label>
+          </div>
+          <div class="col-sm-2"><span style="background-color: rgba(228, 238, 246, .95)"></span>
+            <label>rgba(228, 238, 246, .95)</label>
+            <label>@pastel-cyan</label>
+          </div>
+          <div class="col-sm-2"><span style="background-color: #8b6fad"></span>
+            <label>#8b6fad</label>
+            <label>@violet</label>
+          </div>
+          <div class="col-sm-2"><span style="background-color: #9d968f"></span>
+            <label>#9d968f</label>
+            <label>@gray-brown</label>
+          </div>
+        </div>
+      </div>
+      <div id="typography-guide" class="group-1">
+        <h2 class="title-template">Typography</h2>
+        <h1 class="h1">H1 = Gotham Book 38pt</h1>
+        <h1 class="h1 bold">H1 Strong = Gotham Bold 38pt</h1>
+        <h1 class="h1 italic">H1 Strong = Gotham Bold 38pt</h1>
+        <h2 class="h2">H2 = Gotham Book 32pt</h2>
+        <h2 class="h2 bold">H2 Strong = Gotham Bold 32pt</h2>
+        <h2 class="h2 italic">H2 Strong = Gotham Bold 32pt</h2>
+        <h3 class="h3">H3 = Gotham Book 24pt</h3>
+        <h3 class="h3 bold">H3 Strong = Gotham Bold 24pt</h3>
+        <h3 class="h3 italic">H3 Strong = Gotham Bold 24pt</h3>
+        <h3 class="disclaimer-title"><strong>Disclaimer</strong></h3>
+        <h3 class="static-title">Showing results 1 - 10 of 32</h3>
+        <hr>
+        <p class="text large-text">Large Text = Arial Regular 20pt<strong>Bold text here and here.</strong>Emphasis text Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.<a href="#" title="hyperlink" class="text-link">Hyperlink</a></p>
+        <p class="text normal-text">Normal Text = Arial Regular 16pt.<strong>Bold text here and here.</strong>Lorem ipsum dolor sit ametconsectetur adipiscing elit. Underline text Aenean euismod bibendum laoreet. Proin sodales pulvinar tempor.<a href="#" title="hyperlink" class="text-link">Hyperlink</a></p>
+        <p class="text small-text">Small Text = Arial Regular 14pt.<strong>Bold text here and here.</strong>Lorem ipsum dolor sit amet, bold text consectetur adipiscing elit. Underline text Aenean euismod bibendum laoreet. Parturient montes, nascetur ridiculus mus.<a href="#" title="hyperlink" class="text-link">Hyperlink</a></p>
+        <p class="text disclaimer-text">Disclaimer Text  = Arial Regular 12pt.<strong>Bold text here and here.</strong>Lorem ipsum dolor sit amet, bold text consectetur adipiscing elit. Underline text Aenean euismod bibendum laoreet.<a href="#" title="hyperlink" class="text-link">Hyperlink</a></p>
+      </div>
+      <div id="all-list-guide" class="group-1">
+        <h2 class="title-template">All list</h2>
+        <div class="row">
+          <div class="col-sm-3">
+            <ul>
+              <li><span class="bullet-list">Bullet Level 1</span>
+                <ul>
+                  <li><span class="bullet-list level-2"> Bullet Level 2</span>
+                    <ul>
+                      <li><span class="bullet-list level-3">Bullet Level 3</span></li>
+                    </ul>
+                  </li>
+                  <li><span class="bullet-list level-2">Another bullet</span></li>
+                </ul>
+              </li>
+              <li><span class="bullet-list">Another bullet</span></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <ul>
+              <li><span class="feature-list">Feature list item</span></li>
+              <li><span class="feature-list">Feature list item</span></li>
+              <li><span class="feature-list">Feature list item</span></li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <ul>
+              <li><span class="tick-list"><b>Sum sociis natoque penatibus et magnis dis</b>nascetur ridiculus mus. Nam fermentum, nulla luctus phare tranulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="static-guide" class="group-1">
+        <h2 class="title-template">Static link list</h2>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="static-list-block">
+              <h3 class="static-title">Related Files</h3>
+              <ul class="list-unstyled static-list">
+                <li><a href="#" class="static-link">
+                    <div class="icon-box"><img src="images/upload/icon-document.png" alt="Product Disclosure Statement" class="img-responsive"/>
+                    </div>
+                    <div class="text-box"><span class="text">Product Disclosure Statement</span></div></a>
+                </li>
+                <li><a href="#" class="static-link">
+                    <div class="icon-box"><img src="images/upload/icon-document.png" alt="Terms &amp; Conditions" class="img-responsive"/>
+                    </div>
+                    <div class="text-box"><span class="text">Terms & Conditions</span></div></a>
+                </li>
+              </ul>
+            </div>
+            <div class="static-list-block">
+              <h3 class="static-title">Related Pages</h3>
+              <ul class="list-unstyled static-list">
+                <li><a href="#" class="static-link">
+                    <div class="text-box"><span class="text">Buying your first investment property</span><span class="desc">Product</span></div></a>
+                </li>
+                <li><a href="#" class="static-link">
+                    <div class="text-box"><span class="text">Buying your first investment property</span><span class="desc">Guide</span></div></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div data-event-calendar data-init-ajax="data/ajax-event.json" class="event-calendar">
+              <div class="event-calendar-wrap feature">
+                <h3 class="static-title"><span class="feature-label">Featured Events</span><span class="num">(0)</span></h3>
+                <ul class="list-unstyled static-list"></ul>
+              </div>
+              <div class="month"></div>
+              <div class="text-center"><a href="#" class="link-more"><span class="load-more-label">View more events</span><span aria-hidden="true" class="wi-icon icon-arrow-gray-sm"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="form-group-guide" class="group-1">
+        <h2 class="title-template">Form group</h2>
+        <div class="checkbox-group">
+          <input id="checkbox1" name="checkbox1" type="checkbox" value="" checked="checked"/>
+          <label for="checkbox1" class="label-text">Check box selected&nbsp;<a href="#" class="text-link">Hyperlink</a></label>
+        </div>
+        <div class="checkbox-group">
+          <input id="checkbox2" name="checkbox2" type="checkbox" value=""/>
+          <label for="checkbox2" class="label-text">Check box unselected&nbsp;<a href="#" class="text-link">Hyperlink</a></label>
+        </div>
+        <div class="radio-group">
+          <input id="radio1" name="radio" type="radio" value="" checked="checked"/>
+          <label for="radio1" class="label-text">Radio button selected</label>
+        </div>
+        <div class="radio-group">
+          <input id="radio2" name="radio" type="radio" value=""/>
+          <label for="radio2" class="label-text">Radio button unselected</label>
+        </div>
+      </div>
+      <div id="btn-cta-guide" class="group-1">
+        <h2 class="title-template">Button CTAs</h2>
+        <h5>Event Card Secondary CTA BTNs</h5>
+        <div class="row">
+          <div class="col-sm-4"><a href="#" class="btn btn-secondary"><span>More details</span><span aria-hidden="true" class="wi-icon icon-arrow"></span></a>
+          </div>
+        </div>
+        <h5>Secondary CTA BTNs</h5>
+        <div class="row">
+          <div class="col-sm-4"><a href="#" class="btn btn-default"><span>Send us an enquiry</span><span aria-hidden="true" class="wi-icon icon-arrow"></span></a>
+          </div>
+        </div>
+        <h5>Primary CTA BTNs</h5>
+        <div class="row">
+          <div class="col-sm-4"><a href="#" class="btn btn-primary"><span>Send us an enquiry</span><span aria-hidden="true" class="wi-icon icon-arrow"></span></a>
+          </div>
+        </div>
+        <h5>Terciary CTA BTNs</h5>
+        <div class="row">
+          <div class="col-sm-4"><a href="#" class="btn-tertiary">See all specialties<span aria-hidden="true" class="wi-icon icon-arrow"></span></a>
+          </div>
+          <div class="col-sm-4"><a href="#" class="btn-tertiary">See all specialties<span aria-hidden="true" class="wi-icon icon-arrow"></span></a>
+          </div>
+          <div class="col-sm-4"><a href="#" class="btn-tertiary">See all specialties<span aria-hidden="true" class="wi-icon icon-arrow"></span></a>
+          </div>
+        </div>
+        <h5>Speciatly menu item</h5>
+        <div class="row">
+          <div class="col-sm-4"><a href="#" class="btn btn-special">Everyday Banking</a>
+          </div>
+          <div class="col-sm-4"><a href="#" class="btn btn-special">Everyday Banking</a>
+          </div>
+          <div class="col-sm-4"><a href="#" class="btn btn-special">Everyday Banking</a>
+          </div>
+        </div>
+      </div>
+      <div id="btn-side-guide" class="group-1">
+        <h2 class="title-template">Main Nav Action side BTN's:</h2>
+        <div class="action-link horizontal">
+          <ul data-mobile-top="" class="link-list">
+            <li class="active"><a href="#" class="btn btn-side"><span class="icon"><img src="images/upload/icon-phone-call.png" alt="" class="img-responsive hidden-xs icon-origin"/><img src="images/upload/icon-phone-call-white.png" alt="" class="img-responsive hidden-xs icon-white"/><img src="images/upload/icon-phone-call-xs.png" alt="" class="img-responsive visible-xs"/></span><span>Request Callback</span></a>
+            </li>
+            <li><a href="#" class="btn btn-side"><span class="icon"><img src="images/upload/icon-find.png" alt="" class="img-responsive hidden-xs icon-origin"/><img src="images/upload/icon-find-white.png" alt="" class="img-responsive hidden-xs icon-white"/><img src="images/upload/icon-find-xs.png" alt="" class="img-responsive visible-xs"/></span><span>Find a Specialist</span></a>
+            </li>
+            <li><a href="#" class="btn btn-side"><span class="icon"><img src="images/upload/icon-tag-offer.png" alt="" class="img-responsive hidden-xs icon-origin"/><img src="images/upload/icon-tag-offer-white.png" alt="" class="img-responsive hidden-xs icon-white"/><img src="images/upload/icon-tag-offer-xs.png" alt="" class="img-responsive visible-xs"/></span><span>Browse Offers</span></a>
+            </li>
+            <li><a href="#" class="btn btn-side"><span class="icon"><img src="images/upload/icon-find-event.png" alt="" class="img-responsive hidden-xs icon-origin"/><img src="images/upload/icon-find-event-white.png" alt="" class="img-responsive hidden-xs icon-white"/><img src="images/upload/icon-find-event-xs.png" alt="" class="img-responsive visible-xs"/></span><span>Find Events</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="parsys-area-1-guide" class="group-1">
+      <h2 class="title-template">Parsys area 1</h2>
+      <div class="parsys-area-1 text-center">
+        <div class="container">
+          <h2><span class="title title-1">Not quite what you were looking for?</span></h2>
+          <p><span class="blue-text text-3">At BOQ Specialist we pride ourselves on our flexibility – if you can’t find exactly what you’re looking for, try one of these options for getting in touch to see if we can help you.</span></p><a href="tel:1300131141" class="phone-number"><span class="icon-1"><span class="wi-icon-white icon-phone"></span></span><span class="number">1300 131 141</span></a>
+          <div class="row">
+            <div class="col-sm-6"><a href="#" class="btn btn-default pull-right"><span>Send us an enquiry</span><span aria-hidden="true" class="wi-icon icon-arrow"></span></a>
+            </div>
+            <div class="col-sm-6"><a href="#" class="btn btn-default pull-left"><span>Find a Specialist</span><span aria-hidden="true" class="wi-icon icon-arrow"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="parsys-area-2-guide" class="group-1">
+      <h2 class="title-template">Parsys area 2</h2>
+      <div class="parsys-area-2">
+        <div class="container">
+          <h3><span class="h3">Why a BOQ Specialist Home Loan?</span></h3>
+          <p><span class="blue-text normal-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate.</span></p>
+        </div>
+      </div>
+    </div>
+    <div id="parsys-area-3-guide" class="group-1">
+      <h2 class="title-template">Parsys area with sidebar</h2>
+      <div class="parsys-area-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 parsys-main">
+              <h3><span class="h3">Home Loan features at a glance</span></h3>
+              <ul>
+                <li><span class="tick-list"><b>Sum sociis natoque penatibus et magnis dis</b>nascetur ridiculus mus. Nam fermentum, nulla luctus phare tranulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien.</span></li>
+                <li><span class="tick-list"><b>Sum sociis natoque penatibus et magnis dis</b>nascetur ridiculus mus. Nam fermentum, nulla luctus phare tranulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien.</span></li>
+                <li><span class="tick-list"><b>Sum sociis natoque penatibus et magnis dis</b>nascetur ridiculus mus. Nam fermentum, nulla luctus phare tranulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien.</span></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 parsys-sidebar">
+              <div class="block">
+                <h3 class="h3">Want to know more?</h3>
+                <div class="inner text-center"><a href="tel:1300131141" class="phone-number"><span class="icon-1"><span class="wi-icon-white icon-phone"></span></span><span class="number">1300 131 141</span></a>
+                </div><a href="#" class="btn btn-default btn-default-1"><span>Send us an enquiry</span><span aria-hidden="true" class="wi-icon icon-arrow"></span></a><a href="#" class="btn btn-default btn-default-1"><span>Find a Specialist</span><span aria-hidden="true" class="wi-icon icon-arrow"></span></a>
+                <div class="static-list-block">
+                  <h3 class="static-title">Related Files</h3>
+                  <ul class="list-unstyled static-list">
+                    <li><a href="#" class="static-link">
+                        <div class="icon-box"><img src="images/upload/icon-document.png" alt="Product Disclosure Statement" class="img-responsive"/>
+                        </div>
+                        <div class="text-box"><span class="text">Product Disclosure Statement</span></div></a>
+                    </li>
+                    <li><a href="#" class="static-link">
+                        <div class="icon-box"><img src="images/upload/icon-document.png" alt="Terms &amp; Conditions" class="img-responsive"/>
+                        </div>
+                        <div class="text-box"><span class="text">Terms & Conditions</span></div></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="static-list-block">
+                  <h3 class="static-title">Related Pages</h3>
+                  <ul class="list-unstyled static-list">
+                    <li><a href="#" class="static-link">
+                        <div class="text-box"><span class="text">Buying your first investment property</span><span class="desc">Product</span></div></a>
+                    </li>
+                    <li><a href="#" class="static-link">
+                        <div class="text-box"><span class="text">Buying your first investment property</span><span class="desc">Guide</span></div></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="parsys-area-4-guide" class="group-1">
+      <h2 class="title-template">Parsys area 4</h2>
+      <div class="parsys-area-4">
+        <div class="container">
+          <h3><span class="h3">We help doctors, dentists, vets and more.</span></h3>
+          <p><span class="blue-text normal-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Proin gravida dolor sit amet lacus accumsan et viverra.</span></p>
+          <p><span class="blue-text text-5"><b>Not a Medical Professional?</b></span><a href="#" class="btn-tertiary">See all Specialties<span aria-hidden="true" class="wi-icon icon-arrow"></span></a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="parsys-area-5-guide" class="group-1">
+      <h2 class="title-template">Parsys area 5</h2>
+      <div class="parsys-area-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 block">
+              <h3 class="title title-1">Tips, Guides and FAQs</h3>
+              <form action="#" method="post" id="search-field-form" name="search-field-form" class="search-form full-width" data-search="data-search">
+                <div class="form-group">
+                  <div class="input-group">
+                    <button type="submit" class="search-btn"><span aria-hidden="true" class="wi-icon-white icon-search"></span>
+                    </button>
+                    <div class="wrap">
+                      <input id="search-field" name="search-field" type="text" value="" placeholder="Enter search terms" autocomplete="off" class="form-control"/>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="static-list-block">
+                <h3 class="static-title">Popular Articles</h3>
+                <ul class="list-unstyled static-list">
+                  <li><a href="#" class="static-link">
+                      <div class="text-box"><span class="text">Online Banking Help</span><span class="desc">FAQ</span></div></a>
+                  </li>
+                  <li><a href="#" class="static-link">
+                      <div class="text-box"><span class="text">Budget Planning 101</span><span class="desc">TIPS</span></div></a>
+                  </li>
+                  <li><a href="#" class="static-link">
+                      <div class="text-box"><span class="text">Buying your first investment property</span><span class="desc">Guide</span></div></a>
+                  </li>
+                  <li><a href="#" class="static-link">
+                      <div class="text-box"><span class="text">Buying your first investment property</span><span class="desc">Guide</span></div></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-6 block">
+              <h3 class="title title-1">Upcoming Events</h3>
+              <div data-event-calendar data-init-ajax="data/ajax-event.json" class="event-calendar">
+                <div class="event-calendar-wrap feature">
+                  <h3 class="static-title"><span class="feature-label">Featured Events</span><span class="num">(0)</span></h3>
+                  <ul class="list-unstyled static-list"></ul>
+                </div>
+                <div class="month"></div>
+                <div class="text-center"><a href="#" class="link-more"><span class="load-more-label">View more events</span><span aria-hidden="true" class="wi-icon icon-arrow-gray-sm"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="ribbon-guide">
+      <div class="container">
+        <h2 class="title-template">Profession btn</h2>
+      </div>
+      <section data-sameheight>
+        <h3 class="title-2">Default</h3>
+        <div class="ribbon-box"><a href="#" class="pro-btn pastel-blue-bgd" data-item="data-item"><i class="pro-icon"><img src="images/pro-icon medical-icon" alt="" class="img-responsive invisible-hover"/><img src="images/transparent.png" alt="" class="img-responsive visible-hover"/></i><span class="title">Medical Professionals</span></a>
+        </div>
+        <div class="ribbon-box"><a href="#" class="pro-btn violet-bgd" data-item="data-item"><i class="pro-icon"><img src="images/pro-icon accountant-icon" alt="" class="img-responsive invisible-hover"/><img src="images/transparent.png" alt="" class="img-responsive visible-hover"/></i><span class="title">Accountants</span></a>
+        </div>
+        <div class="ribbon-box"><a href="#" class="pro-btn powder-blue-bgd" data-item="data-item"><i class="pro-icon"><img src="images/pro-icon financial-advisers-icon" alt="" class="img-responsive invisible-hover"/><img src="images/transparent.png" alt="" class="img-responsive visible-hover"/></i><span class="title">Financial Advisers</span></a>
+        </div>
+        <div class="ribbon-box"><a href="#" class="pro-btn gray-brown-bgd" data-item="data-item"><i class="pro-icon"><img src="images/pro-icon private-clients-icon" alt="" class="img-responsive invisible-hover"/><img src="images/transparent.png" alt="" class="img-responsive visible-hover"/></i><span class="title">Private Clients</span></a>
+        </div>
+        <h3 class="title-2">Hover</h3>
+        <div class="ribbon-box"><a href="#" class="pro-btn pastel-blue-bgd hover" data-item="data-item"><i class="pro-icon"><img src="images/pro-icon medical-icon" alt="" class="img-responsive invisible-hover"/><img src="images/transparent.png" alt="" class="img-responsive visible-hover"/></i><span class="title">Medical Professionals</span></a>
+        </div>
+        <div class="ribbon-box"><a href="#" class="pro-btn violet-bgd hover" data-item="data-item"><i class="pro-icon"><img src="images/pro-icon accountant-icon" alt="" class="img-responsive invisible-hover"/><img src="images/transparent.png" alt="" class="img-responsive visible-hover"/></i><span class="title">Accountants</span></a>
+        </div>
+        <div class="ribbon-box"><a href="#" class="pro-btn powder-blue-bgd hover" data-item="data-item"><i class="pro-icon"><img src="images/pro-icon financial-advisers-icon" alt="" class="img-responsive invisible-hover"/><img src="images/transparent.png" alt="" class="img-responsive visible-hover"/></i><span class="title">Financial Advisers</span></a>
+        </div>
+        <div class="ribbon-box"><a href="#" class="pro-btn gray-brown-bgd hover" data-item="data-item"><i class="pro-icon"><img src="images/pro-icon private-clients-icon" alt="" class="img-responsive invisible-hover"/><img src="images/transparent.png" alt="" class="img-responsive visible-hover"/></i><span class="title">Private Clients</span></a>
+        </div>
+        <h3 class="title-2">Active</h3>
+        <div class="active">
+          <div class="ribbon-box"><a href="#" class="pro-btn pastel-blue-bgd active" data-item="data-item"><i class="pro-icon"><img src="images/pro-icon medical-icon" alt="" class="img-responsive invisible-hover"/><img src="images/transparent.png" alt="" class="img-responsive visible-hover"/></i><span class="title">Medical Professionals</span></a>
+          </div>
+          <div class="ribbon-box"><a href="#" class="pro-btn violet-bgd active" data-item="data-item"><i class="pro-icon"><img src="images/pro-icon accountant-icon" alt="" class="img-responsive invisible-hover"/><img src="images/transparent.png" alt="" class="img-responsive visible-hover"/></i><span class="title">Accountants</span></a>
+          </div>
+          <div class="ribbon-box"><a href="#" class="pro-btn powder-blue-bgd active" data-item="data-item"><i class="pro-icon"><img src="images/pro-icon financial-advisers-icon" alt="" class="img-responsive invisible-hover"/><img src="images/transparent.png" alt="" class="img-responsive visible-hover"/></i><span class="title">Financial Advisers</span></a>
+          </div>
+          <div class="ribbon-box"><a href="#" class="pro-btn gray-brown-bgd active" data-item="data-item"><i class="pro-icon"><img src="images/pro-icon private-clients-icon" alt="" class="img-responsive invisible-hover"/><img src="images/transparent.png" alt="" class="img-responsive visible-hover"/></i><span class="title">Private Clients</span></a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="margin-b-50"></div>
+    <div class="loader-overlay"><img src="images/loader.gif" alt="Loader"/>
+    </div>
+    <script src="js/l10n.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/script.js"></script>
+    <!--[if lt IE 8]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    <noscript>JavaScript is off. Please enable to view full site.</noscript>
+  </body>
+</html>

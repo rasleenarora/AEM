@@ -1,0 +1,68 @@
+.icon-caret-white { background-image: url('png/caret-white.png'); background-repeat: no-repeat; }
+
+.icon-caret { background-image: url('png/caret.png'); background-repeat: no-repeat; }
+
+.icon-close-white { background-image: url('png/close-white.png'); background-repeat: no-repeat; }
+
+.icon-close { background-image: url('png/close.png'); background-repeat: no-repeat; }
+
+.icon-contact-gold { background-image: url('png/contact-gold.png'); background-repeat: no-repeat; }
+
+.icon-contact { background-image: url('png/contact.png'); background-repeat: no-repeat; }
+
+.icon-events-gold { background-image: url('png/events-gold.png'); background-repeat: no-repeat; }
+
+.icon-events { background-image: url('png/events.png'); background-repeat: no-repeat; }
+
+.icon-find-gold { background-image: url('png/find-gold.png'); background-repeat: no-repeat; }
+
+.icon-find { background-image: url('png/find.png'); background-repeat: no-repeat; }
+
+.icon-linkedin-white { background-image: url('png/linkedin-white.png'); background-repeat: no-repeat; }
+
+.icon-linkedin { background-image: url('png/linkedin.png'); background-repeat: no-repeat; }
+
+.icon-login-white { background-image: url('png/login-white.png'); background-repeat: no-repeat; }
+
+.icon-login { background-image: url('png/login.png'); background-repeat: no-repeat; }
+
+.icon-mail-white { background-image: url('png/mail-white.png'); background-repeat: no-repeat; }
+
+.icon-mail { background-image: url('png/mail.png'); background-repeat: no-repeat; }
+
+.icon-menu-white { background-image: url('png/menu-white.png'); background-repeat: no-repeat; }
+
+.icon-menu { background-image: url('png/menu.png'); background-repeat: no-repeat; }
+
+.slick-next:before,
+.slick-prev:before,
+.breadcrumb > li + li:before,
+.icon-next-gold { background-image: url('png/next-gold.png'); background-repeat: no-repeat; }
+
+.icon-next-white { background-image: url('png/next-white.png'); background-repeat: no-repeat; }
+
+.icon-prev,
+.card-heading:after,
+.icon-next { background-image: url('png/next.png'); background-repeat: no-repeat; }
+
+.icon-offers-gold { background-image: url('png/offers-gold.png'); background-repeat: no-repeat; }
+
+.icon-offers { background-image: url('png/offers.png'); background-repeat: no-repeat; }
+
+.icon-phone-white { background-image: url('png/phone-white.png'); background-repeat: no-repeat; }
+
+.icon-phone { background-image: url('png/phone.png'); background-repeat: no-repeat; }
+
+.icon-register-white { background-image: url('png/register-white.png'); background-repeat: no-repeat; }
+
+.icon-register { background-image: url('png/register.png'); background-repeat: no-repeat; }
+
+.icon-search-white { background-image: url('png/search-white.png'); background-repeat: no-repeat; }
+
+.icon-search { background-image: url('png/search.png'); background-repeat: no-repeat; }
+
+.icon-tick-white { background-image: url('png/tick-white.png'); background-repeat: no-repeat; }
+
+.ticks li:before,
+.icon-tick { background-image: url('png/tick.png'); background-repeat: no-repeat; }
+

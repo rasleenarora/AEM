@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Filtering">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <pagecontenttype
+            jcr:primaryType="cq:Widget"
+            allowBlank="{Boolean}false"
+            defaultValue="general-other"
+            fieldLabel="Page Content Type:"
+            name="./pagecontenttype"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <product
+                    jcr:primaryType="nt:unstructured"
+                    text="Product"
+                    value="product"/>
+                <expertise
+                    jcr:primaryType="nt:unstructured"
+                    text="Expertise"
+                    value="expertise"/>
+                <event
+                    jcr:primaryType="nt:unstructured"
+                    text="Event"
+                    value="event"/>
+                <specialistbankerprofile
+                    jcr:primaryType="nt:unstructured"
+                    text="Specialist Banker Profile"
+                    value="specialistbanker"/>
+                <news
+                    jcr:primaryType="nt:unstructured"
+                    text="News"
+                    value="news"/>
+                <legal
+                    jcr:primaryType="nt:unstructured"
+                    text="Legal"
+                    value="legaldocument"/>
+                <generalother
+                    jcr:primaryType="nt:unstructured"
+                    text="General / Other"
+                    value="general-other"/>
+            </options>
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                loadcontent="function(){&#xa;var field=this;&#xa;setCategories(field);&#xa;}"
+                selectionchanged="function(){&#xa;var field=this;&#xa;setCategories(field);&#xa;}"/>
+        </pagecontenttype>
+        <relatedprofessions
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Leave all options unselected for ‘All professions’"
+            fieldLabel="Related Profession(s):"
+            name="./relatedprofessions"
+            optionsProvider="function(){&#xa;var json=[];&#xa;var key=&quot;boqs.relatedprofessions_list&quot;;&#xa;json=loadCategories(key);&#xa;return json;&#xa;}"
+            type="checkbox"
+            xtype="selection"/>
+        <relatedproducttypes
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Leave all options unselected for ‘All products’"
+            fieldLabel="Related Product Type(s):"
+            name="./relatedproducttypes"
+            type="checkbox"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <savingsaccounts
+                    jcr:primaryType="nt:unstructured"
+                    text="Savings Accounts"
+                    value="savingsaccount"/>
+                <creditcards
+                    jcr:primaryType="nt:unstructured"
+                    text="Credit Cards"
+                    value="creditcard"/>
+                <propertyfinance
+                    jcr:primaryType="nt:unstructured"
+                    text="Property Finance"
+                    value="propertyfinance"/>
+                <assetfinance
+                    jcr:primaryType="nt:unstructured"
+                    text="Asset Finance"
+                    value="assetfinance"/>
+            </options>
+        </relatedproducttypes>
+        <relatedfinancecategories
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Leave all options unselected for ‘All Finance categories’"
+            fieldLabel="Related Finance Category(s):"
+            name="./relatedfinancecategories"
+            type="checkbox"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <personalfinance
+                    jcr:primaryType="nt:unstructured"
+                    text="Personal Finance"
+                    value="personalfinance"/>
+                <practicefinance
+                    jcr:primaryType="nt:unstructured"
+                    text="Practice Finance"
+                    value="practicefinance"/>
+                <financeforclients
+                    jcr:primaryType="nt:unstructured"
+                    text="Finance for Clients"
+                    value="financeforclient"/>
+            </options>
+        </relatedfinancecategories>
+        <topics
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Topic(s) :"
+            name="./topics"
+            optionsProvider="function(){&#xa;var json=[];&#xa;var key=&quot;boqs.topic_list&quot;;&#xa;json=loadCategories(key);&#xa;return json;&#xa;}"
+            type="checkbox"
+            xtype="selection"/>
+        <relatedstates
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Leave all options unselected for ‘All states’"
+            fieldLabel="Related State(s):"
+            name="./relatedstates"
+            type="checkbox"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <act
+                    jcr:primaryType="nt:unstructured"
+                    text="ACT"
+                    value="act"/>
+                <nt
+                    jcr:primaryType="nt:unstructured"
+                    text="NT"
+                    value="nt"/>
+                <nsw
+                    jcr:primaryType="nt:unstructured"
+                    text="NSW"
+                    value="nsw"/>
+                <qld
+                    jcr:primaryType="nt:unstructured"
+                    text="QLD"
+                    value="qld"/>
+                <sa
+                    jcr:primaryType="nt:unstructured"
+                    text="SA"
+                    value="sa"/>
+                <tas
+                    jcr:primaryType="nt:unstructured"
+                    text="TAS"
+                    value="tas"/>
+                <vic
+                    jcr:primaryType="nt:unstructured"
+                    text="VIC"
+                    value="vic"/>
+                <wa
+                    jcr:primaryType="nt:unstructured"
+                    text="WA"
+                    value="wa"/>
+            </options>
+        </relatedstates>
+    </items>
+</jcr:root>

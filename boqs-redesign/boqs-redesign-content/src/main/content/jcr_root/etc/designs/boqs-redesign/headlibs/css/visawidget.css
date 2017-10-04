@@ -1,0 +1,15 @@
+.visawidget #visaoffers,
+.visawidget #visaoffers #visa-widget-header,
+.visawidget #visaoffers .header-text h3,
+.visawidget #visaoffers .header-text p,
+.visawidget #visaoffers .dropdown option,
+.visawidget #visaoffers .dropdown .selected,
+.visawidget #visaoffers .ellip,
+.visawidget #visaoffers .ellip-line,
+.visawidget #visaoffers #visaOfferMerchantName,
+.visawidget #visaoffers #visaOfferTitleName,
+.visawidget #visaoffers h4,
+.visawidget #visaoffers p,
+.visawidget #visaoffers li {
+ font-family: Arial, Helvetica, sans-serif !important;
+}

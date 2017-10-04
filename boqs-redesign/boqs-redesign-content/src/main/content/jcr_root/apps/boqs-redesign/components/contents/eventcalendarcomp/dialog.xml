@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Event Calendar Configuration"
+	width="600"
+    height="700"
+	xtype="dialog">
+	<listeners jcr:primaryType="nt:unstructured" 
+	loadcontent="function(dialog) { setDefaultValue(dialog);}" />
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<parentpage
+						jcr:primaryType="cq:Widget"
+						fieldDescription="This is the page under which event detail pages will be searched depending on the filter and will be shown in this component in forms of cards."
+						fieldLabel="Parent Page"
+						name="./parentpage"
+						editable="{Boolean}false"
+						allowBlank="{Boolean}false"
+						xtype="pathfield"/>
+					<featuredeventslabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Featured Events Label"
+						name="./featuredeventslabel"
+						allowBlank="{Boolean}false"
+						defaultValue="Featured Events"
+						xtype="textfield"/>
+					<moredetailsbuttonlabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="More Details Button Label"
+						name="./moredetailsbuttonlabel"
+						allowBlank="{Boolean}false"
+						defaultValue="More Events"
+						xtype="textfield"/>
+					<paginateresults
+						jcr:primaryType="cq:Widget"
+						fieldDescription="Select &quot;Yes&quot; for pagination"
+						fieldLabel="Paginate Results"
+						name="./paginateresults"
+						allowBlank="{Boolean}false"
+						type="radio"
+						defaultValue="no"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<yes
+								jcr:primaryType="nt:unstructured"
+								text="Yes"
+								value="yes"/>
+							<no
+								jcr:primaryType="nt:unstructured"
+								text="No"
+								value="no"/>
+						</options>
+					</paginateresults>
+					<noofresultsperpage
+						jcr:primaryType="cq:Widget"
+						fieldLabel="No of Results Per Page"
+						name="./noofresultsperpage"
+						allowBlank="{Boolean}false"
+						regex="/^0*[1-9][0-9]*$/"
+						regexText="Only positive numbers are allowed."
+						defaultValue="10"
+						xtype="numberfield"/>
+					<resulttypeoverride
+						jcr:primaryType="cq:Widget"
+						fieldDescription="This field's value will be used when the number of events is 1. If left empty, &quot;event&quot; will be used by default"
+						name="./resulttypeoverride"
+						fieldLabel="Result Type Override"
+						defaultValue="event"
+						xtype="textfield"/>
+					<resulttypepluraloverride
+						jcr:primaryType="cq:Widget"
+						fieldDescription="This field's value will be used when the number of events is more than 1. If left empty, &quot;events&quot; will be used by default"
+						name="./resulttypepluraloverride"
+						fieldLabel="Result Type(Plural) Override"
+						defaultValue="events"
+						xtype="textfield"/>
+					<resultsbasedonurlparameters
+						jcr:primaryType="cq:Widget"
+						fieldDescription="When the value of this field is yes, then the results will be based on the &quot;Filterable Controls component (i.e. based on the parameters in the URL)&quot; and when it is NO it is based on the values set in the filter tab of this component’s dialog."
+						fieldLabel="Results Based On URL Parameters"
+						name="./resultsbasedonurlparameters"
+						allowBlank="{Boolean}false"
+						type="radio"
+						defaultValue="no"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<yes
+								jcr:primaryType="nt:unstructured"
+								text="Yes"
+								value="yes"/>
+							<no
+								jcr:primaryType="nt:unstructured"
+								text="No"
+								value="no"/>
+						</options>
+					</resultsbasedonurlparameters>
+					<condensedview
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If it is selected as yes, then condensed view of the component will be shown."
+						fieldLabel="Condensed View"
+						name="./condensedview"
+						allowBlank="{Boolean}false"
+						type="radio"
+						defaultValue="no"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<yes
+								jcr:primaryType="nt:unstructured"
+								text="Yes"
+								value="yes"/>
+							<no
+								jcr:primaryType="nt:unstructured"
+								text="No"
+								value="no"/>
+						</options>
+					</condensedview>
+					<loadmoreeventslabelincondensedview
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;Load more events&quot; will be used by default"
+						fieldLabel="Load More Events Label in Condensed View"
+						name="./loadmoreeventslabelincondensedview"
+						defaultValue="Load more events"
+						xtype="textfield"/>
+					<noofresultstoshowincondensedview
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;10&quot; will be used by default"
+						fieldLabel="No of Results to show  in Condensed View"
+						regex="/^0*[1-9][0-9]*$/"
+						regexText="Only positive numbers are allowed."
+						name="./noofresultstoshowincondensedview"
+						defaultValue="10"
+						xtype="numberfield"/>
+					<targeturl
+						jcr:primaryType="cq:Widget"
+						fieldDescription="This will be URL to which user will be taken to when the end user clicks on &quot;Load More Events&quot; link in condensed view of event calendar"
+						fieldLabel="Target URL"
+						name="./targeturl"
+						allowBlank="{Boolean}false"
+						xtype="pathfield"/>
+				</items>
+			</tab1>
+			<tab2
+				jcr:primaryType="cq:Panel"
+				title="Filtering">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<professionfilter
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Profession Filter"
+						name="./professionfilter"
+						allowBlank="{Boolean}false"
+						type="select"
+						defaultValue="allprofessions"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<allprofessions
+								jcr:primaryType="nt:unstructured"
+								text="All professions"
+								value="allprofessions"/>
+							<medical
+								jcr:primaryType="nt:unstructured"
+								text="Medical Professionals"
+								value="medicalprofessional"/>
+							<accountants
+								jcr:primaryType="nt:unstructured"
+								text="Accountants"
+								value="accountant"/>
+							<financialadviser
+								jcr:primaryType="nt:unstructured"
+								text="Financial Adviser"
+								value="financialadviser"/>
+							<privateclients
+								jcr:primaryType="nt:unstructured"
+								text="Private Clients"
+								value="privateclient"/>
+						</options>
+					</professionfilter>
+					<startdate
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Start Date"
+						fieldDescription="Leave blank for ‘Today’"
+						name="./startdate"
+						defaultValue="now"
+						hideTime="true"
+						xtype="datefield"/>
+					<enddate
+						jcr:primaryType="cq:Widget"
+						fieldLabel="End Date"
+						fieldDescription="Leave blank to return all matching events"
+						name="./enddate"
+						hideTime="true"
+						xtype="datefield"/>
+					<eventtypefilter
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Event Type Filter"
+						name="./eventtypefilter"
+						fieldDescription="Leave all options unchecked to return all event types."
+						type="checkbox"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<annualevent
+								jcr:primaryType="nt:unstructured"
+								text="Annual Event"
+								value="annualevent"/>
+							<conference
+								jcr:primaryType="nt:unstructured"
+								text="Conference"
+								value="conference"/>
+							<luncheon
+								jcr:primaryType="nt:unstructured"
+								text="Luncheon"
+								value="luncheon"/>
+							<industryevent
+								jcr:primaryType="nt:unstructured"
+								text="Industry Event"
+								value="industryevent"/>
+							<seminar
+								jcr:primaryType="nt:unstructured"
+								text="Seminar"
+								value="seminar"/>
+							<sportingevent
+								jcr:primaryType="nt:unstructured"
+								text="Sporting Event"
+								value="sportingevent"/>
+							<workshop
+								jcr:primaryType="nt:unstructured"
+								text="Workshop"
+								value="workshop"/>
+						</options>
+					</eventtypefilter>
+					<statefilter
+						jcr:primaryType="cq:Widget"
+						fieldLabel="State Filter"
+						name="./statefilter"
+						allowBlank="{Boolean}false"
+						type="select"
+						defaultValue="allstates"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<allstates
+								jcr:primaryType="nt:unstructured"
+								text="All States"
+								value="allstates"/>
+							<act
+								jcr:primaryType="nt:unstructured"
+								text="ACT"
+								value="act"/>
+							<nt
+								jcr:primaryType="nt:unstructured"
+								text="NT"
+								value="nt"/>
+							<nsw
+								jcr:primaryType="nt:unstructured"
+								text="NSW"
+								value="nsw"/>
+							<qld
+								jcr:primaryType="nt:unstructured"
+								text="QLD"
+								value="qld"/>
+							<sa
+								jcr:primaryType="nt:unstructured"
+								text="SA"
+								value="sa"/>
+							<tas
+								jcr:primaryType="nt:unstructured"
+								text="TAS"
+								value="tas"/>
+							<vic
+								jcr:primaryType="nt:unstructured"
+								text="VIC"
+								value="vic"/>
+							<wa
+								jcr:primaryType="nt:unstructured"
+								text="WA"
+								value="wa"/>
+						</options>
+					</statefilter>
+				</items>
+			</tab2>
+			<tab3
+				jcr:primaryType="cq:Panel"
+				title="Load More">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<loadmoreiconpath
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Load More Icon Path"
+						name="./loadmoreiconpath"
+						rootPath="/content/dam"
+						allowBlank="{Boolean}false"
+						xtype="pathfield"/>
+					<moreresultstext
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;There are %n more %t to display&quot; will be used by default"
+						fieldLabel="More Results Text"
+						name="./moreresultstext"
+						defaultValue="There are %n more %t to display"
+						xtype="textfield"/>
+					<loadmoretext
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;Load More %t&quot; will be used by default "
+						fieldLabel="Load More Text"
+						name="./loadmoretext"
+						defaultValue="Load More %t"
+						xtype="textfield"/>
+				</items>
+			</tab3>
+			<tab4
+				jcr:primaryType="cq:Panel"
+				title="No more result">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<nomoreresultstext
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;There are no other %t to display&quot; will be used by default"
+						fieldLabel="No More Results Text"
+						name="./nomoreresultstext"
+						defaultValue="There are no other %t to display"
+						xtype="textfield"/>
+					<backtotoptext
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;Back to Top Text&quot; will be used by default"
+						fieldLabel="Back to Top Text"
+						name="./backtotoptext"
+						defaultValue="Back to Top"
+						xtype="textfield"/>
+				</items>
+			</tab4>
+			<tab5
+				jcr:primaryType="cq:Panel"
+				title="No result">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<noresultstext
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;We could not find any %t matching your filters&quot; will be used by default."
+						fieldLabel="No Result Text"
+						name="./noresultstext"
+						defaultValue="We could not find any %t matching your filters"
+						xtype="textfield"/>
+					<clearallfilterstext
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;Clear all filters&quot; will be used by default."
+						fieldLabel="Clear All Filters Text"
+						name="./clearallfilterstext"
+						defaultValue="Clear all filters"
+						xtype="textfield"/>
+				</items>
+			</tab5>
+		</items>
+	</items>
+</jcr:root>

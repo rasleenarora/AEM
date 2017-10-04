@@ -1,0 +1,51 @@
+[
+  {
+    "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.",
+    "src": "http://localhost:3000/images/gallery1.jpg",
+    "thumbSrc": "http://localhost:3000/images/gallery1.jpg"
+  },
+  {
+    "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, officia!",
+    "src": "http://localhost:3000/images/gallery2.jpg",
+    "thumbSrc": "http://localhost:3000/images/gallery2.jpg"
+  },
+  {
+    "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, dolore?",
+    "src": "http://localhost:3000/images/gallery3.jpg",
+    "thumbSrc": "http://localhost:3000/images/gallery3.jpg"
+  },
+  {
+    "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, labore!",
+    "src": "http://localhost:3000/images/gallery4.jpg",
+    "thumbSrc": "http://localhost:3000/images/gallery4.jpg"
+  },
+  {
+    "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, expedita!",
+    "src": "http://localhost:3000/images/gallery1.jpg",
+    "thumbSrc": "http://localhost:3000/images/gallery1.jpg"
+  },
+  {
+    "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas.",
+    "src": "http://localhost:3000/images/gallery2.jpg",
+    "thumbSrc": "http://localhost:3000/images/gallery2.jpg"
+  },
+  {
+    "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, officia!",
+    "src": "http://localhost:3000/images/gallery3.jpg",
+    "thumbSrc": "http://localhost:3000/images/gallery3.jpg"
+  },
+  {
+    "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, dolore?",
+    "src": "http://localhost:3000/images/gallery4.jpg",
+    "thumbSrc": "http://localhost:3000/images/gallery4.jpg"
+  },
+  {
+    "src": "http://localhost:3000/images/gallery1.jpg",
+    "thumbSrc": "http://localhost:3000/images/gallery1.jpg"
+  },
+  {
+    "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, expedita!",
+    "src": "http://localhost:3000/images/gallery2.jpg",
+    "thumbSrc": "http://localhost:3000/images/gallery2.jpg"
+  }
+]

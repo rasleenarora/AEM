@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="700"
+    title="Checkbox Configuration"
+    width="700"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <checkboxlbl
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        externalStyleSheets="[]"
+                        fieldLabel="Checkbox Label"
+                        height="400"
+                        name="./checkboxlbl"
+                        xtype="richtext">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            path="/apps/boqs-redesign/components/contents/wysiwygcomp/rteplugins.infinity.json"
+                            xtype="cqinclude"/>
+                    </checkboxlbl>
+                    <checkboxelement
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="agreepolicy"
+                        fieldLabel="Checkbox Element Name"
+                        name="./checkboxelement"
+                        regex="/^[a-zA-Z0-9_./:-]+$/"
+                        regexText="Element name should only contain characters, numbers or _./:-"
+                        xtype="textfield"/>
+                    <isrequire
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        defaultValue="yes"
+                        fieldLabel="Is required"
+                        name="./isrequire"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <yes
+                                jcr:primaryType="nt:unstructured"
+                                text="Yes"
+                                value="yes"/>
+                            <no
+                                jcr:primaryType="nt:unstructured"
+                                text="No"
+                                value="no"/>
+                        </options>
+                    </isrequire>
+                    <requiredmsg
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="It is required."
+                        fieldDescription="Add the required message which will be shown to the end user when the user doesn't enter in this field if it is mandatory. If left empty, &quot;It is required&quot; will be be used by default."
+                        fieldLabel="Required Message"
+                        name="./requiredmsg"
+                        xtype="textfield"/>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>

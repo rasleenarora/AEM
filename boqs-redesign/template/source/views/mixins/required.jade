@@ -1,0 +1,7 @@
+mixin required(obj)
+  - if(typeof(obj.classEvent) === 'undefined') obj.classEvent = 'event-group'
+  - if(typeof(obj.classDesc) === 'undefined') obj.classDesc = 'desc'
+  div(class = obj.classEvent)
+    i(class = obj.icon, aria-hidden="true")
+    div(class = obj.classDesc)
+      p!=obj.text

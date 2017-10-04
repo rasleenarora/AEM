@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Event template will be used to create event detail pages. This template will have a specific tab for allowing authors to configure fields for event details component."
+    jcr:primaryType="cq:Template"
+    jcr:title="BOQS - Redesign Event Template"
+    allowedPaths="[/content(/.*)?]"
+    ranking="{Long}2">
+    <jcr:content
+    	cq:designPath="/etc/designs/boqs-redesign"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="boqs-redesign/components/pages/eventpage">
+        <globalheadercomp 
+			jcr:primaryType="nt:unstructured"
+			sling:resourceType="boqs-redesign/components/contents/globalheadercomp">
+			<searchinputcomp 
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="boqs-redesign/components/contents/searchinputcomp" />
+			<topnavigationcomp
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="boqs-redesign/components/contents/topnavigationcomp" />
+		</globalheadercomp>
+		<menuitemscomp 
+			jcr:primaryType="nt:unstructured"
+			sling:resourceType="boqs-redesign/components/contents/menuitemscomp"/>   
+		<globalfootercomp 
+			jcr:primaryType="nt:unstructured"
+			sling:resourceType="boqs-redesign/components/contents/globalfootercomp"/>     
+    </jcr:content>    
+</jcr:root>

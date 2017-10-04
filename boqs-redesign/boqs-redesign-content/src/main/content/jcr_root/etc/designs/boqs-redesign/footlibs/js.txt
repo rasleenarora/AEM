@@ -1,0 +1,5 @@
+#base=js
+l10n.js
+libs.js
+script-full.js
+masonry-start.js

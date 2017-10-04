@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Top Navigation Configuration"
+	height="700"
+	width="800"
+	xtype="dialog">
+	<listeners
+		jcr:primaryType="nt:unstructured"
+		beforesubmit ="function(dialog) { return beforeSubmitTopNav(dialog); }"/>
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1
+				jcr:primaryType="cq:Panel"
+				title="Specialties">
+				<items jcr:primaryType="cq:WidgetCollection">
+	 			   <specialtieslabel
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;Specialties&quot; will be used by default"
+						fieldLabel="Specialties Label"
+						name="./specialtieslabel"
+						defaultValue="Specialties"
+						xtype="textfield"/>
+					<specialtiesurl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Specialties URL"
+						name="./specialtiesurl"
+						regex="/^(\\/content)+([\\/\\w\\.-])*$/"
+						regexText="Invalid URL Internal."
+						allowBlank="{Boolean}false"
+						xtype="pathfield"/>
+					<primaryspecialtieslabel
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;Distinctive banking for:&quot; will be used by default"
+						fieldLabel="Primary Specialties Label"
+						name="./primaryspecialtieslabel"
+						defaultValue="Distinctive banking for:"
+						xtype="textfield"/>
+					<primaryspecialtieslist
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Primary Specialties List"
+						name="./primaryspecialtieslist"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							xtype="pathfield"/>
+					</primaryspecialtieslist>
+					<otherspecialtieslabel
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;Other Specialties&quot; will be used by default"
+						fieldLabel="Other Specialties Label"
+						name="./otherspecialtieslabel"
+						defaultValue="Other Specialties"
+						xtype="textfield"/>
+					<otherspecialtieslist
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Other Specialties List"
+						name="./otherspecialtieslist"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							xtype="pathfield"/>
+					</otherspecialtieslist>
+					<viewalllabel
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;View all&quot; will be used by default"
+						fieldLabel="View All Label"
+						name="./viewalllabel"
+						defaultValue="View all"
+						xtype="textfield"/>
+					<viewalltargeturl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="View All Target URL"
+						name="./viewalltargeturl"
+						allowBlank="{Boolean}false"
+						xtype="pathfield"/>
+				</items>
+			</tab1>
+			<tab2
+				jcr:primaryType="cq:Panel"
+				title="Products">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<productslabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Products Label"
+						name="./productslabel"
+						allowBlank="{Boolean}false"
+						defaultValue="Products"
+						xtype="textfield"/>
+					<productsurl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Products URL"
+						name="./productsurl"
+						allowBlank="{Boolean}false"
+						xtype="pathfield"/>
+					<primaryproductslabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Primary Products Label"
+						name="./primaryproductslabel"
+						allowBlank="{Boolean}false"
+						defaultValue="Our products include"
+						xtype="textfield"/>
+					<savingsaccounts
+		                jcr:primaryType="cq:Widget"
+		                title="Savings Accounts"
+	                	collapsed ="false"
+		                collapsible="false"
+		                xtype="dialogfieldset">
+		                <items jcr:primaryType="cq:WidgetCollection">
+		                	<savingsaccountsrootpage
+								jcr:primaryType="cq:Widget"
+								fieldLabel="Savings Accounts Root Page"
+								name="./savingsaccountsrootpage"
+								allowBlank="{Boolean}false"
+								xtype="pathfield"/>
+							<savingsaccountsusemanual
+								jcr:primaryType="cq:Widget"
+								defaultValue="false"
+								fieldLabel="Use Manual Navigation"
+								name="./savingsaccountsusemanual"
+								type="checkbox"
+								xtype="selection"/>
+							<savingsaccountslv2list
+								jcr:primaryType="cq:Widget"
+								fieldLabel="Savings Accounts Level 2 List"
+								name="./savingsaccountslv2list"
+								xtype="multifield">
+								<fieldConfig
+									jcr:primaryType="cq:Widget"
+									xtype="pathfield"/>
+							</savingsaccountslv2list>
+		                </items>
+		            </savingsaccounts>
+		            <propertyfinance
+		                jcr:primaryType="cq:Widget"
+		                title="Property Finance"
+	                	collapsed ="false"
+		                collapsible="false"
+		                xtype="dialogfieldset">
+		                <items jcr:primaryType="cq:WidgetCollection">
+		                	<propertyfinancerootpage
+								jcr:primaryType="cq:Widget"
+								fieldLabel="Property Finance Root Page"
+								name="./propertyfinancerootpage"
+								allowBlank="{Boolean}false"
+								xtype="pathfield"/>
+							<propertyfinanceusemanual
+								jcr:primaryType="cq:Widget"
+								defaultValue="false"
+								fieldLabel="Use Manual Navigation"
+								name="./propertyfinanceusemanual"
+								type="checkbox"
+								xtype="selection"/>
+							<propertyfinancelv2list
+								jcr:primaryType="cq:Widget"
+								fieldLabel="Savings Accounts Level 2 List"
+								name="./propertyfinancelv2list"
+								xtype="multifield">
+								<fieldConfig
+									jcr:primaryType="cq:Widget"
+									xtype="pathfield"/>
+							</propertyfinancelv2list>
+		                </items>
+		            </propertyfinance>
+		            <creditcards
+		                jcr:primaryType="cq:Widget"
+		                title="Credit Cards"
+	                	collapsed ="false"
+		                collapsible="false"
+		                xtype="dialogfieldset">
+		                <items jcr:primaryType="cq:WidgetCollection">
+		                	<creditcardsrootpage
+								jcr:primaryType="cq:Widget"
+								fieldLabel="Credit Cards Root Page"
+								name="./creditcardsrootpage"
+								allowBlank="{Boolean}false"
+								xtype="pathfield"/>
+							<creditcardsusemanual
+								jcr:primaryType="cq:Widget"
+								defaultValue="false"
+								fieldLabel="Use Manual Navigation"
+								name="./creditcardsusemanual"
+								type="checkbox"
+								xtype="selection"/>
+							<creditcardslv2list
+								jcr:primaryType="cq:Widget"
+								fieldLabel="Savings Accounts Level 2 List"
+								name="./creditcardslv2list"
+								xtype="multifield">
+								<fieldConfig
+									jcr:primaryType="cq:Widget"
+									xtype="pathfield"/>
+							</creditcardslv2list>
+		                </items>
+		            </creditcards>
+		            <assetfinance
+		                jcr:primaryType="cq:Widget"
+		                title="Asset Finance"
+	                	collapsed ="false"
+		                collapsible="false"
+		                xtype="dialogfieldset">
+		                <items jcr:primaryType="cq:WidgetCollection">
+		                	<assetfinancerootpage
+								jcr:primaryType="cq:Widget"
+								fieldLabel="Asset Finance Root Page"
+								name="./assetfinancerootpage"
+								allowBlank="{Boolean}false"
+								xtype="pathfield"/>
+							<assetfinanceusemanual
+								jcr:primaryType="cq:Widget"
+								defaultValue="false"
+								fieldLabel="Use Manual Navigation"
+								name="./assetfinanceusemanual"
+								type="checkbox"
+								xtype="selection"/>
+							<assetfinancelv2list
+								jcr:primaryType="cq:Widget"
+								fieldLabel="Savings Accounts Level 2 List"
+								name="./assetfinancelv2list"
+								xtype="multifield">
+								<fieldConfig
+									jcr:primaryType="cq:Widget"
+									xtype="pathfield"/>
+							</assetfinancelv2list>
+		                </items>
+		            </assetfinance>
+						
+					<findmoreproductslabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Find More Products Label"
+						name="./findmoreproductslabel"
+						allowBlank="{Boolean}false"
+						defaultValue="Find more products"
+						xtype="textfield"/>
+					<findmoredescription
+						jcr:primaryType="cq:Widget"
+						externalStyleSheets="[]"
+						fieldLabel="Find More Description"
+						height="400"
+						allowBlank="{Boolean}false"
+						name="./findmoredescription"
+						xtype="richtext">
+							<rtePlugins jcr:primaryType="nt:unstructured"
+								path="/apps/boqs-redesign/components/contents/wysiwygcomp/rteplugins.infinity.json"
+								xtype="cqinclude"/>
+							<htmlRules jcr:primaryType="nt:unstructured">
+								<links jcr:primaryType="nt:unstructured" protocols="[http://,https://,javascript:,mailto:]">
+								</links>
+							</htmlRules>
+					</findmoredescription>
+					<productfindericonpath
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Product Finder Icon Path"
+						name="./productfindericonpath"
+						rootPath="/content/dam"
+						xtype="pathfield"/>
+					<productfinderlabel
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;Product Finder&quot; will be used by default"
+						fieldLabel="Product Finder Label"
+						name="./productfinderlabel"
+						defaultValue="Product Finder"
+						xtype="textfield"/>
+					<productfindertargeturl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Product Finder Target URL"
+						name="./productfindertargeturl"
+						allowBlank="{Boolean}false"
+						xtype="pathfield"/>
+				</items>
+			</tab2>
+			<tab3
+				jcr:primaryType="cq:Panel"
+				title="Expertise">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<expertiselabel
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;Expertise&quot; will be used by default"
+						fieldLabel="Expertise Label"
+						name="./expertiselabel"
+						defaultValue="Expertise"
+						xtype="textfield"/>
+					<expertiseurl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Expertise URL"
+						name="./expertiseurl"
+						allowBlank="{Boolean}false"
+						xtype="pathfield"/>
+					<primaryexpertiselabel
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Primary Expertise Label"
+						name="./primaryexpertiselabel"
+						allowBlank="{Boolean}false"
+						defaultValue="Find answers to your questions"
+						xtype="textfield"/>
+					<guidestargeturl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Guides Target URL"
+						name="./guidestargeturl"
+						allowBlank="{Boolean}false"
+						xtype="pathfield"/>
+					<guideslist
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Guides List"
+						name="./guideslist"
+						xtype="benefitmultifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							limit="4"
+							allowBlank="{Boolean}false"
+							xtype="pathfield"/>
+					</guideslist>
+					<publicationstargeturl
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Publications Target URL"
+						name="./publicationstargeturl"
+						allowBlank="{Boolean}false"
+						xtype="pathfield"/>
+					<publicationslist
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Publications List"
+						name="./publicationslist"
+						xtype="benefitmultifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							limit="4"
+							allowBlank="{Boolean}false"
+							xtype="pathfield"/>
+					</publicationslist>
+					<featuredlabel
+						jcr:primaryType="cq:Widget"
+						fieldDescription="If left empty, &quot;Featured&quot; will be used by default"
+						fieldLabel="Featured Label"
+						name="./featuredlabel"
+						defaultValue="Featured"
+						xtype="textfield"/>
+					<featuredlist
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Featured List"
+						name="./featuredlist"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							allowBlank="{Boolean}false"
+							xtype="pathfield"/>
+					</featuredlist>
+				</items>
+			</tab3>
+		</items>
+	</items>
+</jcr:root>

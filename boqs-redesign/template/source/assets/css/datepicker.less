@@ -1,0 +1,72 @@
+.datepicker-months {
+  font-family: @font-family-Gotham-Bold;
+  table {
+    width: 100%;
+    .font-size(22px);
+    text-transform: uppercase;
+    thead {
+      tr {
+        border-bottom-width: 0;
+        border: 1px solid @prussian-blue;
+        th{
+          vertical-align: middle;
+          background: @prussian-blue;
+          color: @white;
+          text-align: center;
+          .icon-arrow-right, .icon-arrow-left {
+            float: none;
+            .wi-icon();
+            .icon-arrow-right-olive();
+          }
+          .icon-arrow-left {
+            .rotate(180deg);
+          }
+        }
+      }
+    }
+    tbody {
+      border: 1px solid @prussian-blue;
+      tr {
+        td {
+          padding: 0;
+          span {
+            display: block;
+            width: 25%;
+            height: 45px;
+            line-height: 45px;
+            float: left;
+            cursor: pointer;
+            border: 1px solid @prussian-blue;
+            color: @prussian-blue;
+            text-align: center;
+            &.disabled {
+              background: @gray-blue;
+              color: @white;
+            }
+            &:hover, &.active {
+              background: @olive-gray;
+              color: @white;
+            }
+          }
+        }
+      }
+    }
+    tfoot {
+      tr {
+        .today {
+          font-family: @font-family-Gotham-Book;
+          .today-btn {
+            display: inline-block;
+            padding: 9px 36px;
+            .border-radius(4px);
+            .btn-primary();
+          }
+          .cancel {
+            margin-left: 20px;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

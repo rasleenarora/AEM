@@ -1,0 +1,11 @@
+include mixins/all
+extends layouts/template
+
+block vars
+  -title = 'Textfield-cmp'
+
+block container
+  main#main.main(style="background-color: #fff")
+    .container
+      +form-group-1({id: "full-name", classForm : "form-group textfield-component", text: "Full Name:", required: "wi-icon icon-required", placeholder: "Enter your first and last names", classIcon: "wi-icon icon-close-2", attr:{"data-required":""}}).custom-box
+      +form-group-1({id: "phone", classForm : "form-group textfield-component", text: "Phone Number:",placeholder: "e.g. 0291234567 or 0431234567", error: "wrap-error", classIcon: "wi-icon icon-close-2", textError: "Please enter a valid phone",attr:{"data-required":"", "data-number": ""}})

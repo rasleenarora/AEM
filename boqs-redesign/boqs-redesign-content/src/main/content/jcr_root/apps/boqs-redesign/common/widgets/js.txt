@@ -1,0 +1,16 @@
+#base=source
+ContentCarouselField.js
+MultiOptionsField.js
+ExtraMenuField.js
+ColorPickerPlugin.js
+ColorPickerDialog.js
+FooterCustomXtypeField.js
+CustomXtypeWithDescField.js
+HomePageSpecialityCustomXtypeField.js
+GlobalFooterCustomXtypeField.js
+CustomXtypeWithIconField.js
+AdditionalButtonField.js
+PhotoListField.js
+OptionListXtypeField.js
+BenefitMultiField.js
+MultifieldPanel.js

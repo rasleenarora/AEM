@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Recommend Products"
+    width="850"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Recommend Products">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Recommend Products"
+                        fieldDescription="If left empty, &quot;Recommend Products&quot; will be used by default "
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <categoryInfo
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="browse"
+                        fieldDescription="Based on the selected value Card information will be populated in this component"
+                        fieldLabel="Get Card Information"
+                        name="./categoryInfoType"
+                        type="radio"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <browse
+                                jcr:primaryType="nt:unstructured"
+                                text="Source Pages"
+                                value="browse"/>
+                            <configure
+                                jcr:primaryType="nt:unstructured"
+                                text="Configure Card Details"
+                                value="configure"/>
+                        </options>
+                    </categoryInfo>
+                    <browsemultifield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Source Pages"
+                        name="./browsedCategories"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            limit="2"
+                            xtype="pathfield"/>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            beforeadd="function(list,component,index) {&#xa;    if(this.fieldConfig.limit!=0) {&#xa;        if(this.fieldConfig.limit == (list.items.getCount()-1)) { &#xa;            CQ.Ext.Msg.show(&#xa;                {title: 'Limit reached',  msg: 'You are only allowed to add '+this.fieldConfig.limit+' items to this module',icon:CQ.Ext.MessageBox.WARNING,buttons: CQ.Ext.Msg.OK}&#xa;            );;return false;&#xa;        }&#xa;    }&#xa;}"/>
+                    </browsemultifield>
+                    <categorymultifield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Configure Card Details"
+                        itemId="authoredCategories"
+                        name="./authoredCategories"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            anchor="98%"
+                            border="true"
+                            hideLabel="true"
+                            layout="form"
+                            limit="2"
+                            padding="10px"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <title
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    dName="title"
+                                    fieldLabel="Card Title"
+                                    xtype="textfield"/>
+                                <icon
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    dName="thumanailImage"
+                                    fieldLabel="Icon Path"
+                                    xtype="pathfield"/>
+                                <alttext
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    dName="altText"
+                                    fieldLabel="Alt Text for Image"
+                                    xtype="textfield"/>
+                                <targeturl
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    dName="path"
+                                    fieldDescription="If left empty, current page url will be used by default"
+                                    fieldLabel="Target URL"
+                                    xtype="pathfield"/>
+                                <content
+                                    jcr:primaryType="cq:Widget"
+                                    anchor="95%"
+                                    dName="description"
+                                    fieldLabel="Card Description"
+                                    height="250"
+                                    xtype="richtext">
+                                    <rtePlugins
+                                        jcr:primaryType="nt:unstructured"
+                                        path="/apps/boqs-redesign/components/contents/category/rteplugins.infinity.json"
+                                        xtype="cqinclude"/>
+                                    <htmlRules jcr:primaryType="nt:unstructured">
+                                        <links
+                                            jcr:primaryType="nt:unstructured"
+                                            protocols="[http://,https://,javascript:,mailto:]"/>
+                                    </htmlRules>
+                                </content>
+                            </items>
+                        </fieldConfig>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            beforeadd="function(list,component,index) {&#xa;    if(this.fieldConfig.limit!=0) {&#xa;        if(this.fieldConfig.limit == (list.items.getCount()-1)) { &#xa;            CQ.Ext.Msg.show(&#xa;                {title: 'Limit reached',  msg: 'You are only allowed to add '+this.fieldConfig.limit+' items to this module',icon:CQ.Ext.MessageBox.WARNING,buttons: CQ.Ext.Msg.OK}&#xa;            );;return false;&#xa;        }&#xa;    }&#xa;}"/>
+                    </categorymultifield>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

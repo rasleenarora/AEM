@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Global Footer Configuration"
+	width="600"
+	height="500"
+	xtype="dialog">
+	<listeners
+		jcr:primaryType="nt:unstructured"
+		beforesubmit ="function(dialog) { return beforeSubmitGlobalFooter(dialog); }"/>
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<tab1 jcr:primaryType="cq:Panel" title="Distinctive Banking">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<distincbank jcr:primaryType="cq:Widget"
+						fieldLabel="Distinctive Banking Heading"
+						defaultValue="Distinctive Banking"
+						allowBlank="{Boolean}false"
+						name="./distincbank"
+						xtype="textfield"/>
+					<distincbanklinks jcr:primaryType="cq:Widget"
+						fieldLabel="Distinctive Banking Links"
+						name="./distincbanklinks"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							fieldLabel="Distinctive Banking Link"
+							xtype="footercustomxtypefield"/>
+					</distincbanklinks>
+				</items>
+			</tab1>
+			<tab2 jcr:primaryType="cq:Panel" title="Expertise">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<expertisehead jcr:primaryType="cq:Widget"
+						fieldLabel="Expertise Heading"
+						defaultValue="Expertise"
+						allowBlank="{Boolean}false"
+						name="./expertisehead"
+						xtype="textfield"/>
+					<expertiselinks jcr:primaryType="cq:Widget"
+						fieldLabel="Expertise Links"
+						name="./expertiselinks"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							fieldLabel="Expertise Link"
+							xtype="footercustomxtypefield"/>
+					</expertiselinks>
+				</items>
+			</tab2>
+			<tab3 jcr:primaryType="cq:Panel" title="BOQ Specialist">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<boqspecialist jcr:primaryType="cq:Widget"
+						fieldLabel="BOQ Specialist Heading"
+						defaultValue="BOQ Specialist"
+						allowBlank="{Boolean}false"
+						name="./boqspecialist"
+						xtype="textfield"/>
+					<boqspecialistlinks jcr:primaryType="cq:Widget"
+						fieldLabel="BOQ Specialist Links"
+						name="./boqspecialistlinks"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							fieldLabel="BOQ Specialist Link"
+							xtype="footercustomxtypefield"/>
+					</boqspecialistlinks>
+				</items>
+			</tab3>
+			<tab4 jcr:primaryType="cq:Panel" title="Contact">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<phoneicon jcr:primaryType="cq:Widget"
+						fieldLabel="Phone Number Icon Path"
+						allowBlank="{Boolean}false"
+						name="./phoneicon"
+						rootPath="/content/dam"
+						xtype="pathfield" />
+					<phonenumber jcr:primaryType="cq:Widget"
+						fieldLabel="Phone Number"
+						allowBlank="{Boolean}false"
+						defaultValue="1300 131 141"
+						name="./phonenumber"
+						xtype="textfield"/>
+					<customlist
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Custom List"
+						name="./customlist"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							fieldLabel="Custom Item"
+							xtype="globalfootercustomxtypefield"/>
+					</customlist>
+				</items>
+			</tab4>
+			<tab5 jcr:primaryType="cq:Panel" title="Disclaimer">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<disclaimer
+						jcr:primaryType="cq:Widget"
+						externalStyleSheets="[]"
+						fieldLabel="Disclaimer"
+						allowBlank="{Boolean}false"
+						hideLabel="{Boolean}true"
+						name="./disclaimer"
+						xtype="richtext">
+						<rtePlugins jcr:primaryType="nt:unstructured"
+								path="/apps/boqs-redesign/components/contents/globalfootercomp/rteplugins.infinity.json"
+								xtype="cqinclude"/>
+					</disclaimer>
+				</items>
+			</tab5>
+			<tab6 jcr:primaryType="cq:Panel" title="Mobile Links">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<mobilelist jcr:primaryType="cq:Widget"
+						fieldLabel="Mobile Links"
+						name="./mobilelist"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							fieldLabel="Mobile Link"
+							xtype="footercustomxtypefield"/>
+					</mobilelist>
+				</items>
+			</tab6>
+		</items>
+	</items>
+</jcr:root>

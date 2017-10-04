@@ -1,0 +1,38 @@
+extends layouts/layout
+
+block vars
+  -title = 'Medical Professionals'
+  -bodyClass = 'medical'
+
+block container
+  main#main.main
+    include blocks/page-header
+
+    include blocks/breadcrumb
+
+    section.panel
+      .container
+        .block
+          .wysiwygcomp
+            include blocks/parsys-area-4
+          include blocks/tab
+    
+    section.panel
+      .container
+        .block
+          .row
+            .col-sm-6
+              .block
+                h2.block-heading Tips, Guides and FAQs
+                include blocks/search-field
+                include blocks/tip-guide-faqs
+            .col-sm-6
+              .block
+                h2.block-heading Upcoming Events
+                include blocks/event-calendar-condensed
+
+        include blocks/testimonial
+
+    section.panel
+      .container
+        include blocks/key-reasons

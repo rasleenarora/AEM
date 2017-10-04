@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Panel"
+          title="Event">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <startdatetime
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Start date &amp; Time:"
+            name="./startdatetime"
+            allowBlank="{Boolean}false"
+            xtype="datetime"/>
+        <enddatetntime
+            jcr:primaryType="cq:Widget"
+            fieldLabel="End date &amp; Time:"
+            name="./enddatetime"
+            allowBlank="{Boolean}false"
+            xtype="datetime"/>
+        <location
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Location:"
+            name="./location"
+            allowBlank="{Boolean}false"
+            fieldDescription="Remember to also select the State in the Filtering tab in the Authoring options in the page properties"
+            xtype="textfield"/>
+        <fulladdress
+            jcr:primaryType="cq:Widget"
+            fieldDescription="This address will not be shown to the website visitors, but it will be emailed to users that have registered to the event."
+            fieldLabel="Full Address:"
+            name="./fulladdress"
+            allowBlank="{Boolean}false"
+            xtype="textarea"/>
+        <eventtype
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Event Type:"
+            name="./eventtype"
+            allowBlank="{Boolean}false"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <annualevent
+                    jcr:primaryType="nt:unstructured"
+                    text="Annual Event"
+                    value="annualevent"/>
+                <conference
+                    jcr:primaryType="nt:unstructured"
+                    text="Conference"
+                    value="conference"/>
+                <luncheon
+                    jcr:primaryType="nt:unstructured"
+                    text="Luncheon"
+                    value="luncheon"/>
+                <industryevent
+                    jcr:primaryType="nt:unstructured"
+                    text="Industry Event"
+                    value="industryevent"/>
+                <seminar
+                    jcr:primaryType="nt:unstructured"
+                    text="Seminar"
+                    value="seminar"/>
+                <sportingevent
+                    jcr:primaryType="nt:unstructured"
+                    text="Sporting Event"
+                    value="sportingevent"/>
+                <workshop
+                    jcr:primaryType="nt:unstructured"
+                    text="Workshop"
+                    value="workshop"/>
+            </options>
+        </eventtype>
+        <image
+            jcr:primaryType="cq:Widget"
+            cropParameter="./eventImageCrop"
+            ddGroups="[media]"
+            fieldLabel="Image"
+            fileReferenceParameter="./eventFileReference"
+            name="./eventImage"
+            rotateParameter="./eventImageRotate"
+            height="{Long}200"
+            width="{Long}200"
+            allowUpload="{Boolean}false"
+            xtype="html5smartimage"/>
+        <alt-text
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Alt"
+            name="./eventimagealt"
+            fieldDescription="Provide the alternate text for the image."
+            xtype="textfield"/>
+        <shortdescription
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Short Description"
+            name="./shortdescription"
+            xtype="textarea"/>
+        <registrationstatus
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Registration Status:"
+            name="./registrationstatus"
+            allowBlank="{Boolean}false"
+            type="select"
+            defaultValue="open"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <open
+                    jcr:primaryType="nt:unstructured"
+                    text="Open"
+                    value="open"/>
+                <waitinglist
+                    jcr:primaryType="nt:unstructured"
+                    text="Waiting List"
+                    value="waitinglist"/>
+                <notavailable
+                    jcr:primaryType="nt:unstructured"
+                    text="Not available"
+                    value="notavailable"/>
+            </options>
+        </registrationstatus>
+        <registrationstatusheadingopen
+            jcr:primaryType="cq:Widget"
+            fieldDescription="This heading will be shown when the &quot;Registration Status&quot; is &quot;Open&quot;."
+            fieldLabel="Registration Status Heading(Open):"
+            defaultValue="Open For Registration"
+            name="./registrationstatusheadingopen"
+            allowBlank="{Boolean}false"
+            xtype="textfield"/>
+        <registrationstatusheadingwaitinglist
+            jcr:primaryType="cq:Widget"
+            fieldDescription="This heading will be shown when the &quot;Registration Status&quot; is &quot;Waiting List&quot;."
+            fieldLabel="Registration Status Heading(Waiting List):"
+            defaultValue="Registration closed"
+            name="./registrationstatusheadingwaitinglist"
+            allowBlank="{Boolean}false"
+            xtype="textfield"/>
+        <registrationstatustextopen
+            jcr:primaryType="cq:Widget"
+            fieldDescription="This text will be shown when the &quot;Registration Status&quot; is &quot;Open&quot;"
+            fieldLabel="Registration Status Text(Open):"
+            defaultValue="Let us know you’re coming and we will send you more details about the event"
+            name="./registrationstatustextopen"
+            allowBlank="{Boolean}false"
+            xtype="textfield"/>
+        <registrationstatustextwaitinglist
+            jcr:primaryType="cq:Widget"
+            fieldDescription="This text will be shown when the &quot;Registration Status&quot; is &quot;Waiting List&quot;."
+            fieldLabel="Registration Status Text(Waiting List):"
+            defaultValue="Sorry, we’ve reached capacity for this event. You can join the waiting list and we’ll let you know if a place becomes available"
+            name="./registrationstatustextwaitinglist"
+            allowBlank="{Boolean}false"
+            xtype="textfield"/>
+        <registerbuttonopen
+            jcr:primaryType="cq:Widget"
+            fieldDescription="This text will be shown on the button when the &quot;Registration Status&quot; is &quot;Open&quot;"
+            fieldLabel="Register Button(Open) Text"
+            defaultValue="Register"
+            name="./registerbuttonopen"
+            allowBlank="{Boolean}false"
+            xtype="textfield"/>
+        <registrationbuttonwaitinglist
+            jcr:primaryType="cq:Widget"
+            fieldDescription="The text will be shown on the button when the &quot;Registration Status&quot; is &quot;Waiting List&quot;"
+            fieldLabel="Register Button(Waiting List) Text"
+            defaultValue="Join Waiting List"
+            name="./registrationbuttonwaitinglist"
+            allowBlank="{Boolean}false"
+            xtype="textfield"/>
+        <featuredevent
+            jcr:primaryType="cq:Widget"
+            defaultValue="false"
+            fieldLabel="Featured Event"
+            name="./featuredevent"
+            type="checkbox"
+            xtype="selection"/>
+        <registrationpagepath
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Registration Page Path"
+            name="./registrationpagepath"
+            editable="{Boolean}fales"
+            allowBlank="{Boolean}false"
+            fieldDescription="Select the page which has the registration form in it."
+            xtype="pathfield"/>
+        <additionalinfoforregisteredusers
+            jcr:primaryType="cq:Widget"
+            fieldDescription="This content will not be shown to website visitors, but will be emailed to users that have registered successfully to the event."
+            externalStyleSheets="[]"
+            fieldLabel="Additional Info For Registered Users:"
+            height="400"
+            name="./additionalinfoforregisteredusers"
+            xtype="richtext">
+                <rtePlugins jcr:primaryType="nt:unstructured"
+                    path="/apps/boqs-redesign/components/contents/wysiwygcomp/rteplugins.infinity.json"
+                    xtype="cqinclude"/>
+        </additionalinfoforregisteredusers>
+    </items>
+</jcr:root>

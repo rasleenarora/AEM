@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="550"
+    title="Visa Offer Widget Configuration"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <apikey
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="OWS_BOQ_AE1B2789-99E5-4036-A19F-51B639901464"
+                        disabled="{Boolean}true"
+                        fieldLabel="API Key"
+                        name="./apikey"
+                        xtype="textfield"/>
+                    <template
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="A"
+                        disabled="{Boolean}true"
+                        fieldLabel="Template"
+                        name="./template"
+                        xtype="textfield"/>
+                    <enabledfilters
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="'category', 'cards'"
+                        disabled="{Boolean}true"
+                        fieldLabel="Enabled Filters"
+                        name="./enabledfilters"
+                        xtype="textfield"/>
+                    <cards
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="'CS_BOQSpecialist_platinum', 'CS_BOQSpecialist_signature'"
+                        disabled="{Boolean}true"
+                        fieldLabel="Cards"
+                        name="./cards"
+                        xtype="textfield"/>
+                    <categories
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="'CS_BOQ_travel', 'CS_BOQ_entertainment', 'CS_BOQ_dining', 'CS_BOQ_activities', 'CS_BOQ_retail'"
+                        disabled="{Boolean}true"
+                        fieldLabel="Categories"
+                        name="./categories"
+                        xtype="textfield"/>
+                    <viewmode
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="display : 'list', listFilterParam : '&amp;cardType=platinum,signature'"
+                        disabled="{Boolean}true"
+                        fieldLabel="View Mode"
+                        name="./viewmode"
+                        xtype="textfield"/>
+                    <language
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="en"
+                        disabled="{Boolean}true"
+                        fieldLabel="Language"
+                        name="./language"
+                        xtype="textfield"/>
+                    <pagesize
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="6"
+                        disabled="{Boolean}true"
+                        fieldLabel="Page Size"
+                        name="./pagesize"
+                        xtype="textfield"/>
+                    <sortoptions
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="order : 'desc', params : 'lastModifiedDatetime'"
+                        disabled="{Boolean}true"
+                        fieldLabel="Sort Options"
+                        name="./sortoptions"
+                        xtype="textfield"/>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./description"
+                        xtype="textfield"/>
+                    <headertext
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Visa offers available to BOQ Specialist credit cardholders"
+                        fieldLabel="Header"
+                        name="./headerText"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

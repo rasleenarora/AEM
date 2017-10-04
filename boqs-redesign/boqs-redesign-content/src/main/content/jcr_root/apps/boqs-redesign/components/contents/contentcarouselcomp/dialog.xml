@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Content Carousel Configuration"
+	xtype="dialog">
+	<listeners
+		jcr:primaryType="nt:unstructured"
+		beforesubmit ="function(dialog) { return beforeSubmitCarousel(dialog); }"/>
+	<items
+		jcr:primaryType="cq:Widget"
+		xtype="tabpanel">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<general
+				jcr:primaryType="cq:Panel"
+				title="General">
+				<items jcr:primaryType="cq:WidgetCollection">
+					<panelpages
+						jcr:primaryType="cq:Widget"
+						fieldLabel="Panel Pages List"
+						name="./panelpages"
+						xtype="multifield">
+						<fieldConfig
+							jcr:primaryType="cq:Widget"
+							fieldLabel="Panel Page"
+							xtype="pathfield"/>
+					</panelpages>
+					<automatictransition
+						jcr:primaryType="cq:Widget"
+						allowBlank="{Boolean}false"
+						fieldLabel="Automatic Transition"
+						name="./automatictransition"
+						type="select"
+						defaultValue="no"
+						xtype="selection">
+						<options jcr:primaryType="cq:WidgetCollection">
+							<option1
+								jcr:primaryType="nt:unstructured"
+								text="Yes"
+								value="yes"/>
+							<option2
+								jcr:primaryType="nt:unstructured"
+								text="No"
+								value="no"/>
+						</options>
+					</automatictransition>
+				</items>
+			</general>
+		</items>
+	</items>
+</jcr:root>

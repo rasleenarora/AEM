@@ -1,0 +1,274 @@
+// Filtering control
+.note-text {
+  padding-left: 28px;
+  font-family: @font-family-Gotham-Book;
+  .font-size(16px);
+  opacity: .45;
+  margin-top: -11px;
+  margin-bottom: 17px;
+
+  @media (min-width: @screen-sm-min) {
+    margin-top: -7px;
+    margin-bottom: 7px;
+    color: @pastel-blue;
+  }
+}
+
+.filtering-controls {
+  display: none; //hide
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 1px solid @gray;
+  border-radius: 10px;
+
+  &.in { display: block; } //show
+
+  @media (min-width: @screen-sm-min) {
+    display: table;
+    width: 100%;
+
+    &.in { display: table; }
+
+    .clear-btn {
+      display: table-footer-group;
+      .btn-reset-filters {
+        margin: 10px 0;
+        text-align: left;
+      }
+    }
+  }
+
+  header {
+    display: none; //hide
+    position: relative;
+    padding: 0 12px;
+    background: @olive-gray;
+    .clearfix();
+
+    @media (min-width: @screen-sm-min) {
+      display: block; //show
+      background: none;
+      padding:0;
+    }
+    h3 {
+      float: left;
+      font-family: @font-family-Gotham-Book;
+      .font-size(24px);
+      color: @prussian-blue;
+      margin-top: 24px;
+      margin-bottom: 11px;
+    }
+  }
+  .btn-reset-filters {
+    border-bottom: 1px solid @gray;
+    width: 100%;
+    padding: 14px 0;
+    text-align: left;
+    
+    @media (min-width: @screen-sm-min) {
+      border-bottom: none;
+    }
+  }
+  .filtering-submit {
+    padding: 20px 0;
+    .text-link {
+      display: inline-block;
+      margin-top: 12px;
+      margin-bottom: 0;
+      color: @prussian-blue;
+      font-family: @font-family-Gotham-Book;
+      .font-size(16px);
+    }
+  }
+}
+
+.filtering-controls-form {
+  .handle {
+    position: relative;
+    padding: 12px 20px 12px 0;
+    border-bottom: 1px solid @gray;
+    margin:0;
+
+    // Caret icon – See Gruntfile.js for grunticon setup
+    &:after {
+      &:extend(.icon, .icon-medium);
+      content: "";
+      position: absolute;
+      top: 17px;
+      right: 0;
+      .rotate(180deg);
+    }
+
+    @media (min-width: @screen-sm-min) {
+      padding: 0 0 2px;
+
+      // &:before,
+      &:after { display: none; } //hide
+    }
+
+    .title {
+      margin: 0;
+      padding-top: 5px;
+      color: @prussian-blue;
+      .font-size(18px);
+
+      .decs {
+        display: block;
+        padding-top: 2px;
+        color:@brown-light;
+        .font-size(13px, 18px);
+      }
+
+      @media (min-width: @screen-sm-min) {
+        display: block;
+        padding-right: 0;
+        margin-bottom: 5px;
+        .font-size(18px);
+        .decs { display: none; }
+      }
+    }
+    
+  }
+  .item {
+    .form-group.content {
+      height: 0;
+      margin: 0;
+      overflow: hidden;
+
+      @media (min-width: @screen-sm-min) {
+        height: auto;
+        padding: 20px 0 8px;
+      }
+    }
+    &.active {
+      .form-group.content.states {
+        overflow: visible;
+      }
+      .handle {
+        &:after {
+          .rotate(0);
+        }
+      }
+      .form-group {
+        height: auto;
+        padding-top: 17px;
+
+        @media (min-width: @screen-sm-min) {
+          margin-bottom: 4px;
+          margin-top: 0;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+  @media (min-width: @screen-sm-min) {
+    .item {
+      .states-group.content {
+        overflow: visible;
+      }
+    }
+  }
+}
+
+
+.popover-filter-control {
+  position: absolute;
+  z-index: 1;
+  .inner {
+    padding: 15px;
+    background: @white;
+    border-radius: 7px;
+    border: 1px solid @gray;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: -20px;
+      left: 68px;
+      border-bottom: 20px solid @gray;
+      border-right: 20px solid transparent;
+      border-left: 20px solid transparent;
+
+      .arrow-left& {
+        top: 20px;
+        left: -20px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid @gray;
+        border-left: 0;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: -18px;
+      left: 68px;
+      border-bottom: 20px solid @white;
+      border-right: 20px solid transparent;
+      border-left: 20px solid transparent;
+
+      .arrow-left& {
+        top: 20px;
+        left: -18px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid @white;
+        border-left: 0;
+      }
+    }
+
+    @media (min-width: @screen-sm-min) {
+      &:before {
+        top: 20px;
+        left: -20px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid @gray;
+        border-left: 0;
+      }
+      &:after {
+        top: 20px;
+        left: -18px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid @white;
+        border-left: 0;
+      }
+    }
+
+    .text-2 {
+      .font-size(14px);
+      color: @blue;
+      
+      span { display: block; }
+    }
+    h3 {
+      margin-top: 0;
+      margin-bottom: 24px;
+      padding-right: 20px;
+      color: @dark-blue;
+      .font-size(16px);
+      line-height: 30px;
+    }
+    h4 {
+      .font-size(18px);
+      color: @dark-blue;
+      margin-bottom: 0;
+    }
+    .close {
+      top: 15px;
+      right: 11px;
+      font: 0 a;
+      .size(30px);
+      padding: 7px;
+    }
+  }
+  .group-btn {
+    padding-top: 30px;
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "BOQS",
+  "description": "BOQS Bower dependencies file by Publicis.Sapient Australia",
+  "main": [
+    "js/main.js",
+    "scss/style.scss"
+  ],
+  "authors": [
+    "Jonny Stening <jonny.stening@sapientnitro.com>"
+  ],
+  "license": "MIT",
+  "homepage": "http://publicis.sapient.com",
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap-sass": "^3.3.7"
+  },
+  "group": {
+    "vendor": [
+      "jquery"
+    ]
+  },
+  "overrides": {
+    "jquery": {
+      "main": [
+        "dist/jquery.min.js"
+      ]
+    }
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}

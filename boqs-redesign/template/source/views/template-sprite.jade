@@ -1,0 +1,64 @@
+extends layouts/template
+
+block vars
+  -title = 'Sprite'
+
+block container
+    .container
+      .row
+        h2.title-template Icons
+        .col-sm-4
+          +icon-list([
+            {icon: "icon-professionals", text: "Medical <br/> Professionals"},
+            {icon: "icon-accountants", text: "Accountants"},
+            {icon: "icon-advisers", text: "Financial <br/> Advisers"},
+            {icon: "icon-clients", text: "Private <br/> Clients"},
+            {icon: "icon-find-events", text: "Event"},
+            {icon: "icon-file", text: "File"},
+            {icon: "icon-checklist", text: "Tick / Checklist"},
+            {icon: "icon-deposits", text: "Term Deposits"},
+            {icon: "icon-notice", text: "Notice Account"},
+            {icon: "icon-car", text: "Car loan"},
+            {icon: "icon-currency", text: "Foreign Currency"},
+            {icon: "icon-private-account", text: "Private Access Account"},
+            {icon: "icon-one-account", text: "One Account"},
+            {icon: "icon-home", text: "Home"}
+            ]).icon-list.first-list.list-unstyled
+        .col-sm-4
+          +icon-list([
+            {icon: "icon-callback", text: "Request Callback"},
+            {icon: "icon-find", text: "Find a Specialist"},
+            {icon: "icon-offers", text: "Browse offers"},
+            {icon: "icon-find-events", text: "Find Events"},
+            {icon: "icon-guide", text: "Guide"},
+            {icon: "icon-publication", text: "Publication"},
+            {icon: "icon-login", text: "Login"},
+            {icon: "icon-phone", text: "Phone"},
+            {icon: "icon-search", text: "Search"},
+            {icon: "icon-saving", text: "Savings Account"},
+            {icon: "icon-property-finance", text: "Property Finance"},
+            {icon: "icon-cards", text: "Credit Cards"},
+            {icon: "icon-assets-finance", text: "Assets finance"},
+            {icon: "icon-search-1", text: "Product Finder"},
+            {icon: "icon-practice-finance", text: "Practice Finance"},
+            {icon: "icon-personal-finance", text: "Personal Finance"}
+            ]).icon-list.list-unstyled
+        .col-sm-4
+          +icon-list([
+            {icon: "icon-profession", text: "Related Profession"},
+            {icon: "icon-finance", text: "Finance"},
+            {icon: "icon-product", text: "Related Product"},
+            {icon: "icon-result-type", text: "Result Type"},
+            {icon: "icon-event-type", text: "Type of Event"},
+            {icon: "icon-event-annual", text: "Annual Event"},
+            {icon: "icon-conference", text: "Conference"},
+            {icon: "icon-luncheon", text: "Luncheon"},
+            {icon: "icon-industry", text: "Industry Event"},
+            {icon: "icon-seminar", text: "Seminar"},
+            {icon: "icon-sporting", text: "Sporting Event"},
+            {icon: "icon-workshop", text: "Workshop"},
+            {icon: "icon-share", text: "Share"},
+            {icon: "icon-message", text: "Message"},
+            {icon: "icon-clear-filters", text: "Clear Filters"},
+            {icon: "icon-gallery", text: "Photo Gallery"}
+            ]).icon-list.list-unstyled
